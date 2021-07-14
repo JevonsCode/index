@@ -1,0 +1,140 @@
+.component-card-box {
+  background: #fff;
+  background: linear-gradient(145deg, #40a8c4 0%, #a2d5f2 100%);
+  width: 300px;
+  // box-shadow: 0 0 2px #666;
+  border-radius: 8px;
+
+  background-color: #e5e5f7;
+}
+
+.component-card-container {
+  border-radius: 8px 8px 0 0;
+  padding: 17px 17px 12px;
+}
+
+.card-header {
+  height: 40px;
+}
+
+.card-header-image-field {
+  width: 32px;
+  height: 32px;
+  background: #fff;
+}
+
+.card-content-top {
+  margin: 12px 0;
+
+  > span {
+    font-weight: 700;
+    font-size: 18px;
+    color: #ffffff;
+  }
+}
+
+.card-content-middle {
+  > span {
+    font-weight: 400;
+    font-size: 12px;
+    color: #ffffff;
+  }
+}
+
+.card-content-bottom {
+  margin-top: 8px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.card-link-goto-field {
+  width: 80px;
+  background-color: #ababf3;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  &:hover .card-link-goto-circle {
+    width: 80px;
+    // background: chocolate;
+
+    &-arrow {
+      left: 18px;
+    }
+
+    &::after {
+      opacity: 1;
+      width: 12px;
+      left: 14px;
+    }
+  }
+  &:hover .card-link-goto-words {
+    color: #40a8c4;
+  }
+}
+
+.card-link-goto-circle {
+  border: 1px solid #fff;
+  background-color: #fff;
+  border-radius: 24px;
+  height: 24px;
+  width: 24px;
+  display: flex;
+  align-items: center;
+  transition: all 0.5s;
+  position: relative;
+
+  &-arrow {
+    color: #fff;
+    border-width: 2px 2px 0 0;
+    border-style: solid;
+    border-color: #40a8c4;
+    width: 6px;
+    height: 6px;
+    transform: rotate(45deg);
+    position: absolute;
+    left: 7px;
+    transition: all 0.5s;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    opacity: 0;
+    height: 2px;
+    transition: all 0.5s;
+    background-color: #40a8c4;
+    left: 10px;
+  }
+}
+
+.card-link-goto-words {
+  font-size: 13px;
+  position: absolute;
+  top: 4px;
+  right: 14px;
+  color: #fff;
+  font-weight: 700;
+  transition: all 0.5s;
+}
+
+.component-card-container-slide-cover {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 8px 6px 12px 12px;
+  border-radius: 0 0 8px 8px;
+}
+
+.tag-group {
+  display: flex;
+  align-content: flex-end;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,23 @@
+.component-tag-container {
+  display: inline-block;
+  border-radius: 4px;
+  padding: 0 7px;
+  line-height: 20px;
+  font-weight: 700;
+  font-size: 12px;
+  color: #ffffff;
+  background: #383e56;
+  -webkit-backdrop-filter: blur(25px);
+  backdrop-filter: blur(25px);
+  opacity: 1;
+  transition: all 0.5s;
+  cursor: default;
+}
+
+.component-tag-container-clickable {
+  &:hover {
+    box-shadow: 0 0 6px #3d3d3dcc;
+    background: #7269c7;
+    cursor: pointer;
+  }
+}
