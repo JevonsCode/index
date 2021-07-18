@@ -21,6 +21,7 @@
       "@pages/*": ["src/pages/*"],
       "@components/*": ["src/components/*"],
       "@service/*": ["src/service/*"],
+      "@store": ["src/store"],
       "@store/*": ["src/store/*"],
       "@database/*": ["src/database/*"]
     }

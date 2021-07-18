@@ -1,19 +1,24 @@
 import React, { useEffect, memo, useState, useMemo } from "react";
-import { observer } from "mobx-react-lite";
+import { observer, useObserver } from "mobx-react-lite";
 import "./styles/search-bash.less";
+import { indexsStore } from "@store";
 
 /**
- * 卡列表集合
- * ---
- * - 排序
- * - 瀑布流
- * - 分组
- * @returns
+ * Search
  */
 function Search() {
+  const { text, setText } = indexsStore;
+
   return (
     <div className="search-bash-container">
-      <div>search</div>
+      <div>{text}</div>
+      <input
+        type="text"
+        value={text}
+        onChange={(e) => {
+          setText(e.target.value);
+        }}
+      />
     </div>
   );
 }

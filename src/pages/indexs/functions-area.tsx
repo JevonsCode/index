@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { SearchBash } from "./components/search";
+import { TagsContainer } from "./components/tags";
 import "./styles/functions-area.less";
 
 export function FunctionsArea() {
@@ -41,7 +42,9 @@ export function FunctionsArea() {
       <div className="function-container search-container">
         <SearchBash />
       </div>
-      <div className="function-container tags-container">tags</div>
+      <div className="function-container tags-container">
+        <TagsContainer />
+      </div>
       <div className="function-container timeline-container">timeline</div>
     </div>
   );

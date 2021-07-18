@@ -26,6 +26,10 @@ yarn && yarn dev
 
 ## Design
 
+TODO:
+
+- 视差背景
+
 ### Style
 
 - color

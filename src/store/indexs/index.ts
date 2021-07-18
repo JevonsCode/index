@@ -13,8 +13,14 @@ class Indexs {
     },
   ];
 
+  text = "我是一段 Demo";
+
   constructor() {
     makeAutoObservable(this);
+  }
+
+  setText(v: string) {
+    indexsStore.text = v;
   }
 }
 
