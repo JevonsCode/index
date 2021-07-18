@@ -3,16 +3,20 @@ body {
   font-family: "Nunito", "Noto Sans SC", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
 
   background-color: #fdfdfd;
-  background-image: radial-gradient(#59c7f34d 1.05px, transparent 1.05px),
-    radial-gradient(#9844f74d 1.05px, #fdfdfd 1.05px);
-  background-size: 36px 36px;
-  background-position: 0 0, 18px 18px;
   color: @black;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.hidden-scrollbar {
+  scrollbar-width: none;
+  ::-webkit-scrollbar {
+    display: none;
+  }
 }

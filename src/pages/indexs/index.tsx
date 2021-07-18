@@ -1,5 +1,7 @@
 import React from "react";
 import { Cards } from "./cards";
+import { FunctionsArea } from "./functions-area";
+import "./styles/indexs.less";
 
 function Indexs() {
   return (
@@ -7,13 +9,16 @@ function Indexs() {
       onClick={() => {
         console.log("APP");
       }}
-      style={{
-        padding: 40,
-      }}
+      className="indexs-page-container"
     >
-      <div>INDEXS</div>
-      <br />
-      <Cards />
+      <div className="indexs-content-container">
+        <div className="indexs-functions-area">
+          <FunctionsArea />
+        </div>
+        <div className="indexs-cards">
+          <Cards />
+        </div>
+      </div>
     </div>
   );
 }

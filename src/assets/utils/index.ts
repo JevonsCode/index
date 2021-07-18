@@ -1,4 +1,4 @@
-export const debounce = (fn: (...args: unknown[]) => void, time = 300) => {
+export const debounce = (fn: (...args: any) => void, time = 300) => {
   let settingFn: NodeJS.Timeout;
 
   return () => {
@@ -9,7 +9,7 @@ export const debounce = (fn: (...args: unknown[]) => void, time = 300) => {
   };
 };
 
-export const throttle = (fn: (...args: unknown[]) => void, time = 300) => {
+export const throttle = (fn: (...args: any) => void, time = 300) => {
   let settingFn: NodeJS.Timeout | null;
 
   return () => {

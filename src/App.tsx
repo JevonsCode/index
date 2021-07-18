@@ -5,7 +5,7 @@ import Indexs from "@pages/indexs";
 
 function App() {
   return (
-    <div className="App">
+    <div className="hidden-scrollbar">
       <Router>
         <Switch>
           <Route path="/">

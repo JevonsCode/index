@@ -1,7 +1,8 @@
+import { makeAutoObservable } from "mobx";
 class Indexs {
   content: IndexsContent[] = [
     {
-      name: "",
+      name: "demo",
       tags: [""],
       link: {
         en: "",
@@ -11,8 +12,12 @@ class Indexs {
       description: "",
     },
   ];
+
+  constructor() {
+    makeAutoObservable(this);
+  }
 }
 
-const indexs = new Indexs();
+const indexsStore = new Indexs();
 
-export { indexs };
+export { indexsStore };

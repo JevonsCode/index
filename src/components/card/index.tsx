@@ -16,7 +16,7 @@ import { IndexsContent_WithTagConst } from "@database/indexs/site.collection";
 export function Card(props: IndexsContent_WithTagConst) {
   const { name, description, link, tags } = props;
   const _tags = tags && typeof tags === "string" ? [tags] : tags;
-  console.log(1);
+
   /**
    * 点击跳转
    * @param event

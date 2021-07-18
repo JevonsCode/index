@@ -1,3 +1,1 @@
-export {};
-
-export const env = "d";
+export * from "./indexs";
