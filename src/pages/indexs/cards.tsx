@@ -1,11 +1,9 @@
 import React, { useEffect, memo, useState, useMemo } from "react";
-import {
-  IndexsContent_WithTagConst,
-  SITE_COLLECTION,
-} from "@database/indexs/site.collection";
+import { IndexsContent_WithTagConst } from "@database/indexs/site.collection";
 import "./styles/cards.less";
 import { throttle } from "@assets/utils";
 import { observer } from "mobx-react-lite";
+import { indexsStore } from "@store";
 
 const Card = React.lazy(() => import("@components/card"));
 
@@ -18,7 +16,7 @@ const Card = React.lazy(() => import("@components/card"));
  * @returns
  */
 function Cards() {
-  const site_sorted = SITE_COLLECTION;
+  const site_sorted = indexsStore.items;
   return <FlexContainer content={site_sorted}></FlexContainer>;
 }
 const obCards = observer(Cards);
