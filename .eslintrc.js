@@ -32,6 +32,13 @@ module.exports = {
     "@typescript-eslint/explicit-module-boundary-types": 0,
     "@typescript-eslint/no-unused-vars": ["warn", { argsIgnorePattern: "^_" }],
     "react-hooks/exhaustive-deps": 0,
+    // FOR WINDOWS
+    "prettier/prettier": [
+      "error",
+      {
+        endOfLine: "auto",
+      },
+    ],
   },
   overrides: [],
 };
