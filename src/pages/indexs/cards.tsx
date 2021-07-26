@@ -82,7 +82,7 @@ const FlexContainer = (props: { content: IndexsContent_WithTagConst[] }) => {
       (window.innerWidth - 20 - 560) / (cardBoxWidth + 20)
     );
 
-    setColumns(columnCount);
+    setColumns(columnCount > 0 ? columnCount : 1);
   };
 
   const debounce_reset = throttle(reset);
