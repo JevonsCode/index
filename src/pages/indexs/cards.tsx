@@ -1,4 +1,4 @@
-import React, { useEffect, memo, useState, useMemo } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { IndexsContent_WithTagConst } from "@database/indexs/site.collection";
 import "./styles/cards.less";
 import { throttle } from "@assets/utils";
@@ -16,8 +16,7 @@ const Card = React.lazy(() => import("@components/card"));
  * @returns
  */
 function Cards() {
-  const site_sorted = indexsStore.items;
-  return <FlexContainer content={site_sorted}></FlexContainer>;
+  return <FlexContainer content={indexsStore.items.slice()}></FlexContainer>;
 }
 const obCards = observer(Cards);
 export { obCards as Cards };
@@ -27,97 +26,108 @@ export { obCards as Cards };
  * @param props list
  * @returns
  */
-const FlexContainer = (props: { content: IndexsContent_WithTagConst[] }) => {
-  const { content } = props;
+const FlexContainer = observer(
+  (props: { content: IndexsContent_WithTagConst[] }) => {
+    const { content } = props;
+    const [columns, setColumns] = useState(1);
+    const [columnList, setColumnList] = useState<
+      IndexsContent_WithTagConst[][]
+    >([[]]);
 
-  const [columns, setColumns] = useState(1);
-  const [columnList, setColumnList] = useState<IndexsContent_WithTagConst[][]>([
-    [],
-  ]);
+    /**
+     * 当网页宽度变动时计算分组
+     *
+     * TODO: 如果是手机模式就一直是 1 不用改变&监听
+     */
+    const reset = (stop?: boolean) => {
+      const cardBoxWidth =
+        document.getElementsByClassName("card-box-index")?.[0]?.clientWidth;
 
-  useEffect(() => {
-    const column_list: IndexsContent_WithTagConst[][] = new Array(columns)
-      .fill(null)
-      .map(() => {
-        return [];
-      });
-
-    let group_length_index = 0;
-    let all_cards_index = 0;
-    while (columns && all_cards_index < content.length) {
-      while (group_length_index < columns) {
-        content[all_cards_index] &&
-          column_list[group_length_index].push(content[all_cards_index]);
-
-        all_cards_index++;
-        group_length_index++;
+      if (!cardBoxWidth) {
+        !stop &&
+          setTimeout(() => {
+            reset(true);
+          }, 100);
+        return;
       }
 
-      group_length_index = 0;
-    }
+      const columnCount = Math.floor(
+        (window.innerWidth - 20 - 560) / (cardBoxWidth + 20)
+      );
 
-    setColumnList(column_list);
-  }, [columns]);
+      const intColumnCount = columnCount > 0 ? columnCount : 1;
 
-  /**
-   * 当网页宽度变动时计算分组
-   *
-   * TODO: 如果是手机模式就一直是 1 不用改变&监听
-   */
-  const reset = (stop?: boolean) => {
-    const cardBoxWidth =
-      document.getElementsByClassName("card-box-index")?.[0]?.clientWidth;
+      document.getElementsByClassName("cards-container") &&
+        document.getElementsByClassName("cards-container")[0] &&
+        ((
+          document.getElementsByClassName("cards-container")[0] as HTMLElement
+        ).style.width =
+          cardBoxWidth * intColumnCount + (intColumnCount - 1) * 20 + "px");
 
-    if (!cardBoxWidth) {
-      !stop &&
-        setTimeout(() => {
-          reset(true);
-        }, 100);
-      return;
-    }
-
-    const columnCount = Math.floor(
-      (window.innerWidth - 20 - 560) / (cardBoxWidth + 20)
-    );
-
-    setColumns(columnCount > 0 ? columnCount : 1);
-  };
-
-  const debounce_reset = throttle(reset);
-
-  useEffect(() => {
-    debounce_reset();
-    window.addEventListener("resize", debounce_reset);
-
-    return () => {
-      window.removeEventListener("resize", debounce_reset);
+      setColumns(intColumnCount);
     };
-  }, []);
 
-  return (
-    <div className={"cards-container"}>
-      {useMemo(() => {
-        return columnList.map((column, index) => {
-          return (
-            <div
-              key={
-                "group-" +
-                index +
-                (column[0]?.name + column[column.length - 1]?.name).toString()
-              }
-            >
-              {column.map((card) => (
-                <CardBox key={card.name} cardInfo={card} />
-              ))}
-            </div>
-          );
+    const debounce_reset = throttle(reset);
+
+    useEffect(() => {
+      debounce_reset();
+      window.addEventListener("resize", debounce_reset);
+
+      return () => {
+        window.removeEventListener("resize", debounce_reset);
+      };
+    }, []);
+
+    useEffect(() => {
+      const column_list: IndexsContent_WithTagConst[][] = new Array(columns)
+        .fill(null)
+        .map(() => {
+          return [];
         });
-      }, [columnList])}
-    </div>
-  );
-};
 
-const CardBox = (props: { cardInfo: IndexsContent_WithTagConst }) => {
+      let group_length_index = 0;
+      let all_cards_index = 0;
+      while (columns && all_cards_index < content.length) {
+        while (group_length_index < columns) {
+          content[all_cards_index] &&
+            column_list[group_length_index].push(content[all_cards_index]);
+
+          all_cards_index++;
+          group_length_index++;
+        }
+
+        group_length_index = 0;
+      }
+      setColumnList(column_list);
+    }, [columns, content]);
+
+    return (
+      <div className={"cards-container"}>
+        {content.length ? (
+          columnList.map((column, index) => {
+            return (
+              <div
+                key={
+                  "group-" +
+                  index +
+                  (column[0]?.name + column[column.length - 1]?.name).toString()
+                }
+              >
+                {column.map((card) => (
+                  <CardBox key={card.name} cardInfo={card} />
+                ))}
+              </div>
+            );
+          })
+        ) : (
+          <CardContainerNothing />
+        )}
+      </div>
+    );
+  }
+);
+
+const CardBox = observer((props: { cardInfo: IndexsContent_WithTagConst }) => {
   const { cardInfo } = props;
 
   return (
@@ -127,4 +137,8 @@ const CardBox = (props: { cardInfo: IndexsContent_WithTagConst }) => {
       </React.Suspense>
     </div>
   );
+});
+
+const CardContainerNothing = () => {
+  return <div style={{ color: "#db2" }}>什么都没有</div>;
 };

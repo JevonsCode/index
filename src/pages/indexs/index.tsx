@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Cards } from "./cards";
 import { FunctionsArea } from "./functions-area";
-import { IndexsService } from "@service/indexs";
+import { indexsService } from "@service/indexs";
 import "./styles/indexs.less";
 
 const Indexs: React.FC = () => {
@@ -34,7 +34,7 @@ const InitIndexs: React.FC = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    new IndexsService();
+    indexsService.init();
     setLoading(false);
   }, []);
 

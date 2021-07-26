@@ -6,7 +6,7 @@ import { tag_type } from "./tag.collection";
  * tags as const
  */
 export interface IndexsContent_WithTagConst extends IndexsContent {
-  tags?: tag_type | tag_type[];
+  tags?: tag_type[];
 }
 
 /**
@@ -22,7 +22,7 @@ export const SITE_COLLECTION: IndexsContent_WithTagConst[] = [
     name: "CODEPEN",
     link: "https://codepen.io/",
     icon: "",
-    tags: "style",
+    tags: ["style"],
     description:
       "CodePen is a social development environment for front-end designers and developers. Build and deploy a website, show off your work, build test cases to learn and debug, and find inspiration.",
   },
@@ -32,6 +32,13 @@ export const SITE_COLLECTION: IndexsContent_WithTagConst[] = [
     icon: "",
     tags: ["学习", "娱乐"],
     description: "哔哩哔哩(゜-゜)つロ干杯~-bilibili",
+  },
+  {
+    name: "r n",
+    link: "https://www.bilibili.com/",
+    icon: "",
+    tags: ["react", "style"],
+    description: "",
   },
 
   ...(() => {

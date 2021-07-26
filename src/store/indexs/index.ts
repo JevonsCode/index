@@ -4,6 +4,9 @@ class Indexs {
   items: IndexsContent_WithTagConst[] = [];
 
   text = "我是一段 Demo";
+  setText(v: string) {
+    indexsStore.text = v;
+  }
 
   constructor() {
     makeAutoObservable(this);
@@ -12,10 +15,6 @@ class Indexs {
   setItems = (value: IndexsContent_WithTagConst[]) => {
     indexsStore.items = value;
   };
-
-  setText(v: string) {
-    indexsStore.text = v;
-  }
 }
 
 const indexsStore = new Indexs();
