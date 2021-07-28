@@ -18,7 +18,7 @@ function Search() {
 
           indexsService.filterSiteDate({
             nameKeywords: e.target.value.replace(/ +/g, " ").split(" "),
-            tagNames: ["style", "react"],
+            tagNames: [],
           });
         }}
       />

@@ -38,9 +38,12 @@ class IndexsService {
         index: number
       ) {
         if (nameKeywords?.length && index) {
-          const test = nameKeywords[index - 1]?.replace(/ /g, "");
+          const testReg = new RegExp(
+            nameKeywords[index - 1]?.replace(/ /g, ""),
+            "i"
+          );
 
-          if (current.name.replace(/ /g, "").match(test)) {
+          if (testReg.test(current.name.replace(/ /g, ""))) {
             deelwithNameKeywords(current, index - 1);
           }
           // else 说明没有匹配
