@@ -26,7 +26,12 @@ class IndexsService {
   }) {
     const { nameKeywords = [], tagNames = [] } = filterParams;
 
-    console.log("kw: ", nameKeywords?.join(), " & tags: ", tagNames?.join());
+    console.log(
+      "kw: ",
+      "->" + nameKeywords?.join() + "<-",
+      " & tags: ",
+      tagNames?.join()
+    );
 
     const filtered: IndexsContent_WithTagConst[] = [];
 
@@ -39,7 +44,7 @@ class IndexsService {
       ) {
         if (nameKeywords?.length && index) {
           const testReg = new RegExp(
-            nameKeywords[index - 1]?.replace(/ /g, ""),
+            nameKeywords[index - 1]?.replace(/( |\n|\r)/g, ""),
             "i"
           );
 
