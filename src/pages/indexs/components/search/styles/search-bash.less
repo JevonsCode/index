@@ -1,3 +1,71 @@
 .search-bash-container {
   color: #fff;
+  border-radius: 8px;
+  background: rgba(36, 36, 36, 0.9);
+
+  .search-text {
+    color: rgb(252, 252, 252);
+    line-height: 20px;
+    font-size: 14px;
+    word-break: "break-all";
+  }
+
+  .search-bash-content-input-before {
+    display: inline-block;
+    width: 14px;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: left;
+  }
 }
+
+.search-bash-header-bar {
+  background: rgb(92, 95, 96);
+  border-radius: 8px 8px 0 0;
+  height: 33px;
+}
+
+.search-bash-content-box {
+  height: 320px;
+  padding: 6px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-bash-content-coded {
+  flex-direction: column;
+}
+
+.search-bash-content-coding {
+  display: flex;
+
+  .search-bash-input {
+    caret-color: none;
+    border: none;
+    outline-style: none;
+    background: none;
+    width: calc(100% - 20px);
+    min-height: 100px;
+    height: 100%;
+    resize: none;
+    overflow-y: visible;
+    background: rgba(46, 45, 45, 0);
+  }
+}
+
+// .search-bash-input {
+//   color: #fff;
+//   caret-color: none;
+//   border: none;
+//   outline-style: none;
+//   background: none;
+//   width: calc(100% - 20px);
+//   min-height: 100px;
+//   height: 100%;
+//   resize: none;
+//   line-height: 20px;
+//   overflow-y: visible;
+//   word-break: "break-all";
+//   background: rgb(206, 206, 206);
+// }
