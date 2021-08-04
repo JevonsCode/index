@@ -57,5 +57,27 @@ TODO:
 
 ## TODO
 
-- [x] div 重新写一个编辑器
-- [x] innerHtml 写成 map react
+- [ ] Search
+
+  - [x] div 重新写一个编辑器
+  - [x] innerHtml 写成 map react
+  - [ ] help placehold 输入后取消
+  - [ ] 光标样式
+
+- [ ] Tags
+
+- [ ] Cards
+
+  - [ ] icon 读取 .ico
+  - [ ] 读取网站颜色
+
+- [ ] 整体的样式
+
+  - [ ] 手机的匹配
+  - [ ] 全部加载完成再加载功能区
+  - [ ] LOADING
+
+- [ ] 脚本
+  - [ ] 检查 tag/site 命名是否重复
+  - [ ] 预加载中文拼音
+  - [ ] 预加载网站颜色/LOGO
