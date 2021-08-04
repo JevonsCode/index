@@ -5,7 +5,7 @@ import { tag_type } from "./tag.collection";
  * ---
  * tags as const
  */
-export interface IndexsContent_WithTagConst extends IndexsContent {
+export interface IndexsContent_WithTagConst extends IIndexsContent {
   tags?: tag_type[];
 }
 

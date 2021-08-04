@@ -1,4 +1,4 @@
-export const indexs: IndexsContent[] = [
+export const indexs: IIndexsContent[] = [
   {
     name: "",
     tags: "",

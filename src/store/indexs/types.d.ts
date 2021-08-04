@@ -3,7 +3,7 @@
  *
  * > 卡片类型应用
  */
-declare interface IndexsContent {
+declare interface IIndexsContent {
   /**
    * 标题/名称
    */
@@ -32,4 +32,12 @@ declare interface IndexsContent {
    * ICON（TODO: 有 Link 的情况下，如果没有 ICON 字段会自行尝试寻找）
    */
   icon?: string;
+}
+
+/**
+ * 搜索的缓存类型
+ */
+declare interface ISearchedCache {
+  content: string;
+  result?: string;
 }

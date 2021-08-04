@@ -1,13 +1,15 @@
 import { makeAutoObservable } from "mobx";
 
-export function SearchCache(valueArr: string[]) {
+export function SearchCache(valueArr: ISearchedCache[]) {
   return makeAutoObservable({
     valueArr,
-    get double() {
-      return this.value.push;
-    },
-    valueArrPush(value: string) {
+
+    valueArrPush(value: ISearchedCache) {
       this.valueArr.push(value);
+    },
+
+    clearValueArr() {
+      this.valueArr = [];
     },
   });
 }

@@ -4,7 +4,7 @@
   background: rgba(36, 36, 36, 0.9);
 
   .search-text {
-    color: rgb(252, 252, 252);
+    color: rgb(255, 255, 255);
     line-height: 20px;
     font-size: 14px;
     word-break: "break-all";
@@ -16,6 +16,7 @@
     font-size: 12px;
     line-height: 20px;
     text-align: left;
+    vertical-align: top;
   }
 }
 
@@ -31,10 +32,26 @@
   overflow-y: auto;
   display: flex;
   flex-direction: column;
+  overflow-y: scroll;
+  cursor: text;
+
+  scrollbar-width: 5px;
+  ::-webkit-scrollbar {
+    display: block;
+  }
 }
 
 .search-bash-content-coded {
   flex-direction: column;
+
+  .limit-width {
+    display: inline-block;
+    width: calc(100% - 20px);
+    word-wrap: break-word;
+
+    overflow-y: visible;
+    vertical-align: top;
+  }
 }
 
 .search-bash-content-coding {
@@ -46,26 +63,20 @@
     outline-style: none;
     background: none;
     width: calc(100% - 20px);
-    min-height: 100px;
+    min-height: 300px;
     height: 100%;
     resize: none;
     overflow-y: visible;
     background: rgba(46, 45, 45, 0);
+    // caret-color: transparent;
+
+    &:empty:before {
+      content: attr(placeholder);
+      color: #bab3af;
+      -webkit-tap-highlight-color: transparent;
+      -webkit-user-modify: read-write;
+      outline: none;
+      border: none;
+    }
   }
 }
-
-// .search-bash-input {
-//   color: #fff;
-//   caret-color: none;
-//   border: none;
-//   outline-style: none;
-//   background: none;
-//   width: calc(100% - 20px);
-//   min-height: 100px;
-//   height: 100%;
-//   resize: none;
-//   line-height: 20px;
-//   overflow-y: visible;
-//   word-break: "break-all";
-//   background: rgb(206, 206, 206);
-// }

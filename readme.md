@@ -57,5 +57,5 @@ TODO:
 
 ## TODO
 
-- [ ] div 重新写一个编辑器
-- [ ] innerHtml 写成 map react
+- [x] div 重新写一个编辑器
+- [x] innerHtml 写成 map react
