@@ -1,7 +1,7 @@
 /**
  * Tag 数据 Map
  */
-export const TAG_COLLECTION = {
+export const TAG_COLLECTION: { [K: string]: ITagBase } = {
   react: {
     icon: "",
     mainColor: "",

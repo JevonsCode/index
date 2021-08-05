@@ -19,7 +19,7 @@ const TagRender: React.ForwardRefRenderFunction<HTMLSpanElement, TagProps> = (
       ref={ref}
       className={`component-tag-container ${
         needClick ? "component-tag-container-clickable" : ""
-      }`}
+      }  ${props.className}`}
       style={props.style}
     >
       <span>{children}</span>

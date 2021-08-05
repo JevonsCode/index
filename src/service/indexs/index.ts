@@ -2,22 +2,39 @@ import {
   IndexsContent_WithTagConst,
   SITE_COLLECTION,
 } from "@database/indexs/site.collection";
+import { TAG_COLLECTION } from "@database/indexs/tag.collection";
 import { tag_type } from "@database/indexs/tag.collection";
 import { indexsStore } from "@store";
 
 class IndexsService {
   SITE_COLLECTION: typeof SITE_COLLECTION;
+  TAG_COLLECTION: typeof TAG_COLLECTION;
 
   constructor() {
     this.SITE_COLLECTION = SITE_COLLECTION;
+    this.TAG_COLLECTION = TAG_COLLECTION;
   }
 
   public init() {
     this.deelwithSiteData(this.SITE_COLLECTION);
+    this.deelwithTagData(this.TAG_COLLECTION);
   }
 
   private deelwithSiteData(sites: typeof SITE_COLLECTION) {
     indexsStore.setItems(sites);
+  }
+
+  private deelwithTagData(tags: typeof TAG_COLLECTION) {
+    const _tags: ITag[] = [];
+
+    for (const tag in tags) {
+      _tags.push({
+        name: tag,
+        ...tags[tag],
+      });
+    }
+
+    indexsStore.setTags(_tags);
   }
 
   public filterSiteDate(filterParams: {

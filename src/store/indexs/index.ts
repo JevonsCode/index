@@ -2,11 +2,7 @@ import { IndexsContent_WithTagConst } from "@database/indexs/site.collection";
 import { makeAutoObservable } from "mobx";
 class Indexs {
   items: IndexsContent_WithTagConst[] = [];
-
-  text = "我是一段 Demo";
-  setText(v: string) {
-    indexsStore.text = v;
-  }
+  tags: ITag[] = [];
 
   constructor() {
     makeAutoObservable(this);
@@ -14,6 +10,10 @@ class Indexs {
 
   setItems = (value: IndexsContent_WithTagConst[]) => {
     indexsStore.items = value;
+  };
+
+  setTags = (value: ITag[]) => {
+    indexsStore.tags = value;
   };
 }
 

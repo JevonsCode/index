@@ -1,16 +1,24 @@
 import React from "react";
 import { observer } from "mobx-react-lite";
 import { indexsStore } from "@store/indexs";
+import { Tag } from "@components/tag";
+import "./styles/tags.less";
 
 /**
  * Tags
  */
 function Tags() {
-  const { text } = indexsStore;
-
   return (
-    <div className="tags-container">
-      <div>--&gt;{text}</div>
+    <div className="tags-box">
+      <div>
+        {indexsStore.tags.map((tag) => {
+          return (
+            <Tag key={tag.name} className="tag-item">
+              {tag.name}
+            </Tag>
+          );
+        })}
+      </div>
     </div>
   );
 }

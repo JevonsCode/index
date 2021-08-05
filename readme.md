@@ -63,8 +63,11 @@ TODO:
   - [x] innerHtml 写成 map react
   - [ ] help placehold 输入后取消
   - [ ] 光标样式
+  - [ ] 滚动条
 
 - [ ] Tags
+
+  - [ ] color design
 
 - [ ] Cards
 
@@ -78,6 +81,7 @@ TODO:
   - [ ] LOADING
 
 - [ ] 脚本
+
   - [ ] 检查 tag/site 命名是否重复
   - [ ] 预加载中文拼音
   - [ ] 预加载网站颜色/LOGO

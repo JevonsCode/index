@@ -41,3 +41,22 @@ declare interface ISearchedCache {
   content: string;
   result?: string;
 }
+
+declare interface ITagBase {
+  /**
+   * 扩展 icon
+   */
+  icon?: string;
+  /**
+   * 主色调
+   */
+  mainColor?: string;
+}
+
+/**
+ * 用于展示的 Tag 类型
+ */
+declare interface ITag extends ITagBase {
+  name: string;
+  isChose?: boolean;
+}
