@@ -28,10 +28,14 @@ class IndexsService {
     const _tags: ITag[] = [];
 
     for (const tag in tags) {
-      _tags.push({
-        name: tag,
-        ...tags[tag],
-      });
+      let i = 0;
+      while (i < 100) {
+        _tags.push({
+          name: i ? tag + i : tag,
+          ...tags[tag as tag_type],
+        });
+        i++;
+      }
     }
 
     indexsStore.setTags(_tags);

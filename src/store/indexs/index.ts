@@ -3,6 +3,7 @@ import { makeAutoObservable } from "mobx";
 class Indexs {
   items: IndexsContent_WithTagConst[] = [];
   tags: ITag[] = [];
+  choseTags: ITag[] = [];
 
   constructor() {
     makeAutoObservable(this);
@@ -14,6 +15,10 @@ class Indexs {
 
   setTags = (value: ITag[]) => {
     indexsStore.tags = value;
+  };
+
+  setChoseTags = (value: ITag[]) => {
+    indexsStore.choseTags = value;
   };
 }
 
