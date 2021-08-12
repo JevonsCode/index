@@ -45,7 +45,7 @@ export function FunctionsArea() {
       <div className="function-container tags-container">
         <TagsContainer />
       </div>
-      <div className="function-container timeline-container">timeline</div>
+      <div className="function-container timeline-container"></div>
     </div>
   );
 }
