@@ -8,8 +8,12 @@ import "./styles/tags.less";
  * Tags
  */
 function Tags() {
+  const onClickTag = (e) => {
+    console.log(e);
+  };
+
   return (
-    <div className="tags-box">
+    <div className="tags-box" onClick={onClickTag}>
       <div>
         {indexsStore.tags.map((tag) => {
           return (

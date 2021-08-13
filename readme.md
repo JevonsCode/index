@@ -64,6 +64,8 @@ TODO:
   - [ ] help placehold 输入后取消
   - [ ] 光标样式
   - [ ] 滚动条
+  - [ ] 拼音搜索
+  - [ ] tag 搜索
 
 - [ ] Tags
 
