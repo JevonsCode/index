@@ -87,3 +87,7 @@ TODO:
   - [ ] 检查 tag/site 命名是否重复
   - [ ] 预加载中文拼音
   - [ ] 预加载网站颜色/LOGO
+
+- [ ] CODE
+
+  - [ ] 整理完成 TAG 将对应的 TAG 存入 SITE MAP 做到同步更改 (Y/n)

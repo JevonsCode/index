@@ -16,8 +16,8 @@ class IndexsService {
   }
 
   public init() {
-    this.deelwithSiteData(this.SITE_COLLECTION);
     this.deelwithTagData(this.TAG_COLLECTION);
+    this.deelwithSiteData(this.SITE_COLLECTION);
   }
 
   private deelwithSiteData(sites: typeof SITE_COLLECTION) {
@@ -28,14 +28,10 @@ class IndexsService {
     const _tags: ITag[] = [];
 
     for (const tag in tags) {
-      let i = 0;
-      while (i < 100) {
-        _tags.push({
-          name: i ? tag + i : tag,
-          ...tags[tag as tag_type],
-        });
-        i++;
-      }
+      _tags.push({
+        name: tag,
+        ...tags[tag as tag_type],
+      });
     }
 
     indexsStore.setTags(_tags);

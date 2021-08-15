@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Cards } from "./cards";
 import { FunctionsArea } from "./functions-area";
 import { indexsService } from "@service/indexs";
+import { indexsStore } from "@store/indexs";
 import "./styles/indexs.less";
 
 const Indexs: React.FC = () => {
@@ -18,6 +19,8 @@ const Indexs: React.FC = () => {
             <FunctionsArea />
           </div>
           <div className="indexs-cards">
+            <div>tags: </div>
+            {/* {indexsStore.choseTags.map((i) => i.name)} */}
             <Cards />
           </div>
         </div>

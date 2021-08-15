@@ -5,7 +5,8 @@ export interface TagProps extends React.HTMLAttributes<HTMLSpanElement> {
   /**
    * 禁止「禁止穿透」
    */
-  disabledStopPropagation?: false;
+  disabledStopPropagation?: boolean;
+  isChose?: boolean;
 }
 
 const TagRender: React.ForwardRefRenderFunction<HTMLSpanElement, TagProps> = (
@@ -19,7 +20,7 @@ const TagRender: React.ForwardRefRenderFunction<HTMLSpanElement, TagProps> = (
       ref={ref}
       className={`component-tag-container ${
         needClick ? "component-tag-container-clickable" : ""
-      }  ${props.className}`}
+      }  ${props.className} ${props.isChose ? "component-tag-chose" : ""}`}
       style={props.style}
     >
       <span>{children}</span>

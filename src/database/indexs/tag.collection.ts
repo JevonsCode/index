@@ -1,24 +1,5 @@
-/**
- * Tag 数据 Map
- */
-export const TAG_COLLECTION = {
-  react: {
-    icon: "",
-    mainColor: "",
-  },
-  学习: {
-    icon: "",
-    mainColor: "",
-  },
-  style: {
-    icon: "",
-    mainColor: "",
-  },
-  娱乐: {
-    icon: "",
-    mainColor: "",
-  },
-};
+import TAG_COLLECTION from "./lib/tags";
+export { TAG_COLLECTION };
 
 function object_keys<T extends { [p: string]: unknown }>(o: T): (keyof T)[] {
   return Object.keys(o);
