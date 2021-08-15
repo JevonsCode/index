@@ -5,11 +5,12 @@
     "name": "☾",
     "email": "jevons.code@gmail.com"
   },
-  "license": "",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "tag-set": "ts-node ./scripts/tags.ts",
+    "lint": "eslint"
   },
   "dependencies": {
     "mobx": "^6.3.2",
@@ -35,6 +36,7 @@
     "less": "^4.1.1",
     "less-loader": "^10.0.1",
     "prettier": "^2.3.2",
+    "ts-node": "^10.2.0",
     "typescript": "^4.3.2",
     "vite": "^2.3.7"
   }
