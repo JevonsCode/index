@@ -27,12 +27,12 @@ export { obCards as Cards };
  * @returns
  */
 const FlexContainer = observer(
-  (props: { content: IndexsContent_WithTagConst[] }) => {
+  (props: { content: typeof indexsStore.items }) => {
     const { content } = props;
     const [columns, setColumns] = useState(1);
-    const [columnList, setColumnList] = useState<
-      IndexsContent_WithTagConst[][]
-    >([[]]);
+    const [columnList, setColumnList] = useState<typeof indexsStore.items[]>([
+      [],
+    ]);
 
     /**
      * 当网页宽度变动时计算分组
@@ -79,7 +79,7 @@ const FlexContainer = observer(
     }, []);
 
     useEffect(() => {
-      const column_list: IndexsContent_WithTagConst[][] = new Array(columns)
+      const column_list: typeof indexsStore.items[] = new Array(columns)
         .fill(null)
         .map(() => {
           return [];
@@ -127,17 +127,19 @@ const FlexContainer = observer(
   }
 );
 
-const CardBox = observer((props: { cardInfo: IndexsContent_WithTagConst }) => {
-  const { cardInfo } = props;
+const CardBox = observer(
+  (props: { cardInfo: typeof indexsStore.items[number] }) => {
+    const { cardInfo } = props;
 
-  return (
-    <div key={cardInfo.name} className={"card-box-index"}>
-      <React.Suspense fallback={null}>
-        <Card {...cardInfo}></Card>
-      </React.Suspense>
-    </div>
-  );
-});
+    return (
+      <div key={cardInfo.name} className={"card-box-index"}>
+        <React.Suspense fallback={null}>
+          <Card {...cardInfo}></Card>
+        </React.Suspense>
+      </div>
+    );
+  }
+);
 
 const CardContainerNothing = () => {
   return <div style={{ color: "#db2" }}>什么都没有</div>;

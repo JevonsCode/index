@@ -9,10 +9,6 @@ declare interface IIndexsContent {
    */
   name: string;
   /**
-   * 标签/标签组（TODO: 如果出现了标签 Map 中没有的字段，用脚本添加至 JSON 后面）
-   */
-  tags?: string | string[];
-  /**
    * 链接地址（TODO: 多个地址 hover 出现多个选项）
    */
   link: string | { [k: string]: string };

@@ -66,7 +66,6 @@ const APieceofCode = observer(() => {
   const toSearch = (value: string) => {
     indexsService.filterSiteDate({
       nameKeywords: value.replace(/ +/g, " ").split(" "),
-      tagNames: [],
     });
   };
 

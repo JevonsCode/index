@@ -21,7 +21,32 @@ class IndexsService {
   }
 
   private deelwithSiteData(sites: typeof SITE_COLLECTION) {
-    indexsStore.setItems(sites);
+    const arrangedSite: typeof indexsStore.items = [];
+
+    for (let i = 0; i < sites.length; i++) {
+      const currSite = sites[i];
+      const _tags = [];
+      const { tags, ...args } = currSite;
+
+      if (tags?.length) {
+        for (let n = 0; n < tags.length; n++) {
+          const tagName = tags[n];
+          const tag = {
+            ...TAG_COLLECTION[tagName],
+            name: tagName,
+          };
+          tag && _tags.push(tag);
+        }
+      }
+      // currSite.tags = tags;
+
+      arrangedSite.push({
+        ...args,
+        tags: _tags,
+      });
+    }
+
+    indexsStore.setItems(arrangedSite);
   }
 
   private deelwithTagData(tags: typeof TAG_COLLECTION) {
@@ -37,12 +62,19 @@ class IndexsService {
     indexsStore.setTags(_tags);
   }
 
-  public filterSiteDate(filterParams: {
-    nameKeywords?: string[];
-    tagNames?: tag_type[];
-  }) {
-    const { nameKeywords = [], tagNames = [] } = filterParams;
+  onClickTag = (e: ITag) => {
+    indexsStore.onClickTag(e);
 
+    this.filterSiteDate({
+      nameKeywords: this.nameKeywordsCache,
+    });
+  };
+
+  nameKeywordsCache: string[] = [];
+  public filterSiteDate(filterParams: { nameKeywords?: string[] }) {
+    const { nameKeywords = [] } = filterParams;
+    this.nameKeywordsCache = nameKeywords;
+    const tagNames = indexsStore.choseTags.map((t) => t.name);
     console.log(
       "kw: ",
       "->" + nameKeywords?.join() + "<-",

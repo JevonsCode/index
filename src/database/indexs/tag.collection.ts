@@ -15,3 +15,13 @@ export const TAG_TYPE_LIST = object_keys(TAG_COLLECTION);
 type GETTYPE<T> = T extends (infer P)[] ? P : never;
 
 export type tag_type = GETTYPE<typeof TAG_TYPE_LIST>;
+
+export interface ITagogSite extends ITagOrigin {
+  name: tag_type;
+}
+
+export interface ITagOrigin {
+  icon?: string;
+  mainColor?: string;
+  isChose?: boolean;
+}

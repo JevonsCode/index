@@ -3,9 +3,13 @@ import { Cards } from "./cards";
 import { FunctionsArea } from "./functions-area";
 import { indexsService } from "@service/indexs";
 import { indexsStore } from "@store/indexs";
+import { observer } from "mobx-react-lite";
 import "./styles/indexs.less";
+import { Tag } from "@components/tag";
 
-const Indexs: React.FC = () => {
+const Indexs = observer(() => {
+  const ischoseTags = indexsStore.choseTags;
+
   return (
     <InitIndexs>
       <div
@@ -19,15 +23,36 @@ const Indexs: React.FC = () => {
             <FunctionsArea />
           </div>
           <div className="indexs-cards">
-            <div>tags: </div>
-            {/* {indexsStore.choseTags.map((i) => i.name)} */}
+            {!ischoseTags.length ? null : (
+              <div
+                className="indexs-ischose-tags"
+                style={{
+                  width:
+                    document.getElementsByClassName("cards-container")[0]
+                      .clientWidth - 6,
+                }}
+              >
+                {ischoseTags.map((tag) => {
+                  return (
+                    <Tag
+                      key={tag.name}
+                      className="tag-item"
+                      onClick={() => indexsService.onClickTag(tag)}
+                      isChose={tag.isChose}
+                    >
+                      {tag.name}
+                    </Tag>
+                  );
+                })}
+              </div>
+            )}
             <Cards />
           </div>
         </div>
       </div>
     </InitIndexs>
   );
-};
+});
 
 const Loading: React.FC = () => {
   return <div>LOADING</div>;

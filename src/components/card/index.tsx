@@ -6,16 +6,18 @@
 import React from "react";
 import { Tag } from "@components/tag";
 import "./styles.less";
-import { IndexsContent_WithTagConst } from "@database/indexs/site.collection";
+import { indexsService } from "@service/indexs";
+import { indexsStore } from "@store";
+import { observer } from "mobx-react-lite";
 
 /**
  * 卡片组件
  * ---
  *
  */
-export function Card(props: IndexsContent_WithTagConst) {
+export function Card(props: typeof indexsStore.items[number]) {
   const { name, description, link, tags } = props;
-  const _tags = tags && typeof tags === "string" ? [tags] : tags;
+  const _tags = tags;
 
   /**
    * 点击跳转
@@ -66,16 +68,14 @@ export function Card(props: IndexsContent_WithTagConst) {
             {_tags.map((tag) => {
               return (
                 <Tag
-                  key={tag}
+                  key={tag.name}
                   style={{
                     marginRight: 6,
                     marginBottom: 2,
                   }}
-                  onClick={() => {
-                    console.log("23333");
-                  }}
+                  onClick={() => indexsService.onClickTag(tag)}
                 >
-                  {tag}
+                  {tag.name}
                 </Tag>
               );
             })}
@@ -86,4 +86,4 @@ export function Card(props: IndexsContent_WithTagConst) {
   );
 }
 
-export default Card;
+export default observer(Card);

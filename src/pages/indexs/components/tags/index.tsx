@@ -3,13 +3,14 @@ import { observer } from "mobx-react-lite";
 import { indexsStore } from "@store/indexs";
 import { Tag } from "@components/tag";
 import "./styles/tags.less";
+import { indexsService } from "@service/indexs";
 
 /**
  * Tags
  */
 function Tags() {
   const onClickTag = (e: ITag) => {
-    e.isChose = !e.isChose;
+    indexsService.onClickTag(e);
   };
 
   return (
