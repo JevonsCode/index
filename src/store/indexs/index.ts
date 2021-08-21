@@ -1,8 +1,7 @@
-import { ITagogSite } from "@database/indexs/tag.collection";
 import { action, makeAutoObservable } from "mobx";
 
 interface IIndexsContentStore extends IIndexsContent {
-  tags?: ITagogSite[];
+  tags?: ITag[];
 }
 
 class Indexs {

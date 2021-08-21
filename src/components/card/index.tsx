@@ -62,7 +62,7 @@ export function Card(props: typeof indexsStore.items[number]) {
         </div>
       </div>
 
-      {_tags ? (
+      {_tags?.length ? (
         <div className={"component-card-container-slide-cover"}>
           <div className={"tag-group"}>
             {_tags.map((tag) => {

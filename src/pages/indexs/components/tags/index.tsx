@@ -32,6 +32,6 @@ function Tags() {
     </div>
   );
 }
-const obSearch = observer(Tags);
+const tagComponent = observer(Tags);
 
-export { obSearch as TagsContainer };
+export { tagComponent as TagsContainer };
