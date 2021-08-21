@@ -1,4 +1,5 @@
 import { action, makeAutoObservable } from "mobx";
+import { IIndexsContent, ITag } from "./types";
 
 interface IIndexsContentStore extends IIndexsContent {
   tags?: ITag[];

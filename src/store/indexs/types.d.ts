@@ -3,7 +3,7 @@
  *
  * > 卡片类型应用
  */
-declare interface IIndexsContent {
+export interface IIndexsContent {
   /**
    * 标题/名称
    */
@@ -33,12 +33,12 @@ declare interface IIndexsContent {
 /**
  * 搜索的缓存类型
  */
-declare interface ISearchedCache {
+export interface ISearchedCache {
   content: string;
   result?: string;
 }
 
-declare interface ITagBase {
+export interface ITagBase {
   /**
    * 扩展 icon
    */
@@ -52,7 +52,7 @@ declare interface ITagBase {
 /**
  * 用于展示的 Tag 类型
  */
-declare interface ITag extends ITagBase {
+export interface ITag extends ITagBase {
   name: string;
   isChose?: boolean;
 }

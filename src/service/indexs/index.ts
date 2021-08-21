@@ -5,6 +5,7 @@ import {
 import { TAG_COLLECTION } from "@database/indexs/tag.collection";
 import { tag_type } from "@database/indexs/tag.collection";
 import { indexsStore } from "@store";
+import { ITag } from "@store/indexs/types";
 
 class IndexsService {
   SITE_COLLECTION: typeof SITE_COLLECTION;

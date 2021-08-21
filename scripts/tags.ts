@@ -1,4 +1,5 @@
 import { TAG_COLLECTION } from "../src/database/indexs/tag.collection";
+import { SITE_COLLECTION } from "../src/database/indexs/site.collection";
 import { exec } from "./utils/exec";
 import { makeFile } from "./utils/mkFile";
 
@@ -8,18 +9,47 @@ interface IFileTagContent {
   [K: string]: unknown;
 }
 
-function deelwithFileTag() {
-  for (const t in TAG_COLLECTION) {
-    const TAG = TAG_COLLECTION[t] as IFileTagContent;
+/**
+ * Tag base
+ */
+const template = { icon: "", mainColor: "", isChose: false };
+
+function filluptheVacancy(TAG_MAP: typeof TAG_COLLECTION) {
+  for (let i = 0; i < SITE_COLLECTION.length; i++) {
+    const site = SITE_COLLECTION[i];
+
+    if (!site.tags) continue;
+
+    for (let ii = 0; ii < site.tags.length; ii++) {
+      const tag = site.tags[ii];
+
+      if (!TAG_MAP[tag]) {
+        TAG_MAP[tag] = template;
+      }
+    }
+  }
+}
+
+function deelwithFileTag(TAG_MAP: typeof TAG_COLLECTION) {
+  for (const t in TAG_MAP) {
+    const TAG = TAG_MAP[t] as IFileTagContent;
     if (!TAG) continue;
 
     TAG.isChose = false;
   }
 }
 
-deelwithFileTag();
+function init() {
+  const TAG_MAP = JSON.parse(JSON.stringify(TAG_COLLECTION));
 
-const CONTENT = `export default` + JSON.stringify(TAG_COLLECTION);
+  deelwithFileTag(TAG_MAP);
+
+  filluptheVacancy(TAG_MAP);
+
+  return TAG_MAP;
+}
+
+const CONTENT = `export default` + JSON.stringify(init());
 
 (async function run() {
   await makeFile(outputTagPath, CONTENT);

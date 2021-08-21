@@ -3,4 +3,5 @@ export default {
   学习: { icon: "", mainColor: "", isChose: false },
   style: { icon: "", mainColor: "", isChose: false },
   娱乐: { icon: "", mainColor: "", isChose: false },
+  "react native": { icon: "", mainColor: "", isChose: false },
 };

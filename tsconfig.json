@@ -24,7 +24,8 @@
       "@store": ["src/store"],
       "@store/*": ["src/store/*"],
       "@database/*": ["src/database/*"]
-    }
+    },
+    "typeRoots": ["src/store/indexs/types.d.ts", "./node_modules/@types"]
   },
   "include": ["src"],
   "ts-node": {
