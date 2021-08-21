@@ -32,6 +32,8 @@ class IndexsService {
       if (tags?.length) {
         for (let n = 0; n < tags.length; n++) {
           const tagName = tags[n];
+          if (!tagName) continue;
+
           // TODO: 在这里加一个 MAP 加快速度
           const tag = indexsStore.tags.find((i) => i.name === tagName);
           tag && _tags.push(tag);

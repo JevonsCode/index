@@ -23,7 +23,7 @@ function filluptheVacancy(TAG_MAP: typeof TAG_COLLECTION) {
     for (let ii = 0; ii < site.tags.length; ii++) {
       const tag = site.tags[ii];
 
-      if (!TAG_MAP[tag]) {
+      if (tag && !TAG_MAP[tag]) {
         TAG_MAP[tag] = template;
       }
     }

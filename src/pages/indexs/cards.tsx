@@ -1,5 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
-import { IndexsContent_WithTagConst } from "@database/indexs/site.collection";
+import React, { useEffect, useState } from "react";
 import "./styles/cards.less";
 import { throttle } from "@assets/utils";
 import { observer } from "mobx-react-lite";
