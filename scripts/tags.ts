@@ -5,6 +5,8 @@ import { makeFile } from "./utils/mkFile";
 
 const outputTagPath = __dirname + "/../src/database/indexs/lib/tags.ts";
 
+const BASECONTENT = `export default`;
+
 interface IFileTagContent {
   [K: string]: unknown;
 }
@@ -39,6 +41,9 @@ function deelwithFileTag(TAG_MAP: typeof TAG_COLLECTION) {
   }
 }
 
+/**
+ * **main**
+ */
 function init() {
   const TAG_MAP = JSON.parse(JSON.stringify(TAG_COLLECTION));
 
@@ -49,7 +54,7 @@ function init() {
   return TAG_MAP;
 }
 
-const CONTENT = `export default` + JSON.stringify(init());
+const CONTENT = BASECONTENT + JSON.stringify(init());
 
 (async function run() {
   await makeFile(outputTagPath, CONTENT);

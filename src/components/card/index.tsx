@@ -16,7 +16,7 @@ import { observer } from "mobx-react-lite";
  *
  */
 export function Card(props: typeof indexsStore.items[number]) {
-  const { name, description, link, tags } = props;
+  const { name, description, link, tags, icon } = props;
   const _tags = tags;
 
   /**
@@ -37,7 +37,17 @@ export function Card(props: typeof indexsStore.items[number]) {
     <div className={"component-card-box"}>
       <div className={"component-card-container"}>
         <div className={"card-header"}>
-          <div className={"card-header-image-field"}></div>
+          <div
+            className={
+              icon
+                ? "card-header-image-field"
+                : "card-header-image-field-without-img"
+            }
+          >
+            {!icon ? null : (
+              <img src={icon} alt="" className={"card-header-image"} />
+            )}
+          </div>
         </div>
         <div className="card-content-top">
           <span>{name}</span>
