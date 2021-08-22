@@ -4,6 +4,7 @@ import { indexsStore } from "@store/indexs";
 import { Tag } from "@components/tag";
 import "./styles/tags.less";
 import { indexsService } from "@service/indexs";
+import { ITag } from "@store/indexs/types";
 
 /**
  * Tags

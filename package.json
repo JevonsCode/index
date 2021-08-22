@@ -10,6 +10,7 @@
     "build": "tsc && vite build",
     "serve": "vite preview",
     "tag-set": "ts-node ./scripts/tags.ts",
+    "deploy": "gh-pages -d dist",
     "lint": "eslint"
   },
   "dependencies": {
@@ -33,6 +34,7 @@
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "gh-pages": "^3.2.3",
     "less": "^4.1.1",
     "less-loader": "^10.0.1",
     "prettier": "^2.3.2",

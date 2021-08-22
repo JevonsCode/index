@@ -1,4 +1,5 @@
 import { makeAutoObservable } from "mobx";
+import { ISearchedCache } from "./types";
 
 export function SearchCache(valueArr: ISearchedCache[]) {
   return makeAutoObservable({
