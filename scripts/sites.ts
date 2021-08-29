@@ -56,23 +56,18 @@ async function setWebIcon(SITES: typeof ORIGIN_SITE_COLLECTION) {
       const imgName = "site-favicon/" + domainFirstName[2] + ".ico";
 
       try {
-        console.log(
-          `这是个啥 ==>  ~ file: sites.ts ~ line 55 ~ setWebIcon ~ link`,
-          link
-        );
+        console.log(`\n正在请求 ${imgName} icon`);
         let res = await query.getImage(link, imgName);
         if (res.statusCode !== 200) {
+          console.log(`\n请求 ${res.statusCode} http 重新请求`);
+
           res = await query.getImage(link, imgName, "http");
         }
         if (res.statusCode !== 200) {
           link = undefined;
         }
-
-        console.log(
-          `这是个啥 ==>  ~ file: sites.ts ~ line 57 ~ setWebIcon ~ res`,
-          res.statusCode
-        );
       } catch (e) {
+        console.log(`这是个啥 ==> err `, e);
         link = undefined;
       }
     }

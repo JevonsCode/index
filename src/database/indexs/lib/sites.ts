@@ -8,11 +8,17 @@ export interface IndexsContent_WithTagConst_origin extends IIndexsContent {
 }
 
 export const ORIGIN_SITE_COLLECTION: IndexsContent_WithTagConst_origin[] = [
-  { name: "GitHub", link: "https://github.com/", tags: ["github", "code"] },
+  {
+    name: "GitHub",
+    link: "https://github.com/",
+    tags: ["github", "code"],
+    icon: "https://github.com/favicon.ico",
+  },
   {
     name: "CODEPEN",
     link: "https://codepen.io/",
     tags: ["style", "javascript"],
+    icon: "src\\source\\images\\site-favicon\\codepen.ico",
     description:
       "CodePen is a social development environment for front-end designers and developers. Build and deploy a website, show off your work, build test cases to learn and debug, and find inspiration.",
   },
