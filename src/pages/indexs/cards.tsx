@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useLayoutEffect, useMemo, useState } from "react";
 import "./styles/cards.less";
 import { throttle } from "@assets/utils";
 import { observer } from "mobx-react-lite";
@@ -6,102 +6,72 @@ import { indexsStore } from "@store";
 
 const Card = React.lazy(() => import("@components/card"));
 
+const CARD_WIDTH = 300;
+const COLUMN_GAP = 20;
+const FUNCTIONS_AREA_WIDTH = 560;
+const PAGE_HORIZONTAL_OFFSET = 20;
+
 /**
  * 卡列表集合
  * ---
  * - 排序
  * - 瀑布流
  * - 分组
- * @returns
  */
 function Cards() {
-  return <FlexContainer content={indexsStore.items.slice()}></FlexContainer>;
+  return <FlexContainer content={indexsStore.items.slice()} />;
 }
 const obCards = observer(Cards);
 export { obCards as Cards };
 
 /**
  * flex 布局瀑布流 container
- * @param props list
- * @returns
  */
 const FlexContainer = observer(
   (props: { content: typeof indexsStore.items }) => {
     const { content } = props;
     const [columns, setColumns] = useState(1);
-    const [columnList, setColumnList] = useState<typeof indexsStore.items[]>([
-      [],
-    ]);
 
-    /**
-     * 当网页宽度变动时计算分组
-     *
-     * TODO: 如果是手机模式就一直是 1 不用改变&监听
-     */
-    const reset = (stop?: boolean) => {
-      const cardBoxWidth =
-        document.getElementsByClassName("card-box-index")?.[0]?.clientWidth;
+    useLayoutEffect(() => {
+      const calculateColumns = () => {
+        const availableWidth =
+          window.innerWidth - FUNCTIONS_AREA_WIDTH - PAGE_HORIZONTAL_OFFSET;
 
-      if (!cardBoxWidth) {
-        !stop &&
-          setTimeout(() => {
-            reset(true);
-          }, 100);
-        return;
-      }
+        const nextColumns = Math.max(
+          1,
+          Math.floor((availableWidth + COLUMN_GAP) / (CARD_WIDTH + COLUMN_GAP))
+        );
 
-      const columnCount = Math.floor(
-        (window.innerWidth - 20 - 560) / (cardBoxWidth + 20)
-      );
+        setColumns(nextColumns);
+      };
 
-      const intColumnCount = columnCount > 0 ? columnCount : 1;
+      const handleResize = throttle(calculateColumns);
 
-      document.getElementsByClassName("cards-container") &&
-        document.getElementsByClassName("cards-container")[0] &&
-        ((
-          document.getElementsByClassName("cards-container")[0] as HTMLElement
-        ).style.width =
-          cardBoxWidth * intColumnCount + (intColumnCount - 1) * 20 + "px");
-
-      setColumns(intColumnCount);
-    };
-
-    const debounce_reset = throttle(reset);
-
-    useEffect(() => {
-      debounce_reset();
-      window.addEventListener("resize", debounce_reset);
+      calculateColumns();
+      window.addEventListener("resize", handleResize);
 
       return () => {
-        window.removeEventListener("resize", debounce_reset);
+        window.removeEventListener("resize", handleResize);
       };
     }, []);
 
-    useEffect(() => {
-      const column_list: typeof indexsStore.items[] = new Array(columns)
+    const columnList = useMemo(() => {
+      const grouped: typeof indexsStore.items[] = new Array(columns)
         .fill(null)
-        .map(() => {
-          return [];
-        });
+        .map(() => []);
 
-      let group_length_index = 0;
-      let all_cards_index = 0;
-      while (columns && all_cards_index < content.length) {
-        while (group_length_index < columns) {
-          content[all_cards_index] &&
-            column_list[group_length_index].push(content[all_cards_index]);
+      content.forEach((item, index) => {
+        grouped[index % columns].push(item);
+      });
 
-          all_cards_index++;
-          group_length_index++;
-        }
-
-        group_length_index = 0;
-      }
-      setColumnList(column_list);
+      return grouped;
     }, [columns, content]);
 
+    const containerWidth =
+      columns * CARD_WIDTH + Math.max(columns - 1, 0) * COLUMN_GAP;
+
     return (
-      <div className={"cards-container"}>
+      <div className="cards-container" style={{ width: containerWidth }}>
         {content.length ? (
           columnList.map((column, index) => {
             return (
@@ -109,7 +79,8 @@ const FlexContainer = observer(
                 key={
                   "group-" +
                   index +
-                  (column[0]?.name + column[column.length - 1]?.name).toString()
+                  (column[0]?.name ?? "") +
+                  (column[column.length - 1]?.name ?? "")
                 }
               >
                 {column.map((card) => (
@@ -131,9 +102,9 @@ const CardBox = observer(
     const { cardInfo } = props;
 
     return (
-      <div key={cardInfo.name} className={"card-box-index"}>
+      <div className="card-box-index">
         <React.Suspense fallback={null}>
-          <Card {...cardInfo}></Card>
+          <Card {...cardInfo} />
         </React.Suspense>
       </div>
     );
