@@ -18,33 +18,37 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: 20
-          cache: npm
+          node-version: latest
+          package-manager-cache: false
 
-      - name: Use npmjs registry
-        run: npm config set registry https://registry.npmjs.org/
+      - name: Force npmjs registry
+        run: |
+          npm config set registry https://registry.npmjs.org/
+          npm config get registry
 
-      - name: Remove legacy yarn lock mirror pins
+      - name: Remove legacy Yarn lockfile mirror pins
         run: rm -f yarn.lock
 
       - name: Install dependencies
-        run: npm install --no-fund --no-audit
+        run: npm install --registry=https://registry.npmjs.org/ --no-fund --no-audit
 
-      - name: Build
+      - name: Build site
         run: npm run build
 
-      - name: Setup Pages
+      - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
         with:
           path: ./dist
 
@@ -54,7 +58,9 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     steps:
-      - name: Deploy
+      - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
