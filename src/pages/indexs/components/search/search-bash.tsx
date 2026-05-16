@@ -57,6 +57,9 @@ function Search() {
 }
 const obSearch = memo(observer(Search));
 
+const plaintextOnlyContentEditable =
+  "plaintext-only" as React.HTMLAttributes<HTMLDivElement>["contentEditable"];
+
 /**
  * content
  */
@@ -90,7 +93,7 @@ const APieceofCode = observer(() => {
         ref={codeInput}
         onInput={onChange}
         className="search-bash-input search-text"
-        contentEditable="plaintext-only"
+        contentEditable={plaintextOnlyContentEditable}
         placeholder="help"
       ></div>
     </div>
