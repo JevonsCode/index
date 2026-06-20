@@ -1,0 +1,15 @@
+[
+  {
+    "slug": "iceland-4day",
+    "title": "冰岛 4 日行程复核｜真实照片与地图标注",
+    "subtitle": "斯奈山半岛、黄金圈、南岸、维克、冰河湖可选动线",
+    "destination": "Iceland",
+    "days": 4,
+    "date": "2026-06-21",
+    "status": "published",
+    "entry": "./iceland-4day/",
+    "tags": ["冰岛", "自驾", "真实照片", "地图标注", "行程复核"],
+    "summary": "基于 Excel 路书整理，包含合理性判断、真实景点照片来源、Leaflet 地图标注和 GeoJSON 坐标数据。",
+    "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Iceland_Snaefellsnes.jpg/1280px-Iceland_Snaefellsnes.jpg"
+  }
+]
