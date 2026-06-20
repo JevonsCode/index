@@ -1,0 +1,22 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {"type":"Feature","geometry":{"type":"Point","coordinates":[-21.9426,64.1466]},"properties":{"day":"D1","cn":"雷克雅未克","en":"Reykjavík","type":"城市/出发点"}},
+    {"type":"Feature","geometry":{"type":"Point","coordinates":[-23.0,64.8333]},"properties":{"day":"D1","cn":"斯奈山半岛","en":"Snæfellsnes Peninsula","type":"区域"}},
+    {"type":"Feature","geometry":{"type":"Point","coordinates":[-23.3075,64.9417]},"properties":{"day":"D1","cn":"草帽山","en":"Kirkjufell","type":"山峰/瀑布"}},
+    {"type":"Feature","geometry":{"type":"Point","coordinates":[-22.7297,65.0756]},"properties":{"day":"D1","cn":"斯蒂基斯霍尔米","en":"Stykkishólmur","type":"住宿点/小镇"}},
+    {"type":"Feature","geometry":{"type":"Point","coordinates":[-19.9886,63.6156]},"properties":{"day":"D2","cn":"塞里雅兰瀑布","en":"Seljalandsfoss","type":"瀑布"}},
+    {"type":"Feature","geometry":{"type":"Point","coordinates":[-20.4000,63.8333]},"properties":{"day":"D2","cn":"赫拉","en":"Hella","type":"住宿点/小镇"}},
+    {"type":"Feature","geometry":{"type":"Point","coordinates":[-21.1300,64.2559]},"properties":{"day":"D3","cn":"辛格维利尔国家公园","en":"Þingvellir National Park","type":"国家公园"}},
+    {"type":"Feature","geometry":{"type":"Point","coordinates":[-20.3000,64.3104]},"properties":{"day":"D3","cn":"盖歇尔间歇泉","en":"Geysir / Strokkur","type":"地热景观"}},
+    {"type":"Feature","geometry":{"type":"Point","coordinates":[-20.1200,64.3271]},"properties":{"day":"D3","cn":"黄金瀑布","en":"Gullfoss","type":"瀑布"}},
+    {"type":"Feature","geometry":{"type":"Point","coordinates":[-19.0670,63.9920]},"properties":{"day":"D3","cn":"兰德曼纳劳卡 / 彩虹山","en":"Landmannalaugar","type":"高地/机动点"}},
+    {"type":"Feature","geometry":{"type":"Point","coordinates":[-19.0090,63.4186]},"properties":{"day":"D3-D4","cn":"维克","en":"Vík í Mýrdal","type":"住宿点/小镇"}},
+    {"type":"Feature","geometry":{"type":"Point","coordinates":[-19.0443,63.4045]},"properties":{"day":"D4","cn":"雷尼斯黑沙滩","en":"Reynisfjara Black Sand Beach","type":"海滩"}},
+    {"type":"Feature","geometry":{"type":"Point","coordinates":[-19.1260,63.4009]},"properties":{"day":"D4","cn":"迪霍拉里海岬","en":"Dyrhólaey","type":"海岬"}},
+    {"type":"Feature","geometry":{"type":"Point","coordinates":[-19.5114,63.5321]},"properties":{"day":"D4","cn":"斯科加瀑布","en":"Skógafoss","type":"瀑布"}},
+    {"type":"Feature","geometry":{"type":"Point","coordinates":[-19.3692,63.5308]},"properties":{"day":"D4","cn":"索尔黑马冰川","en":"Sólheimajökull","type":"冰川"}},
+    {"type":"Feature","geometry":{"type":"Point","coordinates":[-16.2306,64.0481]},"properties":{"day":"D4 可选","cn":"杰古沙龙冰河湖","en":"Jökulsárlón Glacier Lagoon","type":"冰河湖"}},
+    {"type":"Feature","geometry":{"type":"Point","coordinates":[-16.1781,64.0439]},"properties":{"day":"D4 可选","cn":"钻石沙滩","en":"Diamond Beach","type":"海滩"}}
+  ]
+}
