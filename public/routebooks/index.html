@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>路书项目｜Routebooks</title>
+  <style>
+    :root{--blue:#1677ff;--deep:#0f172a;--text:#334155;--muted:#64748b;--line:#e2e8f0;--soft:#f8fafc;--card:#fff;--ok:#16a34a}*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',Arial,sans-serif;color:var(--text);background:linear-gradient(180deg,#f4f8ff 0,#fff 32%)}.hero{padding:56px 56px 24px;max-width:1200px;margin:0 auto}.eyebrow{display:inline-flex;gap:8px;align-items:center;padding:6px 10px;border:1px solid #bfdbfe;background:#eff6ff;color:#1d4ed8;border-radius:999px;font-size:13px;font-weight:600}.dot{width:8px;height:8px;background:var(--ok);border-radius:50%}h1{font-size:42px;line-height:1.12;margin:20px 0 12px;color:var(--deep);letter-spacing:-.03em}.sub{max-width:760px;line-height:1.75;color:var(--muted);font-size:16px}.toolbar{display:flex;gap:12px;align-items:center;margin-top:28px;flex-wrap:wrap}.search{width:min(420px,100%);padding:13px 15px;border:1px solid var(--line);border-radius:14px;background:#fff;font-size:15px;outline:none}.pill{padding:10px 13px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--muted);font-size:14px}main{max-width:1200px;margin:0 auto;padding:24px 56px 64px}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}.card{display:flex;flex-direction:column;overflow:hidden;border:1px solid var(--line);border-radius:24px;background:rgba(255,255,255,.92);box-shadow:0 18px 50px rgba(15,23,42,.08);text-decoration:none;color:inherit;transition:.18s ease}.card:hover{transform:translateY(-3px);box-shadow:0 24px 70px rgba(15,23,42,.12);border-color:#bfdbfe}.cover{height:178px;background:#e2e8f0 center/cover no-repeat}.body{padding:20px}.meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}.tag{font-size:12px;border:1px solid #dbeafe;background:#eff6ff;color:#1d4ed8;border-radius:999px;padding:5px 8px}.title{font-size:20px;font-weight:800;color:var(--deep);line-height:1.35;margin-bottom:8px}.summary{font-size:14px;line-height:1.7;color:var(--muted)}.foot{display:flex;justify-content:space-between;align-items:center;margin-top:16px;font-size:13px;color:#64748b}.empty{padding:32px;border:1px dashed var(--line);border-radius:20px;background:var(--soft);color:var(--muted)}.guide{margin-top:32px;padding:22px;border:1px solid var(--line);border-radius:22px;background:var(--soft);line-height:1.8}.guide h2{margin:0 0 8px;color:var(--deep);font-size:18px}.guide code{background:#fff;border:1px solid var(--line);padding:2px 6px;border-radius:7px;color:#0f172a}.guide pre{overflow:auto;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px;font-size:13px;line-height:1.6}@media(max-width:720px){.hero{padding:34px 22px 16px}main{padding:20px 22px 44px}h1{font-size:32px}.cover{height:150px}}
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <div class="eyebrow"><span class="dot"></span> GitHub Pages Routebooks</div>
+    <h1>路书项目</h1>
+    <p class="sub">集中托管旅行路书 HTML。每一份路书使用独立目录，支持真实照片、地图标注、GeoJSON 坐标和后续复用。</p>
+    <div class="toolbar"><input id="q" class="search" placeholder="搜索目的地、标签、标题…" /><span class="pill" id="count">加载中</span></div>
+  </section>
+  <main>
+    <div id="list" class="grid"></div>
+    <div class="guide">
+      <h2>新增路书的约定</h2>
+      <p>把新的 HTML 放到 <code>public/routebooks/你的路书-slug/index.html</code>，再在 <code>public/routebooks/manifest.json</code> 里追加一条记录。推送到 <code>master</code> 后，GitHub Actions 会自动部署到 GitHub Pages。</p>
+      <pre>{
+  "slug": "norway-fjords-2026",
+  "title": "挪威峡湾 4 日路书",
+  "entry": "./norway-fjords-2026/",
+  "destination": "Norway",
+  "days": 4,
+  "tags": ["挪威", "峡湾", "自驾"]
+}</pre>
+    </div>
+  </main>
+  <script>
+    const list=document.querySelector('#list');const q=document.querySelector('#q');const count=document.querySelector('#count');let data=[];
+    function safe(s){return String(s||'').replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]))}
+    function match(item,keyword){if(!keyword)return true;const text=[item.title,item.subtitle,item.destination,item.summary,(item.tags||[]).join(' ')].join(' ').toLowerCase();return text.includes(keyword.toLowerCase())}
+    function render(){const keyword=q.value.trim();const items=data.filter(item=>match(item,keyword));count.textContent=`${items.length} 份路书`;list.innerHTML=items.length?items.map(item=>`<a class="card" href="${safe(item.entry)}"><div class="cover" style="background-image:url('${safe(item.cover)}')"></div><div class="body"><div class="meta"><span class="tag">${safe(item.destination||'Travel')}</span><span class="tag">${safe(item.days||'-')} 天</span>${(item.tags||[]).slice(0,2).map(t=>`<span class="tag">${safe(t)}</span>`).join('')}</div><div class="title">${safe(item.title)}</div><div class="summary">${safe(item.summary||item.subtitle||'')}</div><div class="foot"><span>${safe(item.date||'')}</span><strong>打开路书 →</strong></div></div></a>`).join(''):'<div class="empty">没有匹配的路书。</div>'}
+    fetch('./manifest.json').then(r=>r.json()).then(json=>{data=json;render()}).catch(()=>{count.textContent='加载失败';list.innerHTML='<div class="empty">manifest.json 加载失败。</div>'});q.addEventListener('input',render);
+  </script>
+</body>
+</html>
