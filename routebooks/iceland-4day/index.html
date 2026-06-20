@@ -6,7 +6,7 @@
   <title>冰岛 4 日行程复核｜真实照片与地图标注</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <style>
-    :root{--blue:#1677ff;--deep:#0f172a;--text:#334155;--muted:#64748b;--line:#e2e8f0;--soft:#f8fafc;--warn:#ea580c;--bad:#dc2626;--ok:#16a34a}*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',Arial,sans-serif;color:var(--text);background:linear-gradient(180deg,#f6f9ff 0%,#fff 28%)}.top{position:sticky;top:0;z-index:999;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:10px 48px;font-size:14px}.top a{color:var(--blue);text-decoration:none;font-weight:700}.top span{color:#94a3b8;margin-left:12px}header{padding:40px 48px 24px}h1{margin:0 0 10px;font-size:32px;color:var(--deep);letter-spacing:-.02em}.sub{color:var(--muted);font-size:15px;max-width:980px;line-height:1.7}main{padding:0 48px 56px}section{margin:28px 0}.grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.card{background:white;border:1px solid var(--line);border-radius:18px;box-shadow:0 12px 36px rgba(15,23,42,.06);overflow:hidden}.card .body{padding:18px}.metric{font-size:28px;font-weight:800;color:var(--deep)}.label{color:var(--muted);font-size:13px;margin-top:4px}.warn{color:var(--warn);font-weight:700}.bad{color:var(--bad);font-weight:700}.ok{color:var(--ok);font-weight:700}.section-title{display:flex;align-items:end;justify-content:space-between;margin-bottom:12px}.section-title h2{margin:0;color:var(--deep);font-size:22px}.section-title p{margin:0;color:var(--muted);font-size:13px}.timeline{display:grid;gap:14px}.day{border-left:4px solid var(--blue)}.day h3{margin:0 0 8px;color:var(--deep);font-size:18px}.day ul{margin:8px 0 0;padding-left:18px;line-height:1.8}.map{height:520px;border-radius:18px;border:1px solid var(--line);overflow:hidden}.places{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}.place img{width:100%;height:160px;object-fit:cover;background:#e2e8f0}.place h3{margin:0;font-size:16px;color:var(--deep)}.place p{font-size:13px;line-height:1.6;color:var(--muted);margin:8px 0}.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}.tag{font-size:12px;padding:4px 8px;border-radius:999px;background:#eff6ff;color:#1d4ed8;border:1px solid #bfdbfe}a{color:var(--blue)}table{width:100%;border-collapse:collapse;background:white;border:1px solid var(--line);border-radius:16px;overflow:hidden}th,td{padding:12px;border-bottom:1px solid var(--line);text-align:left;font-size:14px;vertical-align:top}th{background:#f8fafc;color:#475569}tr:last-child td{border-bottom:0}.note{padding:14px 16px;background:#fff7ed;border:1px solid #fed7aa;border-radius:16px;color:#9a3412;line-height:1.8}@media(max-width:900px){header,main{padding-left:20px;padding-right:20px}.top{padding:10px 20px}.grid-3,.grid-2{grid-template-columns:1fr}.map{height:420px}}
+    :root{--blue:#1677ff;--deep:#0f172a;--text:#334155;--muted:#64748b;--line:#e2e8f0;--soft:#f8fafc;--warn:#ea580c;--bad:#dc2626;--ok:#16a34a}*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',Arial,sans-serif;color:var(--text);background:linear-gradient(180deg,#f6f9ff 0%,#fff 28%)}.top{position:sticky;top:0;z-index:999;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:10px 48px;font-size:14px}.top a{color:var(--blue);text-decoration:none;font-weight:700}.top span{color:#94a3b8;margin-left:12px}header{padding:40px 48px 24px}h1{margin:0 0 10px;font-size:32px;color:var(--deep);letter-spacing:-.02em}.sub{color:var(--muted);font-size:15px;max-width:980px;line-height:1.7}main{padding:0 48px 56px}section{margin:28px 0}.grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.card{background:white;border:1px solid var(--line);border-radius:18px;box-shadow:0 12px 36px rgba(15,23,42,.06);overflow:hidden}.card .body{padding:18px}.metric{font-size:28px;font-weight:800;color:var(--deep)}.label{color:var(--muted);font-size:13px;margin-top:4px}.warn{color:var(--warn);font-weight:700}.bad{color:var(--bad);font-weight:700}.ok{color:var(--ok);font-weight:700}.section-title{display:flex;align-items:end;justify-content:space-between;margin-bottom:12px}.section-title h2{margin:0;color:var(--deep);font-size:22px}.section-title p{margin:0;color:var(--muted);font-size:13px}.day{border-left:4px solid var(--blue)}.day h3{margin:0 0 8px;color:var(--deep);font-size:18px}.day ul{margin:8px 0 0;padding-left:18px;line-height:1.8}.map{height:520px;border-radius:18px;border:1px solid var(--line);overflow:hidden}.places{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}.place img{display:block;width:100%;height:170px;object-fit:cover;background:#e2e8f0}.place.image-broken img{display:none}.image-fallback{display:none;height:170px;padding:22px;background:linear-gradient(135deg,#eff6ff,#f8fafc);border-bottom:1px solid var(--line);color:#64748b;line-height:1.7}.place.image-broken .image-fallback{display:flex;align-items:center}.place h3{margin:0;font-size:16px;color:var(--deep)}.place p{font-size:13px;line-height:1.6;color:var(--muted);margin:8px 0}.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}.tag{font-size:12px;padding:4px 8px;border-radius:999px;background:#eff6ff;color:#1d4ed8;border:1px solid #bfdbfe}a{color:var(--blue)}table{width:100%;border-collapse:collapse;background:white;border:1px solid var(--line);border-radius:16px;overflow:hidden}th,td{padding:12px;border-bottom:1px solid var(--line);text-align:left;font-size:14px;vertical-align:top}th{background:#f8fafc;color:#475569}tr:last-child td{border-bottom:0}.note{padding:14px 16px;background:#fff7ed;border:1px solid #fed7aa;border-radius:16px;color:#9a3412;line-height:1.8}@media(max-width:900px){header,main{padding-left:20px;padding-right:20px}.top{padding:10px 20px}.grid-3,.grid-2{grid-template-columns:1fr}.map{height:420px}}
   </style>
 </head>
 <body>
@@ -38,7 +38,7 @@
     </section>
 
     <section>
-      <div class="section-title"><h2>真实照片与来源</h2><p>以下为线上真实照片来源，不是生成图</p></div>
+      <div class="section-title"><h2>真实照片与来源</h2><p>图片使用 Wikimedia FilePath + 图片代理双通道加载</p></div>
       <div id="places" class="places"></div>
     </section>
 
@@ -53,31 +53,54 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script>
     const places = [
-      {day:'D1',cn:'雷克雅未克',en:'Reykjavík',type:'城市/出发点',lat:64.1466,lng:-21.9426,img:'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Reykjav%C3%ADk_Old_Harbor.jpg/1280px-Reykjav%C3%ADk_Old_Harbor.jpg',src:'https://commons.wikimedia.org/wiki/File:Reykjav%C3%ADk_Old_Harbor.jpg'},
-      {day:'D1',cn:'斯奈山半岛',en:'Snæfellsnes Peninsula',type:'区域',lat:64.8333,lng:-23.0,img:'https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Iceland_Snaefellsnes.jpg/1280px-Iceland_Snaefellsnes.jpg',src:'https://commons.wikimedia.org/wiki/File:Iceland_Snaefellsnes.jpg'},
-      {day:'D1',cn:'草帽山',en:'Kirkjufell',type:'山峰/瀑布',lat:64.9417,lng:-23.3075,img:'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Kirkjufell_%282017%29.jpg/1280px-Kirkjufell_%282017%29.jpg',src:'https://commons.wikimedia.org/wiki/File:Kirkjufell_(2017).jpg'},
-      {day:'D1',cn:'斯蒂基斯霍尔米',en:'Stykkishólmur',type:'住宿点/小镇',lat:65.0756,lng:-22.7297,img:'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Stykkisholmur.jpg/1280px-Stykkisholmur.jpg',src:'https://commons.wikimedia.org/wiki/File:Stykkisholmur.jpg'},
-      {day:'D2',cn:'塞里雅兰瀑布',en:'Seljalandsfoss',type:'瀑布',lat:63.6156,lng:-19.9886,img:'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Seljalandsfoss%2C_Iceland.jpg/1280px-Seljalandsfoss%2C_Iceland.jpg',src:'https://commons.wikimedia.org/wiki/File:Seljalandsfoss,_Iceland.jpg'},
-      {day:'D2',cn:'赫拉',en:'Hella',type:'住宿点/小镇',lat:63.8333,lng:-20.4,img:'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Hella_Iceland.JPG/1280px-Hella_Iceland.JPG',src:'https://commons.wikimedia.org/wiki/File:Hella_Iceland.JPG'},
-      {day:'D3',cn:'辛格维利尔国家公园',en:'Þingvellir National Park',type:'国家公园',lat:64.2559,lng:-21.13,img:'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Thingvellir_from_the_information_centre.JPG/1280px-Thingvellir_from_the_information_centre.JPG',src:'https://commons.wikimedia.org/wiki/File:Thingvellir_from_the_information_centre.JPG'},
-      {day:'D3',cn:'盖歇尔间歇泉',en:'Geysir / Strokkur',type:'地热景观',lat:64.3104,lng:-20.3,img:'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Strokkur_Geyser_Eruption%2C_Iceland.jpg/1280px-Strokkur_Geyser_Eruption%2C_Iceland.jpg',src:'https://commons.wikimedia.org/wiki/File:Strokkur_Geyser_Eruption,_Iceland.jpg'},
-      {day:'D3',cn:'黄金瀑布',en:'Gullfoss',type:'瀑布',lat:64.3271,lng:-20.12,img:'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Iceland_Gullfoss_2004.jpg/1280px-Iceland_Gullfoss_2004.jpg',src:'https://commons.wikimedia.org/wiki/File:Iceland_Gullfoss_2004.jpg'},
-      {day:'D3',cn:'兰德曼纳劳卡 / 彩虹山',en:'Landmannalaugar',type:'高地/机动点',lat:63.992,lng:-19.067,img:'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Landmannalaugar_2010.jpg/1280px-Landmannalaugar_2010.jpg',src:'https://commons.wikimedia.org/wiki/File:Landmannalaugar_2010.jpg'},
-      {day:'D3-D4',cn:'维克',en:'Vík í Mýrdal',type:'住宿点/小镇',lat:63.4186,lng:-19.009,img:'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Vik_i_Myrdal.jpg/1280px-Vik_i_Myrdal.jpg',src:'https://commons.wikimedia.org/wiki/File:Vik_i_Myrdal.jpg'},
-      {day:'D4',cn:'雷尼斯黑沙滩',en:'Reynisfjara Black Sand Beach',type:'海滩',lat:63.4045,lng:-19.0443,img:'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Reynisfjara_02.jpg/1280px-Reynisfjara_02.jpg',src:'https://commons.wikimedia.org/wiki/File:Reynisfjara_02.jpg'},
-      {day:'D4',cn:'迪霍拉里海岬',en:'Dyrhólaey',type:'海岬',lat:63.4009,lng:-19.126,img:'https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Dyrholaey_Iceland.jpg/1280px-Dyrholaey_Iceland.jpg',src:'https://commons.wikimedia.org/wiki/File:Dyrholaey_Iceland.jpg'},
-      {day:'D4',cn:'斯科加瀑布',en:'Skógafoss',type:'瀑布',lat:63.5321,lng:-19.5114,img:'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Sk%C3%B3gafoss%2C_Iceland.jpg/1280px-Sk%C3%B3gafoss%2C_Iceland.jpg',src:'https://commons.wikimedia.org/wiki/File:Sk%C3%B3gafoss,_Iceland.jpg'},
-      {day:'D4',cn:'索尔黑马冰川',en:'Sólheimajökull',type:'冰川',lat:63.5308,lng:-19.3692,img:'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/S%C3%B3lheimaj%C3%B6kull.JPG/1280px-S%C3%B3lheimaj%C3%B6kull.JPG',src:'https://commons.wikimedia.org/wiki/File:S%C3%B3lheimaj%C3%B6kull.JPG'},
-      {day:'D4 可选',cn:'杰古沙龙冰河湖',en:'Jökulsárlón Glacier Lagoon',type:'冰河湖',lat:64.0481,lng:-16.2306,img:'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/J%C3%B6kuls%C3%A1rl%C3%B3n_lagoon_in_Iceland.jpg/1280px-J%C3%B6kuls%C3%A1rl%C3%B3n_lagoon_in_Iceland.jpg',src:'https://commons.wikimedia.org/wiki/File:J%C3%B6kuls%C3%A1rl%C3%B3n_lagoon_in_Iceland.jpg'},
-      {day:'D4 可选',cn:'钻石沙滩',en:'Diamond Beach',type:'海滩',lat:64.0439,lng:-16.1781,img:'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Diamond_Beach_Iceland.jpg/1280px-Diamond_Beach_Iceland.jpg',src:'https://commons.wikimedia.org/wiki/File:Diamond_Beach_Iceland.jpg'}
+      {day:'D1',cn:'雷克雅未克',en:'Reykjavík',type:'城市/出发点',lat:64.1466,lng:-21.9426,file:'Reykjavík_Old_Harbor.jpg',src:'https://commons.wikimedia.org/wiki/File:Reykjav%C3%ADk_Old_Harbor.jpg'},
+      {day:'D1',cn:'斯奈山半岛',en:'Snæfellsnes Peninsula',type:'区域',lat:64.8333,lng:-23.0,file:'Iceland_Snaefellsnes.jpg',src:'https://commons.wikimedia.org/wiki/File:Iceland_Snaefellsnes.jpg'},
+      {day:'D1',cn:'草帽山',en:'Kirkjufell',type:'山峰/瀑布',lat:64.9417,lng:-23.3075,file:'Kirkjufell_in_Iceland.jpg',src:'https://commons.wikimedia.org/wiki/File:Kirkjufell_in_Iceland.jpg'},
+      {day:'D1',cn:'斯蒂基斯霍尔米',en:'Stykkishólmur',type:'住宿点/小镇',lat:65.0756,lng:-22.7297,file:'Stykkisholmur.jpg',src:'https://commons.wikimedia.org/wiki/File:Stykkisholmur.jpg'},
+      {day:'D2',cn:'塞里雅兰瀑布',en:'Seljalandsfoss',type:'瀑布',lat:63.6156,lng:-19.9886,file:'Seljalandsfoss,_Suðurland,_Islandia,_2014-08-16,_DD_201-203_HDR.JPG',src:'https://commons.wikimedia.org/wiki/File:Seljalandsfoss,_Su%C3%B0urland,_Islandia,_2014-08-16,_DD_201-203_HDR.JPG'},
+      {day:'D2',cn:'赫拉',en:'Hella',type:'住宿点/小镇',lat:63.8333,lng:-20.4,file:'Hella_Iceland.JPG',src:'https://commons.wikimedia.org/wiki/File:Hella_Iceland.JPG'},
+      {day:'D3',cn:'辛格维利尔国家公园',en:'Þingvellir National Park',type:'国家公园',lat:64.2559,lng:-21.13,file:'Thingvellir_from_the_information_centre.JPG',src:'https://commons.wikimedia.org/wiki/File:Thingvellir_from_the_information_centre.JPG'},
+      {day:'D3',cn:'盖歇尔间歇泉',en:'Geysir / Strokkur',type:'地热景观',lat:64.3104,lng:-20.3,file:'Strokkur_Geyser_Eruption,_Iceland.jpg',src:'https://commons.wikimedia.org/wiki/File:Strokkur_Geyser_Eruption,_Iceland.jpg'},
+      {day:'D3',cn:'黄金瀑布',en:'Gullfoss',type:'瀑布',lat:64.3271,lng:-20.12,file:'Iceland_Gullfoss_2004.jpg',src:'https://commons.wikimedia.org/wiki/File:Iceland_Gullfoss_2004.jpg'},
+      {day:'D3',cn:'兰德曼纳劳卡 / 彩虹山',en:'Landmannalaugar',type:'高地/机动点',lat:63.992,lng:-19.067,file:'Landmannalaugar_2010.jpg',src:'https://commons.wikimedia.org/wiki/File:Landmannalaugar_2010.jpg'},
+      {day:'D3-D4',cn:'维克',en:'Vík í Mýrdal',type:'住宿点/小镇',lat:63.4186,lng:-19.009,file:'Vik_i_Myrdal.jpg',src:'https://commons.wikimedia.org/wiki/File:Vik_i_Myrdal.jpg'},
+      {day:'D4',cn:'雷尼斯黑沙滩',en:'Reynisfjara Black Sand Beach',type:'海滩',lat:63.4045,lng:-19.0443,file:'Reynisfjara_02.jpg',src:'https://commons.wikimedia.org/wiki/File:Reynisfjara_02.jpg'},
+      {day:'D4',cn:'迪霍拉里海岬',en:'Dyrhólaey',type:'海岬',lat:63.4009,lng:-19.126,file:'Dyrholaey_Iceland.jpg',src:'https://commons.wikimedia.org/wiki/File:Dyrholaey_Iceland.jpg'},
+      {day:'D4',cn:'斯科加瀑布',en:'Skógafoss',type:'瀑布',lat:63.5321,lng:-19.5114,file:'Skógafoss,_Iceland.jpg',src:'https://commons.wikimedia.org/wiki/File:Sk%C3%B3gafoss,_Iceland.jpg'},
+      {day:'D4',cn:'索尔黑马冰川',en:'Sólheimajökull',type:'冰川',lat:63.5308,lng:-19.3692,file:'Sólheimajökull.JPG',src:'https://commons.wikimedia.org/wiki/File:S%C3%B3lheimaj%C3%B6kull.JPG'},
+      {day:'D4 可选',cn:'杰古沙龙冰河湖',en:'Jökulsárlón Glacier Lagoon',type:'冰河湖',lat:64.0481,lng:-16.2306,file:'Jökulsárlón_lagoon_in_Iceland.jpg',src:'https://commons.wikimedia.org/wiki/File:J%C3%B6kuls%C3%A1rl%C3%B3n_lagoon_in_Iceland.jpg'},
+      {day:'D4 可选',cn:'钻石沙滩',en:'Diamond Beach',type:'海滩',lat:64.0439,lng:-16.1781,file:'Diamond_Beach_Iceland.jpg',src:'https://commons.wikimedia.org/wiki/File:Diamond_Beach_Iceland.jpg'}
     ];
+    const esc = s => String(s || '').replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+    const filePath = file => 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(file).replace(/%20/g, '_');
+    const proxyUrl = url => 'https://images.weserv.nl/?url=' + encodeURIComponent(url.replace(/^https?:\/\//, '')) + '&w=900&h=520&fit=cover&output=jpg';
+    const candidates = p => {
+      const direct = filePath(p.file);
+      return [proxyUrl(direct), direct, proxyUrl(p.src), p.src];
+    };
+    window.handleImageError = function(img){
+      const list = JSON.parse(img.dataset.candidates || '[]');
+      const nextIndex = Number(img.dataset.index || '0') + 1;
+      if (nextIndex < list.length) {
+        img.dataset.index = String(nextIndex);
+        img.src = list[nextIndex];
+        return;
+      }
+      const card = img.closest('.place');
+      if (card) card.classList.add('image-broken');
+    };
+
     const map = L.map('map',{scrollWheelZoom:true}).setView([64.4,-19.8],6);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'&copy; OpenStreetMap contributors'}).addTo(map);
     const group = L.featureGroup().addTo(map);
     places.forEach((p,i)=>{L.marker([p.lat,p.lng]).bindPopup(`<b>${i+1}. ${p.cn}</b><br>${p.en}<br>${p.day}｜${p.type}`).addTo(group)});
     map.fitBounds(group.getBounds().pad(0.15));
-    document.querySelector('#places').innerHTML = places.map((p,i)=>`<article class="card place"><img src="${p.img}" alt="${p.cn}" loading="lazy"><div class="body"><h3>${i+1}. ${p.cn}</h3><p>${p.en}</p><div class="tags"><span class="tag">${p.day}</span><span class="tag">${p.type}</span></div><p><a href="${p.src}" target="_blank" rel="noopener">查看真实照片来源</a></p></div></article>`).join('');
-    document.querySelector('#rows').innerHTML = places.map(p=>`<tr><td>${p.day}</td><td>${p.cn}</td><td>${p.en}</td><td>${p.type}</td><td>${p.lat.toFixed(4)}, ${p.lng.toFixed(4)}</td></tr>`).join('');
+
+    document.querySelector('#places').innerHTML = places.map((p,i)=>{
+      const list = candidates(p);
+      return `<article class="card place"><img src="${esc(list[0])}" data-index="0" data-candidates='${esc(JSON.stringify(list))}' alt="${esc(p.cn)}" referrerpolicy="no-referrer" loading="eager" decoding="async" onerror="handleImageError(this)"><div class="image-fallback">图片源临时无法加载。可点击下方「查看真实照片来源」打开 Wikimedia 原图页面。</div><div class="body"><h3>${i+1}. ${esc(p.cn)}</h3><p>${esc(p.en)}</p><div class="tags"><span class="tag">${esc(p.day)}</span><span class="tag">${esc(p.type)}</span></div><p><a href="${esc(p.src)}" target="_blank" rel="noopener">查看真实照片来源</a>｜<a href="${esc(filePath(p.file))}" target="_blank" rel="noopener">打开原图</a></p></div></article>`;
+    }).join('');
+    document.querySelector('#rows').innerHTML = places.map(p=>`<tr><td>${esc(p.day)}</td><td>${esc(p.cn)}</td><td>${esc(p.en)}</td><td>${esc(p.type)}</td><td>${p.lat.toFixed(4)}, ${p.lng.toFixed(4)}</td></tr>`).join('');
   </script>
 </body>
 </html>
