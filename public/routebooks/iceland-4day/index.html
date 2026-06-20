@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>冰岛 4 日行程复核｜真实照片与地图标注</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <style>
+    :root{--blue:#1677ff;--deep:#0f172a;--text:#334155;--muted:#64748b;--line:#e2e8f0;--soft:#f8fafc;--warn:#ea580c;--bad:#dc2626;--ok:#16a34a}*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',Arial,sans-serif;color:var(--text);background:linear-gradient(180deg,#f6f9ff 0%,#fff 28%)}.top{position:sticky;top:0;z-index:999;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:10px 48px;font-size:14px}.top a{color:var(--blue);text-decoration:none;font-weight:700}.top span{color:#94a3b8;margin-left:12px}header{padding:40px 48px 24px}h1{margin:0 0 10px;font-size:32px;color:var(--deep);letter-spacing:-.02em}.sub{color:var(--muted);font-size:15px;max-width:980px;line-height:1.7}main{padding:0 48px 56px}section{margin:28px 0}.grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.card{background:white;border:1px solid var(--line);border-radius:18px;box-shadow:0 12px 36px rgba(15,23,42,.06);overflow:hidden}.card .body{padding:18px}.metric{font-size:28px;font-weight:800;color:var(--deep)}.label{color:var(--muted);font-size:13px;margin-top:4px}.warn{color:var(--warn);font-weight:700}.bad{color:var(--bad);font-weight:700}.ok{color:var(--ok);font-weight:700}.section-title{display:flex;align-items:end;justify-content:space-between;margin-bottom:12px}.section-title h2{margin:0;color:var(--deep);font-size:22px}.section-title p{margin:0;color:var(--muted);font-size:13px}.timeline{display:grid;gap:14px}.day{border-left:4px solid var(--blue)}.day h3{margin:0 0 8px;color:var(--deep);font-size:18px}.day ul{margin:8px 0 0;padding-left:18px;line-height:1.8}.map{height:520px;border-radius:18px;border:1px solid var(--line);overflow:hidden}.places{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}.place img{width:100%;height:160px;object-fit:cover;background:#e2e8f0}.place h3{margin:0;font-size:16px;color:var(--deep)}.place p{font-size:13px;line-height:1.6;color:var(--muted);margin:8px 0}.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}.tag{font-size:12px;padding:4px 8px;border-radius:999px;background:#eff6ff;color:#1d4ed8;border:1px solid #bfdbfe}a{color:var(--blue)}table{width:100%;border-collapse:collapse;background:white;border:1px solid var(--line);border-radius:16px;overflow:hidden}th,td{padding:12px;border-bottom:1px solid var(--line);text-align:left;font-size:14px;vertical-align:top}th{background:#f8fafc;color:#475569}tr:last-child td{border-bottom:0}.note{padding:14px 16px;background:#fff7ed;border:1px solid #fed7aa;border-radius:16px;color:#9a3412;line-height:1.8}@media(max-width:900px){header,main{padding-left:20px;padding-right:20px}.top{padding:10px 20px}.grid-3,.grid-2{grid-template-columns:1fr}.map{height:420px}}
+  </style>
+</head>
+<body>
+  <div class="top"><a href="../">← 返回路书首页</a><span>JevonsCode Routebooks / Iceland 4-Day</span></div>
+  <header>
+    <h1>冰岛 4 日行程复核｜真实照片与地图标注</h1>
+    <p class="sub">基于上传 Excel 路书整理。页面包含行程合理性判断、景点真实照片来源、景点坐标与 Leaflet 地图标注。照片使用线上真实图片来源，不使用生成图。</p>
+  </header>
+  <main>
+    <section class="grid-3">
+      <div class="card"><div class="body"><div class="metric">4 天</div><div class="label">原始计划跨度</div></div></div>
+      <div class="card"><div class="body"><div class="metric">17 点</div><div class="label">景点/城市/住宿点标注</div></div></div>
+      <div class="card"><div class="body"><div class="metric warn">偏赶</div><div class="label">D3-D4 需要重点优化</div></div></div>
+    </section>
+
+    <section>
+      <div class="section-title"><h2>整体判断</h2><p>结论先行</p></div>
+      <div class="grid-2">
+        <div class="card day"><div class="body"><h3>D1：雷克雅未克 → 斯奈山半岛 → 草帽山 → 斯蒂基斯霍尔米</h3><p class="ok">可执行，但内容偏满。</p><ul><li>斯奈山半岛本身适合一整天，不建议再加入太多额外绕路点。</li><li>住宿放在斯蒂基斯霍尔米可以降低返程压力。</li></ul></div></div>
+        <div class="card day"><div class="body"><h3>D2：斯奈山 → 南岸 → 塞里雅兰瀑布 → Hella</h3><p class="ok">可执行，属于转场日。</p><ul><li>重点控制出发时间，避免傍晚才到南岸。</li><li>塞里雅兰瀑布适合作为进入南岸的核心停留点。</li></ul></div></div>
+        <div class="card day"><div class="body"><h3>D3：黄金圈 / 彩虹山机动 / 前往维克</h3><p class="warn">需要二选一或做强取舍。</p><ul><li>黄金圈本身已经是一条完整路线。</li><li>Landmannalaugar 属于高地机动点，涉及路况、天气和车辆限制，不建议随意塞入。</li></ul></div></div>
+        <div class="card day"><div class="body"><h3>D4：维克 → 黑沙滩 / 南岸 → 冰河湖可选 → 雷市</h3><p class="bad">不建议当天强行维克往返冰河湖再回雷克雅未克。</p><ul><li>冰河湖、钻石沙滩距离维克仍很远。</li><li>更建议 D4 只做维克周边和南岸回程，冰河湖另给一天。</li></ul></div></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title"><h2>地图标注</h2><p>点击点位可查看景点名称</p></div>
+      <div id="map" class="map"></div>
+    </section>
+
+    <section>
+      <div class="section-title"><h2>真实照片与来源</h2><p>以下为线上真实照片来源，不是生成图</p></div>
+      <div id="places" class="places"></div>
+    </section>
+
+    <section>
+      <div class="section-title"><h2>点位数据</h2><p>可复用 GeoJSON</p></div>
+      <table><thead><tr><th>日期</th><th>中文名</th><th>英文名</th><th>类型</th><th>坐标</th></tr></thead><tbody id="rows"></tbody></table>
+    </section>
+
+    <section class="note">建议优化版本：D1 斯奈山；D2 斯奈山转南岸；D3 黄金圈后住 Hella/Selfoss 或直接南岸；D4 维克周边 + 南岸返雷克雅未克。冰河湖/钻石沙滩建议增加第 5 天，或取消部分西部/高地点。</section>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    const places = [
+      {day:'D1',cn:'雷克雅未克',en:'Reykjavík',type:'城市/出发点',lat:64.1466,lng:-21.9426,img:'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Reykjav%C3%ADk_Old_Harbor.jpg/1280px-Reykjav%C3%ADk_Old_Harbor.jpg',src:'https://commons.wikimedia.org/wiki/File:Reykjav%C3%ADk_Old_Harbor.jpg'},
+      {day:'D1',cn:'斯奈山半岛',en:'Snæfellsnes Peninsula',type:'区域',lat:64.8333,lng:-23.0,img:'https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Iceland_Snaefellsnes.jpg/1280px-Iceland_Snaefellsnes.jpg',src:'https://commons.wikimedia.org/wiki/File:Iceland_Snaefellsnes.jpg'},
+      {day:'D1',cn:'草帽山',en:'Kirkjufell',type:'山峰/瀑布',lat:64.9417,lng:-23.3075,img:'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Kirkjufell_%282017%29.jpg/1280px-Kirkjufell_%282017%29.jpg',src:'https://commons.wikimedia.org/wiki/File:Kirkjufell_(2017).jpg'},
+      {day:'D1',cn:'斯蒂基斯霍尔米',en:'Stykkishólmur',type:'住宿点/小镇',lat:65.0756,lng:-22.7297,img:'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Stykkisholmur.jpg/1280px-Stykkisholmur.jpg',src:'https://commons.wikimedia.org/wiki/File:Stykkisholmur.jpg'},
+      {day:'D2',cn:'塞里雅兰瀑布',en:'Seljalandsfoss',type:'瀑布',lat:63.6156,lng:-19.9886,img:'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Seljalandsfoss%2C_Iceland.jpg/1280px-Seljalandsfoss%2C_Iceland.jpg',src:'https://commons.wikimedia.org/wiki/File:Seljalandsfoss,_Iceland.jpg'},
+      {day:'D2',cn:'赫拉',en:'Hella',type:'住宿点/小镇',lat:63.8333,lng:-20.4,img:'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Hella_Iceland.JPG/1280px-Hella_Iceland.JPG',src:'https://commons.wikimedia.org/wiki/File:Hella_Iceland.JPG'},
+      {day:'D3',cn:'辛格维利尔国家公园',en:'Þingvellir National Park',type:'国家公园',lat:64.2559,lng:-21.13,img:'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Thingvellir_from_the_information_centre.JPG/1280px-Thingvellir_from_the_information_centre.JPG',src:'https://commons.wikimedia.org/wiki/File:Thingvellir_from_the_information_centre.JPG'},
+      {day:'D3',cn:'盖歇尔间歇泉',en:'Geysir / Strokkur',type:'地热景观',lat:64.3104,lng:-20.3,img:'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Strokkur_Geyser_Eruption%2C_Iceland.jpg/1280px-Strokkur_Geyser_Eruption%2C_Iceland.jpg',src:'https://commons.wikimedia.org/wiki/File:Strokkur_Geyser_Eruption,_Iceland.jpg'},
+      {day:'D3',cn:'黄金瀑布',en:'Gullfoss',type:'瀑布',lat:64.3271,lng:-20.12,img:'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Iceland_Gullfoss_2004.jpg/1280px-Iceland_Gullfoss_2004.jpg',src:'https://commons.wikimedia.org/wiki/File:Iceland_Gullfoss_2004.jpg'},
+      {day:'D3',cn:'兰德曼纳劳卡 / 彩虹山',en:'Landmannalaugar',type:'高地/机动点',lat:63.992,lng:-19.067,img:'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Landmannalaugar_2010.jpg/1280px-Landmannalaugar_2010.jpg',src:'https://commons.wikimedia.org/wiki/File:Landmannalaugar_2010.jpg'},
+      {day:'D3-D4',cn:'维克',en:'Vík í Mýrdal',type:'住宿点/小镇',lat:63.4186,lng:-19.009,img:'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Vik_i_Myrdal.jpg/1280px-Vik_i_Myrdal.jpg',src:'https://commons.wikimedia.org/wiki/File:Vik_i_Myrdal.jpg'},
+      {day:'D4',cn:'雷尼斯黑沙滩',en:'Reynisfjara Black Sand Beach',type:'海滩',lat:63.4045,lng:-19.0443,img:'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Reynisfjara_02.jpg/1280px-Reynisfjara_02.jpg',src:'https://commons.wikimedia.org/wiki/File:Reynisfjara_02.jpg'},
+      {day:'D4',cn:'迪霍拉里海岬',en:'Dyrhólaey',type:'海岬',lat:63.4009,lng:-19.126,img:'https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Dyrholaey_Iceland.jpg/1280px-Dyrholaey_Iceland.jpg',src:'https://commons.wikimedia.org/wiki/File:Dyrholaey_Iceland.jpg'},
+      {day:'D4',cn:'斯科加瀑布',en:'Skógafoss',type:'瀑布',lat:63.5321,lng:-19.5114,img:'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Sk%C3%B3gafoss%2C_Iceland.jpg/1280px-Sk%C3%B3gafoss%2C_Iceland.jpg',src:'https://commons.wikimedia.org/wiki/File:Sk%C3%B3gafoss,_Iceland.jpg'},
+      {day:'D4',cn:'索尔黑马冰川',en:'Sólheimajökull',type:'冰川',lat:63.5308,lng:-19.3692,img:'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/S%C3%B3lheimaj%C3%B6kull.JPG/1280px-S%C3%B3lheimaj%C3%B6kull.JPG',src:'https://commons.wikimedia.org/wiki/File:S%C3%B3lheimaj%C3%B6kull.JPG'},
+      {day:'D4 可选',cn:'杰古沙龙冰河湖',en:'Jökulsárlón Glacier Lagoon',type:'冰河湖',lat:64.0481,lng:-16.2306,img:'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/J%C3%B6kuls%C3%A1rl%C3%B3n_lagoon_in_Iceland.jpg/1280px-J%C3%B6kuls%C3%A1rl%C3%B3n_lagoon_in_Iceland.jpg',src:'https://commons.wikimedia.org/wiki/File:J%C3%B6kuls%C3%A1rl%C3%B3n_lagoon_in_Iceland.jpg'},
+      {day:'D4 可选',cn:'钻石沙滩',en:'Diamond Beach',type:'海滩',lat:64.0439,lng:-16.1781,img:'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Diamond_Beach_Iceland.jpg/1280px-Diamond_Beach_Iceland.jpg',src:'https://commons.wikimedia.org/wiki/File:Diamond_Beach_Iceland.jpg'}
+    ];
+    const map = L.map('map',{scrollWheelZoom:true}).setView([64.4,-19.8],6);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'&copy; OpenStreetMap contributors'}).addTo(map);
+    const group = L.featureGroup().addTo(map);
+    places.forEach((p,i)=>{L.marker([p.lat,p.lng]).bindPopup(`<b>${i+1}. ${p.cn}</b><br>${p.en}<br>${p.day}｜${p.type}`).addTo(group)});
+    map.fitBounds(group.getBounds().pad(0.15));
+    document.querySelector('#places').innerHTML = places.map((p,i)=>`<article class="card place"><img src="${p.img}" alt="${p.cn}" loading="lazy"><div class="body"><h3>${i+1}. ${p.cn}</h3><p>${p.en}</p><div class="tags"><span class="tag">${p.day}</span><span class="tag">${p.type}</span></div><p><a href="${p.src}" target="_blank" rel="noopener">查看真实照片来源</a></p></div></article>`).join('');
+    document.querySelector('#rows').innerHTML = places.map(p=>`<tr><td>${p.day}</td><td>${p.cn}</td><td>${p.en}</td><td>${p.type}</td><td>${p.lat.toFixed(4)}, ${p.lng.toFixed(4)}</td></tr>`).join('');
+  </script>
+</body>
+</html>
