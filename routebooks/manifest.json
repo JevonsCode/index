@@ -1,5 +1,18 @@
 [
   {
+    "slug": "iceland-3",
+    "title": "冰岛三｜10月斯奈山南岸机动路书",
+    "subtitle": "10月1日-10月7日｜斯奈山半岛、高地/黄金圈机动、南岸、冰河湖、钻石沙滩",
+    "destination": "Iceland",
+    "days": 7,
+    "date": "2026-06-22",
+    "status": "published",
+    "entry": "./iceland-3/",
+    "tags": ["冰岛", "斯奈山", "南岸", "高地机动", "真实照片", "地图标注"],
+    "summary": "基于 Excel 6 Sheet 客户版整理，包含每日路线、合理性判断、景点照片、地图点位、住宿、自驾、门票和预算要点。",
+    "cover": "https://images.weserv.nl/?url=commons.wikimedia.org%2Fwiki%2FSpecial%3AFilePath%2FKirkjufell_in_Iceland.jpg&w=900&h=520&fit=cover&output=jpg"
+  },
+  {
     "slug": "iceland-2",
     "title": "冰岛2｜环岛游玩行程表",
     "subtitle": "6月4日-6月10日｜接机温泉、南岸、冰河湖、东部峡湾、米湖、斯奈山半岛",
