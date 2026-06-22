@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>冰岛2｜环岛游玩行程表</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <style>
+    :root{--blue:#1677ff;--deep:#0f172a;--text:#334155;--muted:#64748b;--line:#e2e8f0;--soft:#f8fafc;--warn:#ea580c;--bad:#dc2626;--ok:#16a34a;--card:#fff}*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',Arial,sans-serif;color:var(--text);background:linear-gradient(180deg,#f5f9ff 0,#fff 28%)}.top{position:sticky;top:0;z-index:999;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:10px 48px;font-size:14px}.top a{color:var(--blue);text-decoration:none;font-weight:800}.top span{color:#94a3b8;margin-left:12px}header{padding:42px 48px 20px;max-width:1280px;margin:0 auto}h1{margin:0 0 12px;font-size:36px;color:var(--deep);letter-spacing:-.03em}.sub{max-width:980px;color:var(--muted);line-height:1.8}.badge{display:inline-flex;gap:8px;align-items:center;padding:6px 10px;border-radius:999px;border:1px solid #bfdbfe;background:#eff6ff;color:#1d4ed8;font-size:13px;font-weight:700;margin-bottom:14px}.dot{width:8px;height:8px;border-radius:50%;background:var(--ok)}main{max-width:1280px;margin:0 auto;padding:0 48px 56px}section{margin:28px 0}.grid-4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.grid-2{display:grid;grid-template-columns:1.1fr .9fr;gap:16px}.card{background:white;border:1px solid var(--line);border-radius:20px;box-shadow:0 14px 44px rgba(15,23,42,.06);overflow:hidden}.body{padding:18px}.metric{font-size:28px;font-weight:900;color:var(--deep)}.label{font-size:13px;color:var(--muted);margin-top:4px}.section-title{display:flex;justify-content:space-between;align-items:end;margin-bottom:12px}.section-title h2{margin:0;color:var(--deep);font-size:22px}.section-title p{margin:0;color:var(--muted);font-size:13px}.map{height:560px;border-radius:20px;border:1px solid var(--line);overflow:hidden}.note{border:1px solid #fed7aa;background:#fff7ed;color:#9a3412;border-radius:18px;padding:16px 18px;line-height:1.8}.ok{color:var(--ok);font-weight:800}.warn{color:var(--warn);font-weight:800}.bad{color:var(--bad);font-weight:800}.days{display:grid;gap:14px}.day{border-left:4px solid var(--blue)}.day h3{margin:0 0 8px;color:var(--deep);font-size:18px}.day .route{color:#475569;font-weight:700;margin-bottom:8px}.day ul{margin:8px 0 0;padding-left:18px;line-height:1.8}.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:18px;background:#fff}table{width:100%;border-collapse:collapse;min-width:980px}th,td{padding:12px;border-bottom:1px solid var(--line);text-align:left;font-size:14px;vertical-align:top}th{background:#f8fafc;color:#475569;white-space:nowrap}tr:last-child td{border-bottom:0}.places{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}.place img{display:block;width:100%;height:168px;object-fit:cover;background:#e2e8f0}.img-placeholder{height:168px;padding:18px;display:flex;align-items:center;justify-content:center;text-align:center;line-height:1.7;background:linear-gradient(135deg,#eff6ff,#f8fafc);color:#64748b;border-bottom:1px solid var(--line)}.place h3{margin:0;font-size:16px;color:var(--deep)}.place p{margin:8px 0;font-size:13px;line-height:1.65;color:var(--muted)}.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}.tag{font-size:12px;padding:4px 8px;border-radius:999px;background:#eff6ff;color:#1d4ed8;border:1px solid #bfdbfe}a{color:var(--blue)}.small{font-size:12px;color:#94a3b8}@media(max-width:980px){header,main{padding-left:20px;padding-right:20px}.top{padding:10px 20px}.grid-4,.grid-2{grid-template-columns:1fr}.map{height:430px}}
+  </style>
+</head>
+<body>
+  <div class="top"><a href="../">← 返回路书首页</a><span>Routebook / 冰岛2</span></div>
+  <header>
+    <div class="badge"><span class="dot"></span> 已发布到 GitHub Pages</div>
+    <h1>冰岛2｜环岛游玩行程表</h1>
+    <p class="sub">根据截图中的《冰岛环岛游玩行程表》整理：6 月 4 日接机温泉，6 月 5 日南岸到维克，6 月 6 日冰川湖区到霍芬，6 月 7 日东部峡湾到埃伊尔斯塔济，6 月 8 日前往米湖，6 月 9 日米湖/胡萨维克/华姆斯唐吉，6 月 10 日斯奈山半岛返雷克雅未克。</p>
+  </header>
+  <main>
+    <section class="grid-4">
+      <div class="card"><div class="body"><div class="metric">7 天</div><div class="label">6 月 4 日 - 6 月 10 日</div></div></div>
+      <div class="card"><div class="body"><div class="metric">31 点</div><div class="label">景点/体验/住宿点标注</div></div></div>
+      <div class="card"><div class="body"><div class="metric warn">高强度</div><div class="label">环岛压缩版，不适合慢游</div></div></div>
+      <div class="card"><div class="body"><div class="metric">真实图</div><div class="label">Wikimedia Commons 在线检索</div></div></div>
+    </section>
+
+    <section class="note"><b>合理性判断：</b>这条路线能表达“环岛全覆盖”，但强度明显偏高。尤其 6 月 6 日维克到霍芬含冰河湖快艇、6 月 7 日霍芬到埃伊尔斯塔济、6 月 10 日华姆斯唐吉绕斯奈山半岛再回雷克雅未克，都属于长距离驾驶日。若是自驾，建议每天至少预留 1-2 个备选点可删；若遇到风、雨、道路关闭或观鲸/快艇时间变动，不要硬赶。</section>
+
+    <section>
+      <div class="section-title"><h2>地图标注</h2><p>点击点位查看对应日期与景点</p></div>
+      <div id="map" class="map"></div>
+    </section>
+
+    <section>
+      <div class="section-title"><h2>每日行程复核</h2><p>结合截图内容整理</p></div>
+      <div id="days" class="days"></div>
+    </section>
+
+    <section>
+      <div class="section-title"><h2>真实照片卡片</h2><p>通过 Wikimedia Commons API 自动加载真实照片</p></div>
+      <div id="places" class="places"></div>
+    </section>
+
+    <section>
+      <div class="section-title"><h2>完整点位表</h2><p>含原中文名、英文匹配与确认状态</p></div>
+      <div class="table-wrap"><table><thead><tr><th>日期</th><th>路线</th><th>中文名</th><th>英文/匹配点位</th><th>类型</th><th>坐标</th></tr></thead><tbody id="rows"></tbody></table></div>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    const days = [
+      {day:'6月4日',route:'雷克雅未克接机',time:'13:05 航班落地；13:40 机场接机；14:30 前往温泉景区；19:00 入住酒店',items:['蓝湖温泉 / 天湖温泉二选一'],fee:'蓝湖约 750 元；天湖约 620 元',judgement:'抵达日只安排温泉是合理的，不建议再加市区密集游览。'},
+      {day:'6月5日',route:'雷克雅未克 → 维克小镇',time:'08:00 出发；09:00 沿途景点；12:30 海岸景观；18:00 入住小镇',items:['塞里雅兰瀑布','森林瀑布','秘境瀑布','彩虹瀑布','乌屿之门','维科夫亚拉黑沙滩','维克教堂'],fee:'无',judgement:'南岸经典一日线，景点偏多，建议按天气删减小众瀑布。'},
+      {day:'6月6日',route:'维克小镇 → 霍芬镇',time:'08:00 出发；09:00 自然地貌；12:00 冰川湖区；15:00 水上项目；18:00 入住小镇',items:['苔原地貌','斯特由纳尔瀑布','西祖瀑布','恩斐那冰川','冰河湖','钻石沙滩','冰河湖快艇'],fee:'快艇约 830 元',judgement:'强度较高，快艇会受天气和班次影响，建议把小瀑布作为备选。'},
+      {day:'6月7日',route:'霍芬镇 → 埃伊尔斯塔济',time:'08:00 出发；09:00 山林瀑布；11:30 海岸景点；18:00 入住城镇',items:['司库塔瀑布','尼库哈伊斯瀑布','东角山','法乌斯卡黑沙滩'],fee:'无',judgement:'东部峡湾驾驶时间长，景点名称需二次确认，建议重点保留 Vestrahorn / Stokksnes。'},
+      {day:'6月8日',route:'埃伊尔斯塔济 → 米湖',time:'08:00 出发；09:00 峡谷瀑布；13:00 越野体验；18:00 入住度假区',items:['里尤堆达峡谷','玄武石峡谷','黛提瀑布','熔岩地貌 ATV 越野'],fee:'ATV 越野约 1400 元',judgement:'可玩性强，但 Dettifoss 与 Stuðlagil 绕路明显，需早出发。'},
+      {day:'6月9日',route:'米湖 → 华姆斯唐吉',time:'08:00 出发；09:00 特色景致；13:00 出海游玩；15:30 温泉休息；18:00 入住小镇',items:['火山口','众神瀑布','黑鲸鱼教堂','犀牛石','出海观鲸','米湖地热温泉'],fee:'观鲸约 600 元',judgement:'米湖、胡萨维克、华姆斯唐吉跨度较大；观鲸后再长途转场会累。'},
+      {day:'6月10日',route:'华姆斯唐吉 → 雷克雅未克',time:'08:00 出发；09:00 网红小镇；11:00 半岛风光；18:00 返程入住',items:['白日梦想家小镇','斯奈山半岛','特色沙滩','情人桥','海豹沙滩'],fee:'无',judgement:'这天最容易超时。华姆斯唐吉到斯奈山再回雷市非常绕，建议只选半岛核心 2-3 点。'}
+    ];
+
+    const places = [
+      {day:'6月4日',route:'雷克雅未克接机',cn:'凯夫拉维克机场',en:'Keflavík International Airport',type:'机场',lat:63.9850,lng:-22.6056,q:'Keflavik International Airport Iceland'},
+      {day:'6月4日',route:'雷克雅未克接机',cn:'蓝湖温泉',en:'Blue Lagoon',type:'温泉',lat:63.8804,lng:-22.4495,q:'Blue Lagoon Iceland geothermal spa'},
+      {day:'6月4日',route:'雷克雅未克接机',cn:'天湖温泉',en:'Sky Lagoon',type:'温泉',lat:64.1221,lng:-21.9874,q:'Sky Lagoon Iceland'},
+      {day:'6月5日',route:'雷克雅未克-维克小镇',cn:'塞里雅兰瀑布',en:'Seljalandsfoss',type:'瀑布',lat:63.6156,lng:-19.9886,q:'Seljalandsfoss Iceland waterfall'},
+      {day:'6月5日',route:'雷克雅未克-维克小镇',cn:'森林瀑布',en:'Skógafoss',type:'瀑布',lat:63.5321,lng:-19.5114,q:'Skogafoss Iceland waterfall'},
+      {day:'6月5日',route:'雷克雅未克-维克小镇',cn:'秘境瀑布',en:'Kvernufoss',type:'瀑布/需确认',lat:63.5276,lng:-19.4806,q:'Kvernufoss Iceland waterfall'},
+      {day:'6月5日',route:'雷克雅未克-维克小镇',cn:'维科夫亚拉黑沙滩',en:'Reynisfjara Black Sand Beach',type:'黑沙滩',lat:63.4045,lng:-19.0443,q:'Reynisfjara black sand beach Iceland'},
+      {day:'6月5日',route:'雷克雅未克-维克小镇',cn:'维克教堂',en:'Vík Church',type:'教堂/小镇',lat:63.4186,lng:-19.0090,q:'Vik i Myrdal church Iceland'},
+      {day:'6月6日',route:'维克小镇-霍芬镇',cn:'苔原地貌/苔藓熔岩原',en:'Eldhraun Lava Field',type:'熔岩地貌/需确认',lat:63.8050,lng:-18.0540,q:'Eldhraun lava field Iceland moss'},
+      {day:'6月6日',route:'维克小镇-霍芬镇',cn:'斯特由纳尔瀑布',en:'Stjórnarfoss',type:'瀑布/需确认',lat:63.7918,lng:-18.0837,q:'Stjornarfoss Iceland waterfall'},
+      {day:'6月6日',route:'维克小镇-霍芬镇',cn:'西祖瀑布',en:'Systrafoss',type:'瀑布/需确认',lat:63.7820,lng:-17.9962,q:'Systrafoss Iceland waterfall'},
+      {day:'6月6日',route:'维克小镇-霍芬镇',cn:'斯卡夫塔山/冰川区域',en:'Skaftafell / Vatnajökull',type:'冰川区域/需确认',lat:64.0153,lng:-16.9755,q:'Skaftafell Vatnajokull glacier Iceland'},
+      {day:'6月6日',route:'维克小镇-霍芬镇',cn:'冰河湖',en:'Jökulsárlón Glacier Lagoon',type:'冰河湖/快艇',lat:64.0481,lng:-16.2306,q:'Jokulsarlon Glacier Lagoon Iceland'},
+      {day:'6月6日',route:'维克小镇-霍芬镇',cn:'钻石沙滩',en:'Diamond Beach',type:'黑沙滩',lat:64.0439,lng:-16.1781,q:'Diamond Beach Iceland ice'},
+      {day:'6月7日',route:'霍芬镇-埃伊尔斯塔济',cn:'霍芬',en:'Höfn',type:'小镇/出发点',lat:64.2497,lng:-15.2082,q:'Hofn Iceland harbor town'},
+      {day:'6月7日',route:'霍芬镇-埃伊尔斯塔济',cn:'东角山',en:'Vestrahorn / Stokksnes',type:'山景/黑沙滩',lat:64.2448,lng:-14.9720,q:'Vestrahorn Stokksnes Iceland'},
+      {day:'6月7日',route:'霍芬镇-埃伊尔斯塔济',cn:'东部峡湾海景点',en:'Eastfjords coastal viewpoints',type:'海岸公路/需确认',lat:64.6575,lng:-14.3556,q:'Eastfjords Iceland coast'},
+      {day:'6月7日',route:'霍芬镇-埃伊尔斯塔济',cn:'尼库哈伊斯瀑布/东部瀑布',en:'Hengifoss / East Iceland waterfall',type:'瀑布/需确认',lat:65.0775,lng:-14.8903,q:'Hengifoss Iceland waterfall'},
+      {day:'6月7日',route:'霍芬镇-埃伊尔斯塔济',cn:'埃伊尔斯塔济',en:'Egilsstaðir',type:'住宿点/城镇',lat:65.2627,lng:-15.2496,q:'Egilsstadir Iceland town'},
+      {day:'6月8日',route:'埃伊尔斯塔济-米湖',cn:'里尤堆达峡谷',en:'Stuðlagil Canyon',type:'玄武岩峡谷',lat:65.1637,lng:-15.1635,q:'Studlagil Canyon Iceland basalt'},
+      {day:'6月8日',route:'埃伊尔斯塔济-米湖',cn:'黛提瀑布',en:'Dettifoss',type:'瀑布',lat:65.8147,lng:-16.3846,q:'Dettifoss Iceland waterfall'},
+      {day:'6月8日',route:'埃伊尔斯塔济-米湖',cn:'玄武石峡谷/地热区',en:'Hverir / Námafjall',type:'地热地貌/需确认',lat:65.6400,lng:-16.8080,q:'Hverir Namafjall Iceland geothermal'},
+      {day:'6月8日',route:'埃伊尔斯塔济-米湖',cn:'米湖熔岩地貌',en:'Mývatn lava field',type:'ATV 区域',lat:65.7171,lng:-16.8857,q:'Myvatn lava field Iceland'},
+      {day:'6月9日',route:'米湖-华姆斯唐吉',cn:'火山口',en:'Hverfjall Crater',type:'火山口',lat:65.6047,lng:-16.9859,q:'Hverfjall crater Iceland'},
+      {day:'6月9日',route:'米湖-华姆斯唐吉',cn:'众神瀑布',en:'Goðafoss',type:'瀑布',lat:65.6828,lng:-17.5467,q:'Godafoss Iceland waterfall'},
+      {day:'6月9日',route:'米湖-华姆斯唐吉',cn:'出海观鲸/观鲸博物馆',en:'Húsavík Whale Watching / Whale Museum',type:'观鲸体验',lat:66.0449,lng:-17.3373,q:'Husavik whale watching Iceland'},
+      {day:'6月9日',route:'米湖-华姆斯唐吉',cn:'米湖地热温泉',en:'Mývatn Nature Baths',type:'温泉',lat:65.6420,lng:-16.9121,q:'Myvatn Nature Baths Iceland'},
+      {day:'6月9日',route:'米湖-华姆斯唐吉',cn:'华姆斯唐吉',en:'Hvammstangi',type:'住宿点/小镇',lat:65.3973,lng:-20.3097,q:'Hvammstangi Iceland town'},
+      {day:'6月10日',route:'华姆斯唐吉-雷克雅未克',cn:'斯奈山半岛',en:'Snæfellsnes Peninsula / Kirkjufell',type:'半岛/山景',lat:64.9417,lng:-23.3075,q:'Snaefellsnes Peninsula Kirkjufell Iceland'},
+      {day:'6月10日',route:'华姆斯唐吉-雷克雅未克',cn:'白日梦想家小镇',en:'Stykkishólmur / Walter Mitty film location',type:'小镇/需确认',lat:64.7667,lng:-23.1208,q:'Stykkisholmur Iceland town'},
+      {day:'6月10日',route:'华姆斯唐吉-雷克雅未克',cn:'情人桥/海岸石桥',en:'Arnarstapi Stone Bridge',type:'海岸地貌',lat:64.7660,lng:-23.6225,q:'Arnarstapi stone bridge Iceland'},
+      {day:'6月10日',route:'华姆斯唐吉-雷克雅未克',cn:'海豹沙滩',en:'Ytri Tunga Seal Beach',type:'海豹沙滩',lat:64.8032,lng:-22.8115,q:'Ytri Tunga seal beach Iceland'}
+    ];
+
+    const esc = s => String(s || '').replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+    const dayColor = d => ({'6月4日':'#1677ff','6月5日':'#16a34a','6月6日':'#ea580c','6月7日':'#7c3aed','6月8日':'#0891b2','6月9日':'#dc2626','6月10日':'#0f766e'}[d] || '#1677ff');
+
+    document.querySelector('#days').innerHTML = days.map(d => `<article class="card day"><div class="body"><h3>${esc(d.day)}｜${esc(d.route)}</h3><div class="route">${esc(d.time)}</div><ul>${d.items.map(i=>`<li>${esc(i)}</li>`).join('')}</ul><p><b>收费参考：</b>${esc(d.fee)}</p><p><b>判断：</b>${esc(d.judgement)}</p></div></article>`).join('');
+    document.querySelector('#rows').innerHTML = places.map(p => `<tr><td>${esc(p.day)}</td><td>${esc(p.route)}</td><td>${esc(p.cn)}</td><td>${esc(p.en)}</td><td>${esc(p.type)}</td><td>${p.lat.toFixed(4)}, ${p.lng.toFixed(4)}</td></tr>`).join('');
+    document.querySelector('#places').innerHTML = places.map((p,i)=>`<article class="card place" data-index="${i}"><div class="img-placeholder">正在加载真实照片…<br><span class="small">${esc(p.en)}</span></div><div class="body"><h3>${i+1}. ${esc(p.cn)}</h3><p>${esc(p.en)}</p><div class="tags"><span class="tag">${esc(p.day)}</span><span class="tag">${esc(p.type)}</span></div><p class="photo-link"></p></div></article>`).join('');
+
+    const map = L.map('map',{scrollWheelZoom:true}).setView([64.9,-18.8],6);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'&copy; OpenStreetMap contributors'}).addTo(map);
+    const group = L.featureGroup().addTo(map);
+    places.forEach((p,i)=>{const marker=L.circleMarker([p.lat,p.lng],{radius:7,color:dayColor(p.day),fillColor:dayColor(p.day),fillOpacity:.86,weight:2}).bindPopup(`<b>${i+1}. ${esc(p.cn)}</b><br>${esc(p.en)}<br>${esc(p.day)}｜${esc(p.type)}`);marker.addTo(group)});
+    map.fitBounds(group.getBounds().pad(0.12));
+
+    async function loadPhoto(p, i){
+      const card = document.querySelector(`.place[data-index="${i}"]`);
+      const holder = card.querySelector('.img-placeholder');
+      const link = card.querySelector('.photo-link');
+      const api = 'https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrnamespace=6&gsrlimit=1&prop=imageinfo&iiprop=url|thumburl|descriptionurl&iiurlwidth=900&format=json&origin=*&gsrsearch=' + encodeURIComponent(p.q);
+      try {
+        const res = await fetch(api);
+        const json = await res.json();
+        const page = json.query && json.query.pages ? Object.values(json.query.pages)[0] : null;
+        const info = page && page.imageinfo && page.imageinfo[0];
+        if (!info || !(info.thumburl || info.url)) throw new Error('no image');
+        const url = info.thumburl || info.url;
+        const img = new Image();
+        img.src = url;
+        img.alt = p.cn;
+        img.loading = 'lazy';
+        img.referrerPolicy = 'no-referrer';
+        img.onerror = () => { holder.innerHTML = `图片临时无法加载<br><span class="small">可打开来源页查看</span>`; };
+        img.onload = () => { holder.replaceWith(img); };
+        link.innerHTML = `<a href="${esc(info.descriptionurl || url)}" target="_blank" rel="noopener">查看真实照片来源</a>`;
+      } catch(e) {
+        holder.innerHTML = `未自动匹配到图片<br><span class="small">${esc(p.en)}</span>`;
+        link.innerHTML = `<a href="https://commons.wikimedia.org/w/index.php?search=${encodeURIComponent(p.q)}&title=Special:MediaSearch&type=image" target="_blank" rel="noopener">在 Wikimedia 搜索真实照片</a>`;
+      }
+    }
+    places.forEach((p,i)=>loadPhoto(p,i));
+  </script>
+</body>
+</html>

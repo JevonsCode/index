@@ -1,5 +1,18 @@
 [
   {
+    "slug": "iceland-2",
+    "title": "冰岛2｜环岛游玩行程表",
+    "subtitle": "6月4日-6月10日｜接机温泉、南岸、冰河湖、东部峡湾、米湖、斯奈山半岛",
+    "destination": "Iceland",
+    "days": 7,
+    "date": "2026-06-22",
+    "status": "published",
+    "entry": "./iceland-2/",
+    "tags": ["冰岛", "环岛", "路书", "真实照片", "地图标注"],
+    "summary": "根据截图中的冰岛环岛游玩行程表整理，包含每日路线、时间安排、收费参考、合理性判断、真实照片和地图标注。",
+    "cover": "https://images.weserv.nl/?url=commons.wikimedia.org%2Fwiki%2FSpecial%3AFilePath%2FJokulsarlon_Glacier_Lagoon_Iceland.jpg&w=900&h=520&fit=cover&output=jpg"
+  },
+  {
     "slug": "iceland-4day",
     "title": "冰岛 4 日行程复核｜真实照片与地图标注",
     "subtitle": "斯奈山半岛、黄金圈、南岸、维克、冰河湖可选动线",
