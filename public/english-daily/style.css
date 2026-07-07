@@ -1,0 +1,256 @@
+:root {
+  color-scheme: light;
+  --bg: #f5f8ff;
+  --card: rgba(255, 255, 255, 0.92);
+  --text: #172033;
+  --muted: #64748b;
+  --line: rgba(52, 103, 215, 0.14);
+  --primary: #1f6feb;
+  --primary-soft: #eaf2ff;
+  --shadow: 0 18px 50px rgba(31, 111, 235, 0.12);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(31, 111, 235, 0.16), transparent 30%),
+    linear-gradient(135deg, #f8fbff 0%, #eef5ff 100%);
+  color: var(--text);
+}
+
+button,
+select {
+  font: inherit;
+}
+
+.app-shell {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 32px 0 56px;
+}
+
+.hero-card,
+.toolbar-card,
+.panel {
+  border: 1px solid var(--line);
+  background: var(--card);
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
+}
+
+.hero-card {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 34px;
+  margin-bottom: 18px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: var(--primary);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 12px;
+  font-size: clamp(30px, 5vw, 54px);
+  line-height: 1.05;
+}
+
+.subtitle {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.hero-meta {
+  min-width: 160px;
+  display: grid;
+  align-content: center;
+  gap: 10px;
+  text-align: right;
+  color: var(--muted);
+}
+
+.hero-meta strong {
+  color: var(--primary);
+  font-size: 28px;
+}
+
+.toolbar-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+
+.toolbar-card label {
+  color: var(--muted);
+  font-weight: 700;
+}
+
+select,
+button {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: white;
+  padding: 10px 14px;
+  color: var(--text);
+}
+
+button {
+  cursor: pointer;
+}
+
+button:hover {
+  border-color: rgba(31, 111, 235, 0.42);
+}
+
+.panel {
+  padding: 28px;
+  margin-top: 18px;
+}
+
+.section-title {
+  margin-bottom: 18px;
+}
+
+.section-title h2 {
+  margin-bottom: 0;
+  font-size: 24px;
+}
+
+.quiz-list {
+  display: grid;
+  gap: 10px;
+}
+
+.quiz-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 13px 16px;
+  border: 1px dashed var(--line);
+  border-radius: 16px;
+  background: rgba(246, 249, 255, 0.78);
+}
+
+.quiz-item code {
+  color: var(--primary);
+  font-weight: 800;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.quiz-item.revealed code {
+  opacity: 1;
+}
+
+.word-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.word-card {
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 20px;
+  background: linear-gradient(180deg, #ffffff 0%, #f9fbff 100%);
+}
+
+.word-card.remembered {
+  border-color: rgba(31, 111, 235, 0.45);
+  background: var(--primary-soft);
+}
+
+.word-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+
+.word {
+  margin-bottom: 4px;
+  font-size: 26px;
+}
+
+.phonetic,
+.meaning,
+.phrase,
+.sentence {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.phrase,
+.sentence {
+  margin-bottom: 10px;
+}
+
+.tag {
+  height: fit-content;
+  white-space: nowrap;
+  color: var(--primary);
+  background: var(--primary-soft);
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.remember-button {
+  width: 100%;
+  background: #fff;
+}
+
+.word-card.remembered .remember-button {
+  background: var(--primary);
+  color: white;
+}
+
+.focus-list {
+  display: grid;
+  gap: 12px;
+  padding-left: 20px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+@media (max-width: 760px) {
+  .hero-card,
+  .toolbar-card {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-meta {
+    text-align: left;
+  }
+
+  .word-grid {
+    grid-template-columns: 1fr;
+  }
+}
