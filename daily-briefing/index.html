@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>每日重点简报</title>
+  <meta name="description" content="AI / Agent / LLM、前端、保险科技、金融科技、宏观市场与国际新闻每日简报" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <div class="orb orb-a"></div>
+      <div class="orb orb-b"></div>
+      <nav class="topbar">
+        <div class="brand">
+          <span class="brand-mark"></span>
+          <span>Daily Briefing</span>
+        </div>
+        <span class="updated" id="updatedAt">Loading…</span>
+      </nav>
+
+      <section class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">AI · Agent · Frontend · FinTech · Macro</p>
+          <h1>每日重点简报</h1>
+          <p class="subtitle">过滤噪音，只看真正影响产品、技术、商业和风险判断的变化。最新简报自动置顶。</p>
+          <div class="hero-actions">
+            <a class="primary-btn" href="#briefs">查看最新</a>
+            <button class="secondary-btn" id="refreshBtn" type="button">刷新数据</button>
+          </div>
+        </div>
+
+        <div class="signal-card">
+          <div class="signal-card-title">关注范围</div>
+          <div class="topic-cloud">
+            <span>AI / Agent / LLM</span>
+            <span>前端 / 开发工具</span>
+            <span>保险科技 / 金融科技</span>
+            <span>宏观经济 / 市场</span>
+            <span>国际新闻</span>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main class="content-layout">
+      <aside class="rail">
+        <section class="rail-card">
+          <div class="rail-title">历史简报</div>
+          <div class="brief-nav" id="briefNav"></div>
+        </section>
+      </aside>
+
+      <section class="feed" id="briefs">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Latest first</p>
+            <h2>简报流</h2>
+          </div>
+          <span class="count-pill" id="briefCount">0 篇</span>
+        </div>
+        <div class="brief-list" id="briefList">
+          <div class="skeleton"></div>
+          <div class="skeleton short"></div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <template id="briefTpl">
+    <article class="brief-card">
+      <div class="brief-head">
+        <div>
+          <div class="date"></div>
+          <h3></h3>
+        </div>
+        <span class="badge">最新</span>
+      </div>
+      <p class="summary"></p>
+      <div class="topics"></div>
+      <div class="items"></div>
+      <div class="signals-wrap">
+        <h4>值得继续关注</h4>
+        <div class="signals"></div>
+      </div>
+    </article>
+  </template>
+
+  <script src="./app.js"></script>
+</body>
+</html>

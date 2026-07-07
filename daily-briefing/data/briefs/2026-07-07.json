@@ -1,0 +1,76 @@
+{
+  "date": "2026-07-07",
+  "title": "中文每日简报",
+  "summary": "AI 的价值链正在从模型能力转向内存、电力、审计、金融监管和地缘风险共同决定；真正有商业价值的 AI，不是 demo 更炫，而是能稳定进流程、可控成本、可审计、可证明 ROI。",
+  "topics": [
+    "AI / Agent / LLM",
+    "前端 / 开发工具",
+    "保险科技 / 金融科技",
+    "宏观经济 / 市场",
+    "国际新闻"
+  ],
+  "items": [
+    {
+      "title": "UN 与 FCA 强化 AI 监管信号",
+      "category": "AI / 金融监管",
+      "what_happened": "联合国秘书长呼吁建立全球 AI 协调规则，英国 FCA 官员也提出应评估是否把 ChatGPT、Claude、Gemini 等通用大模型纳入监管边界。",
+      "why_it_matters": "监管关注点正在从机构如何使用 AI，扩展到基础模型本身是否应被监管。金融、保险、投顾、客服和销售辅助都会受到影响。",
+      "what_it_means_for_you": "做保险 AI / 智能保顾方案时，不能只强调回答准确率，还要讲清楚 AI 是否构成建议、谁负责复核、日志如何追踪、出错后怎么纠偏。",
+      "sources": []
+    },
+    {
+      "title": "AI 内存成为资本市场新主角",
+      "category": "AI 基建",
+      "what_happened": "SK Hynix 启动 Nasdaq ADR 发行，市场继续围绕 HBM、DRAM、NAND 和先进封装重估 AI 基建价值链。",
+      "why_it_matters": "AI 基建瓶颈不只是 GPU，还包括内存、封装、电力和数据中心供给。资本正在把 AI 内存视为核心基础设施资产。",
+      "what_it_means_for_you": "AI 产品成本评估要把长上下文、RAG、Agent 多轮调用、缓存、批处理和降级策略算进去，不能只看模型 API 单价。",
+      "sources": []
+    },
+    {
+      "title": "GitHub Copilot 进入企业治理阶段",
+      "category": "前端 / 开发工具",
+      "what_happened": "Copilot 近期集中更新 agent session streaming、cost center AI credit pool、Copilot Vision、CLI auto model selection 和更多可选模型。",
+      "why_it_matters": "AI coding 已经不是个人插件，而是工程生产系统。企业关心谁用了多少额度、Agent 调了什么工具、是否能审计、是否能看图/PDF、是否能自动选合适模型。",
+      "what_it_means_for_you": "前端团队要把 issue 验收标准、PR 模板、组件 Story、接口 mock、设计稿截图、CI 错误、E2E 命令、AGENTS.md 标准化。上下文越清楚，Agent 越少返工。",
+      "sources": []
+    },
+    {
+      "title": "Vercel 把 Agent 观测和模型路由平台化",
+      "category": "Agent 平台",
+      "what_happened": "Vercel Agent Runs 支持通过 MCP 和 CLI 查看运行状态、工具调用、token 成本和完整 trace；AI Gateway routing rules 可在网关层改写或拒绝模型请求。",
+      "why_it_matters": "Agent 不能是黑盒，它需要像 APM 一样可观测；模型调用也不应散落在业务代码里，而应通过网关统一治理。",
+      "what_it_means_for_you": "做 PRD 分析 Agent、Codex Skill 或内部 Agent 平台时，可以参考统一 model gateway、任务 trace、token 成本、工具调用记录、失败原因、人工接管和结果回放。",
+      "sources": []
+    },
+    {
+      "title": "AI 交易开始从芯片转向 hyperscaler",
+      "category": "宏观经济 / 市场",
+      "what_happened": "市场开始讨论资金是否从半导体股转向 Alphabet、Amazon、Meta 等大规模投入数据中心的 hyperscaler。",
+      "why_it_matters": "AI 交易正在从谁卖铲子，转向谁能把铲子变成现金流。芯片、内存、云和应用层都会被重新定价。",
+      "what_it_means_for_you": "AI 产品路线要避免只讲技术栈，应更多使用业务指标：售前提效、PRD 审查缺陷召回率、开发 TODO 准确率、测试覆盖提升、客户经营转化率。",
+      "sources": []
+    },
+    {
+      "title": "霍尔木兹与台海继续影响能源和芯片风险",
+      "category": "国际新闻",
+      "what_happened": "中东航道风险和台海周边海空活动继续影响市场对能源、半导体和全球供应链的风险定价。",
+      "why_it_matters": "能源价格影响通胀、利率和数据中心成本；台海风险直接影响半导体、电子制造、AI 服务器和全球风险偏好。",
+      "what_it_means_for_you": "技术和产品架构仍要避免单点依赖：模型供应商、云区域、CDN、支付通道、关键 API、数据源、芯片和设备供应都应有替代或降级方案。",
+      "sources": []
+    }
+  ],
+  "signals": [
+    {
+      "title": "AI 内存涨价是否继续传导到云和终端价格",
+      "reason": "如果 DRAM、NAND、HBM 继续涨价，AI 应用层会面对更高云账单和硬件成本。"
+    },
+    {
+      "title": "Agent 是否全面进入可审计、可限额、可路由",
+      "reason": "GitHub 与 Vercel 的更新说明企业级 Agent 的关键门槛正在从聪明变成可治理。"
+    },
+    {
+      "title": "金融监管是否把通用模型纳入监管边界",
+      "reason": "如果监管边界扩大，智能保顾、金融客服、投顾辅助都会被要求更强的解释、审计和人工复核。"
+    }
+  ]
+}
