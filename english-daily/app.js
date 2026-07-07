@@ -14,6 +14,16 @@ async function fetchJson(path) {
   return response.json();
 }
 
+function formatDate(dateString) {
+  const date = new Date(`${dateString}T00:00:00`);
+  if (Number.isNaN(date.getTime())) return dateString;
+  return date.toLocaleDateString('zh-CN', {
+    month: '2-digit',
+    day: '2-digit',
+    weekday: 'short',
+  });
+}
+
 function storageKey(date) {
   return `english-daily:${date}:remembered`;
 }
@@ -37,7 +47,7 @@ function saveRemembered() {
 
 function renderMeta() {
   const lesson = state.currentLesson;
-  $('#todayLabel').textContent = lesson ? lesson.title : 'No lesson';
+  $('#todayLabel').textContent = lesson ? formatDate(lesson.date) : 'No lesson';
   $('#progressLabel').textContent = `${state.remembered.size} / ${lesson?.words?.length || 0}`;
 }
 
@@ -125,7 +135,7 @@ async function init() {
 
   const select = $('#lessonSelect');
   select.innerHTML = state.lessons
-    .map((item) => `<option value="${item.date}">${item.title}</option>`)
+    .map((item) => `<option value="${item.date}">${formatDate(item.date)}</option>`)
     .join('');
 
   select.addEventListener('change', () => loadLesson(select.value));
