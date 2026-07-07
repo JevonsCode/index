@@ -39,16 +39,23 @@ function loadRemembered(date) {
 
 function saveRemembered() {
   if (!state.currentLesson) return;
-  localStorage.setItem(
-    storageKey(state.currentLesson.date),
-    JSON.stringify([...state.remembered]),
-  );
+  localStorage.setItem(storageKey(state.currentLesson.date), JSON.stringify([...state.remembered]));
 }
 
 function renderMeta() {
   const lesson = state.currentLesson;
+  const total = lesson?.words?.length || 0;
+  const count = state.remembered.size;
+  const percent = total ? Math.round((count / total) * 100) : 0;
+
   $('#todayLabel').textContent = lesson ? formatDate(lesson.date) : 'No lesson';
-  $('#progressLabel').textContent = `${state.remembered.size} / ${lesson?.words?.length || 0}`;
+  $('#progressLabel').textContent = `${count} / ${total}`;
+
+  const bar = $('#progressBar');
+  if (bar) bar.style.width = `${percent}%`;
+
+  const tip = $('#progressTip');
+  if (tip) tip.textContent = percent >= 100 ? '今日完成' : percent >= 60 ? '继续巩固' : '开始今天的学习';
 }
 
 function renderQuiz() {
@@ -71,42 +78,63 @@ function renderQuiz() {
   });
 }
 
-function renderWords() {
+function renderCategoryTabs() {
+  const container = $('#categoryTabs');
+  if (!container) return;
+  const categories = ['全部', ...new Set(state.currentLesson.words.map((item) => item.category))];
+  container.innerHTML = categories.map((category) => `<button type="button">${category}</button>`).join('');
+  [...container.querySelectorAll('button')].forEach((button, index) => {
+    if (index === 0) button.classList.add('active');
+    button.addEventListener('click', () => {
+      [...container.querySelectorAll('button')].forEach((item) => item.classList.remove('active'));
+      button.classList.add('active');
+      renderWords(button.textContent);
+    });
+  });
+}
+
+function renderWords(category = '全部') {
   const grid = $('#wordGrid');
   const template = $('#wordCardTemplate');
   grid.innerHTML = '';
 
-  state.currentLesson.words.forEach((item) => {
-    const card = template.content.firstElementChild.cloneNode(true);
-    card.dataset.word = item.word;
-    card.querySelector('.word').textContent = item.word;
-    card.querySelector('.phonetic').textContent = item.phonetic;
-    card.querySelector('.tag').textContent = item.category;
-    card.querySelector('.meaning').textContent = item.meaning;
-    card.querySelector('.phrase').textContent = `短语：${item.phrase}`;
-    card.querySelector('.sentence').textContent = `例句：${item.sentence}`;
+  state.currentLesson.words
+    .filter((item) => category === '全部' || item.category === category)
+    .forEach((item) => {
+      const card = template.content.firstElementChild.cloneNode(true);
+      card.dataset.word = item.word;
+      card.dataset.category = item.category;
+      card.querySelector('.word').textContent = item.word;
+      card.querySelector('.phonetic').textContent = item.phonetic;
+      card.querySelector('.tag').textContent = item.category;
+      card.querySelector('.meaning').textContent = item.meaning;
+      card.querySelector('.phrase').textContent = `短语：${item.phrase}`;
+      card.querySelector('.sentence').textContent = `例句：${item.sentence}`;
 
-    const button = card.querySelector('.remember-button');
-    const sync = () => {
-      const remembered = state.remembered.has(item.word);
-      card.classList.toggle('remembered', remembered);
-      button.textContent = remembered ? '已记住' : '标记已记住';
-    };
+      const copyButton = card.querySelector('.copy-button');
+      if (copyButton) copyButton.addEventListener('click', () => copyButton.textContent = '已展开例句');
 
-    button.addEventListener('click', () => {
-      if (state.remembered.has(item.word)) {
-        state.remembered.delete(item.word);
-      } else {
-        state.remembered.add(item.word);
-      }
-      saveRemembered();
+      const button = card.querySelector('.remember-button');
+      const sync = () => {
+        const remembered = state.remembered.has(item.word);
+        card.classList.toggle('remembered', remembered);
+        button.textContent = remembered ? '已记住' : '标记已记住';
+      };
+
+      button.addEventListener('click', () => {
+        if (state.remembered.has(item.word)) {
+          state.remembered.delete(item.word);
+        } else {
+          state.remembered.add(item.word);
+        }
+        saveRemembered();
+        sync();
+        renderMeta();
+      });
+
       sync();
-      renderMeta();
+      grid.appendChild(card);
     });
-
-    sync();
-    grid.appendChild(card);
-  });
 }
 
 function renderFocus() {
@@ -125,6 +153,7 @@ async function loadLesson(date) {
   state.remembered = loadRemembered(state.currentLesson.date);
   renderMeta();
   renderQuiz();
+  renderCategoryTabs();
   renderWords();
   renderFocus();
 }
@@ -134,10 +163,7 @@ async function init() {
   state.lessons = index.lessons;
 
   const select = $('#lessonSelect');
-  select.innerHTML = state.lessons
-    .map((item) => `<option value="${item.date}">${formatDate(item.date)}</option>`)
-    .join('');
-
+  select.innerHTML = state.lessons.map((item) => `<option value="${item.date}">${formatDate(item.date)}</option>`).join('');
   select.addEventListener('change', () => loadLesson(select.value));
 
   $('#resetProgress').addEventListener('click', () => {
