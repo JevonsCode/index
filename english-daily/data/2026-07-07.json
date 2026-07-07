@@ -1,0 +1,102 @@
+{
+  "date": "2026-07-07",
+  "title": "2026-07-07｜旅游前端英语 Day 1",
+  "reviewQuiz": [
+    { "zh": "行程单；行程安排", "answer": "itinerary" },
+    { "zh": "可用情况；空位", "answer": "availability" },
+    { "zh": "防抖", "answer": "debounce" },
+    { "zh": "节流", "answer": "throttle" },
+    { "zh": "重定向", "answer": "redirect" },
+    { "zh": "接口端点", "answer": "endpoint" },
+    { "zh": "复现一个 bug", "answer": "reproduce a bug" },
+    { "zh": "测试环境", "answer": "test environment" }
+  ],
+  "words": [
+    {
+      "word": "availability",
+      "phonetic": "/əˌveɪləˈbɪləti/",
+      "meaning": "可用情况；房态；余票；库存",
+      "phrase": "check availability",
+      "sentence": "We need to check room availability in real time.",
+      "category": "旅游业务"
+    },
+    {
+      "word": "itinerary",
+      "phonetic": "/aɪˈtɪnəˌreri/",
+      "meaning": "行程单；行程安排",
+      "phrase": "travel itinerary",
+      "sentence": "Users can view their travel itinerary after booking.",
+      "category": "旅游业务"
+    },
+    {
+      "word": "fare",
+      "phonetic": "/fer/",
+      "meaning": "票价；车费；费用",
+      "phrase": "fare details",
+      "sentence": "The fare details should be displayed clearly on the checkout page.",
+      "category": "旅游业务"
+    },
+    {
+      "word": "cancellation",
+      "phonetic": "/ˌkænsəˈleɪʃn/",
+      "meaning": "取消；退订",
+      "phrase": "cancellation policy",
+      "sentence": "The cancellation policy should be visible before payment.",
+      "category": "旅游业务"
+    },
+    {
+      "word": "component",
+      "phonetic": "/kəmˈpoʊnənt/",
+      "meaning": "组件",
+      "phrase": "reusable component",
+      "sentence": "I am building a reusable booking card component.",
+      "category": "前端开发"
+    },
+    {
+      "word": "render",
+      "phonetic": "/ˈrendər/",
+      "meaning": "渲染",
+      "phrase": "render a component",
+      "sentence": "The page fails to render the price component correctly.",
+      "category": "前端开发"
+    },
+    {
+      "word": "validation",
+      "phonetic": "/ˌvælɪˈdeɪʃən/",
+      "meaning": "校验；验证",
+      "phrase": "form validation",
+      "sentence": "We should add form validation before submitting passenger information.",
+      "category": "前端开发"
+    },
+    {
+      "word": "fallback",
+      "phonetic": "/ˈfɔːlbæk/",
+      "meaning": "兜底方案；降级展示",
+      "phrase": "fallback UI",
+      "sentence": "We need a fallback UI when the booking request fails.",
+      "category": "前端开发"
+    },
+    {
+      "word": "clarify",
+      "phonetic": "/ˈklærəfaɪ/",
+      "meaning": "澄清；说明清楚",
+      "phrase": "clarify the requirement",
+      "sentence": "Could you clarify the requirement for the itinerary page?",
+      "category": "工作沟通"
+    },
+    {
+      "word": "priority",
+      "phonetic": "/praɪˈɔːrəti/",
+      "meaning": "优先级",
+      "phrase": "set the priority",
+      "sentence": "We need to set the priority for this payment issue.",
+      "category": "工作沟通"
+    }
+  ],
+  "focus": [
+    "重点复习：itinerary / availability，这两个是旅游业务高频但容易卡壳的词。",
+    "技术表达重点：validation / fallback / render，尽量用它们描述真实页面问题。",
+    "今天至少开口说 3 句：Could you clarify the requirement? / We need a fallback UI. / Check room availability in real time.",
+    "动态调整：如果明天 itinerary 和 availability 仍然想不起来，继续复现到后天。"
+  ]
+}
