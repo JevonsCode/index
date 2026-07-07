@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>English Daily｜旅游前端英语</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero-card">
+        <div>
+          <p class="eyebrow">English Daily</p>
+          <h1>旅游公司前端开发英语</h1>
+          <p class="subtitle">每天 10 个高频词：旅游业务 + 前端开发 + 工作沟通。先复习，再学新词。</p>
+        </div>
+        <div class="hero-meta">
+          <span id="todayLabel">Loading...</span>
+          <strong id="progressLabel">0 / 0</strong>
+        </div>
+      </section>
+
+      <section class="toolbar-card">
+        <label for="lessonSelect">选择日期</label>
+        <select id="lessonSelect"></select>
+        <button id="resetProgress" type="button">重置今日进度</button>
+      </section>
+
+      <section class="panel quiz-panel">
+        <div class="section-title">
+          <p class="eyebrow">Review</p>
+          <h2>先复习昨天</h2>
+        </div>
+        <div id="quizList" class="quiz-list"></div>
+      </section>
+
+      <section class="panel">
+        <div class="section-title">
+          <p class="eyebrow">Words</p>
+          <h2>今日新词</h2>
+        </div>
+        <div id="wordGrid" class="word-grid"></div>
+      </section>
+
+      <section class="panel strategy-panel">
+        <div class="section-title">
+          <p class="eyebrow">Focus</p>
+          <h2>今日强化重点</h2>
+        </div>
+        <ul id="focusList" class="focus-list"></ul>
+      </section>
+    </main>
+
+    <template id="wordCardTemplate">
+      <article class="word-card">
+        <div class="word-head">
+          <div>
+            <h3 class="word"></h3>
+            <p class="phonetic"></p>
+          </div>
+          <span class="tag"></span>
+        </div>
+        <p class="meaning"></p>
+        <p class="phrase"></p>
+        <p class="sentence"></p>
+        <button class="remember-button" type="button">标记已记住</button>
+      </article>
+    </template>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
