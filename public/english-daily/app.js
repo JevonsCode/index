@@ -5,6 +5,8 @@ const state = {
 };
 
 const $ = (selector) => document.querySelector(selector);
+const PROGRESS_KEY = 'english-daily-progress';
+const RETENTION_DAYS = 90;
 
 async function fetchJson(path) {
   const response = await fetch(path, { cache: 'no-store' });
@@ -24,22 +26,60 @@ function formatDate(dateString) {
   });
 }
 
-function storageKey(date) {
+function readProgress() {
+  try {
+    const raw = localStorage.getItem(PROGRESS_KEY);
+    const parsed = raw ? JSON.parse(raw) : {};
+    return parsed && typeof parsed === 'object' ? parsed : {};
+  } catch (_) {
+    return {};
+  }
+}
+
+function writeProgress(progress) {
+  localStorage.setItem(PROGRESS_KEY, JSON.stringify(progress));
+}
+
+function oldStorageKey(date) {
   return `english-daily:${date}:remembered`;
 }
 
-function loadRemembered(date) {
+function readOldRemembered(date) {
   try {
-    const raw = localStorage.getItem(storageKey(date));
-    return new Set(raw ? JSON.parse(raw) : []);
+    const raw = localStorage.getItem(oldStorageKey(date));
+    return raw ? JSON.parse(raw) : [];
   } catch (_) {
-    return new Set();
+    return [];
   }
+}
+
+function cleanupProgress(progress) {
+  const now = new Date();
+  const cutoff = new Date(now.getFullYear(), now.getMonth(), now.getDate() - RETENTION_DAYS);
+  Object.keys(progress).forEach((dateString) => {
+    const date = new Date(`${dateString}T00:00:00`);
+    if (Number.isNaN(date.getTime()) || date < cutoff) {
+      delete progress[dateString];
+    }
+  });
+  return progress;
+}
+
+function loadRemembered(date) {
+  const progress = cleanupProgress(readProgress());
+  if (!progress[date]) {
+    const oldWords = readOldRemembered(date);
+    if (oldWords.length) progress[date] = oldWords;
+  }
+  writeProgress(progress);
+  return new Set(progress[date] || []);
 }
 
 function saveRemembered() {
   if (!state.currentLesson) return;
-  localStorage.setItem(storageKey(state.currentLesson.date), JSON.stringify([...state.remembered]));
+  const progress = cleanupProgress(readProgress());
+  progress[state.currentLesson.date] = [...state.remembered];
+  writeProgress(progress);
 }
 
 function renderMeta() {
