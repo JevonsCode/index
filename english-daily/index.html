@@ -13,18 +13,24 @@
         <div class="hero-copy">
           <p class="eyebrow">Daily English</p>
           <h1>每日英语</h1>
-          <p class="subtitle">先复习，再学习。每天 10 个能直接用到的词。</p>
+          <p class="subtitle">复习 → 学习 → 标记掌握。每天 10 个能直接用到的词。</p>
+          <div class="hero-pills" aria-label="学习流程">
+            <span>Review</span>
+            <span>Words</span>
+            <span>Focus</span>
+          </div>
         </div>
-        <div class="hero-meta" aria-label="今日学习进度">
+        <div class="progress-card" aria-label="今日学习进度">
           <span id="todayLabel">Loading...</span>
           <strong id="progressLabel">0 / 0</strong>
-          <small>已记住</small>
+          <div class="progress-track" aria-hidden="true"><i id="progressBar"></i></div>
+          <small id="progressTip">开始今天的学习</small>
         </div>
       </section>
 
       <section class="toolbar-card" aria-label="学习日期选择">
         <div class="field">
-          <label for="lessonSelect">日期</label>
+          <label for="lessonSelect">学习日期</label>
           <select id="lessonSelect"></select>
         </div>
         <button id="resetProgress" type="button">重置进度</button>
@@ -32,8 +38,10 @@
 
       <section class="panel quiz-panel">
         <div class="section-title">
-          <p class="eyebrow">Review</p>
-          <h2>复习</h2>
+          <div>
+            <p class="eyebrow">Review</p>
+            <h2>复习</h2>
+          </div>
           <span>点击题目显示答案</span>
         </div>
         <div id="quizList" class="quiz-list"></div>
@@ -41,17 +49,22 @@
 
       <section class="panel">
         <div class="section-title">
-          <p class="eyebrow">Words</p>
-          <h2>今日新词</h2>
+          <div>
+            <p class="eyebrow">Words</p>
+            <h2>今日新词</h2>
+          </div>
           <span>读音、短语、例句一起记</span>
         </div>
+        <div id="categoryTabs" class="category-tabs" aria-label="分类筛选"></div>
         <div id="wordGrid" class="word-grid"></div>
       </section>
 
       <section class="panel strategy-panel">
         <div class="section-title">
-          <p class="eyebrow">Focus</p>
-          <h2>强化重点</h2>
+          <div>
+            <p class="eyebrow">Focus</p>
+            <h2>强化重点</h2>
+          </div>
         </div>
         <ul id="focusList" class="focus-list"></ul>
       </section>
@@ -67,9 +80,14 @@
           <span class="tag"></span>
         </div>
         <p class="meaning"></p>
-        <p class="phrase"></p>
-        <p class="sentence"></p>
-        <button class="remember-button" type="button">标记已记住</button>
+        <div class="example-block">
+          <p class="phrase"></p>
+          <p class="sentence"></p>
+        </div>
+        <div class="card-actions">
+          <button class="copy-button" type="button">复制例句</button>
+          <button class="remember-button" type="button">标记已记住</button>
+        </div>
       </article>
     </template>
 
