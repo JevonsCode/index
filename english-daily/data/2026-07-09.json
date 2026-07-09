@@ -1,0 +1,134 @@
+{
+  "date": "2026-07-09",
+  "title": "2026-07-09｜Daily English",
+  "reviewQuiz": [
+    {
+      "zh": "需求；要求",
+      "answer": "requirement"
+    },
+    {
+      "zh": "范围；边界",
+      "answer": "scope"
+    },
+    {
+      "zh": "预估工作量",
+      "answer": "estimate the effort"
+    },
+    {
+      "zh": "预订确认单",
+      "answer": "booking confirmation"
+    },
+    {
+      "zh": "入住人数限制",
+      "answer": "occupancy limit"
+    },
+    {
+      "zh": "兜底界面",
+      "answer": "fallback UI"
+    },
+    {
+      "zh": "表单校验",
+      "answer": "form validation"
+    },
+    {
+      "zh": "渲染价格组件",
+      "answer": "render the price component"
+    },
+    {
+      "zh": "可用情况；房态；余票",
+      "answer": "availability"
+    },
+    {
+      "zh": "澄清需求",
+      "answer": "clarify the requirement"
+    }
+  ],
+  "words": [
+    {
+      "word": "constraint",
+      "phonetic": "/kənˈstreɪnt/",
+      "meaning": "限制；约束条件",
+      "phrase": "technical constraint",
+      "sentence": "We should explain the technical constraint before changing the booking flow.",
+      "category": "业务"
+    },
+    {
+      "word": "approval",
+      "phonetic": "/əˈpruːvəl/",
+      "meaning": "批准；审批；同意",
+      "phrase": "get approval",
+      "sentence": "We need to get approval before releasing the new checkout page.",
+      "category": "业务"
+    },
+    {
+      "word": "handoff",
+      "phonetic": "/ˈhændɔːf/",
+      "meaning": "交接；移交",
+      "phrase": "design handoff",
+      "sentence": "The design handoff should include states for loading, error, and empty results.",
+      "category": "沟通"
+    },
+    {
+      "word": "edge case",
+      "phonetic": "/ˈedʒ keɪs/",
+      "meaning": "边界情况；极端情况",
+      "phrase": "handle edge cases",
+      "sentence": "We need to handle edge cases when users select multiple travelers.",
+      "category": "技术"
+    },
+    {
+      "word": "latency",
+      "phonetic": "/ˈleɪtənsi/",
+      "meaning": "延迟；响应耗时",
+      "phrase": "reduce latency",
+      "sentence": "Caching can reduce latency when the user opens the itinerary page.",
+      "category": "技术"
+    },
+    {
+      "word": "rollback",
+      "phonetic": "/ˈroʊlbæk/",
+      "meaning": "回滚；恢复到上一版本",
+      "phrase": "rollback plan",
+      "sentence": "We should prepare a rollback plan before the production release.",
+      "category": "技术"
+    },
+    {
+      "word": "navigation",
+      "phonetic": "/ˌnævɪˈɡeɪʃən/",
+      "meaning": "导航；页面路径；路线导航",
+      "phrase": "page navigation",
+      "sentence": "The page navigation should remain clear after users complete payment.",
+      "category": "技术"
+    },
+    {
+      "word": "accommodation",
+      "phonetic": "/əˌkɑːməˈdeɪʃən/",
+      "meaning": "住宿；住处",
+      "phrase": "book accommodation",
+      "sentence": "Travelers usually book accommodation after confirming their flight itinerary.",
+      "category": "旅行"
+    },
+    {
+      "word": "boarding",
+      "phonetic": "/ˈbɔːrdɪŋ/",
+      "meaning": "登机；上车；登船",
+      "phrase": "boarding pass",
+      "sentence": "The boarding pass should be easy to find in the trip details page.",
+      "category": "旅行"
+    },
+    {
+      "word": "receipt",
+      "phonetic": "/rɪˈsiːt/",
+      "meaning": "收据；付款凭证",
+      "phrase": "payment receipt",
+      "sentence": "Users may need a payment receipt for reimbursement after booking.",
+      "category": "业务"
+    }
+  ],
+  "focus": [
+    "动态复习：继续强化 requirement / scope / estimate，用它们表达需求边界、工作量和排期。",
+    "技术表达：把 fallback / validation / render 复习成完整句子，例如 The fallback UI should render after validation fails.",
+    "今天新重点：constraint / edge case / latency / rollback，用来描述前端开发中的限制、边界场景、性能和发布风险。",
+    "旅行场景：accommodation / boarding / receipt，串成预订后的用户流程：book accommodation, check the boarding pass, download the receipt."
+  ]
+}
