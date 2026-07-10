@@ -1,0 +1,134 @@
+{
+  "date": "2026-07-10",
+  "title": "2026-07-10｜Daily English",
+  "reviewQuiz": [
+    {
+      "zh": "限制；约束条件",
+      "answer": "constraint"
+    },
+    {
+      "zh": "设计交接",
+      "answer": "design handoff"
+    },
+    {
+      "zh": "边界情况",
+      "answer": "edge case"
+    },
+    {
+      "zh": "减少延迟",
+      "answer": "reduce latency"
+    },
+    {
+      "zh": "回滚计划",
+      "answer": "rollback plan"
+    },
+    {
+      "zh": "页面导航",
+      "answer": "page navigation"
+    },
+    {
+      "zh": "住宿",
+      "answer": "accommodation"
+    },
+    {
+      "zh": "登机牌",
+      "answer": "boarding pass"
+    },
+    {
+      "zh": "付款凭证",
+      "answer": "payment receipt"
+    },
+    {
+      "zh": "表单校验",
+      "answer": "form validation"
+    }
+  ],
+  "words": [
+    {
+      "word": "eligibility",
+      "phonetic": "/ˌelɪdʒəˈbɪləti/",
+      "meaning": "资格；符合条件",
+      "phrase": "eligibility rules",
+      "sentence": "The eligibility rules should be checked before showing the offer.",
+      "category": "业务"
+    },
+    {
+      "word": "workflow",
+      "phonetic": "/ˈwɜːrkfloʊ/",
+      "meaning": "工作流；业务流程",
+      "phrase": "approval workflow",
+      "sentence": "The approval workflow needs a clear fallback when the request fails.",
+      "category": "业务"
+    },
+    {
+      "word": "milestone",
+      "phonetic": "/ˈmaɪlstoʊn/",
+      "meaning": "里程碑；关键节点",
+      "phrase": "project milestone",
+      "sentence": "The next project milestone is to finish the checkout prototype.",
+      "category": "业务"
+    },
+    {
+      "word": "dependency",
+      "phonetic": "/dɪˈpendənsi/",
+      "meaning": "依赖；依赖项",
+      "phrase": "external dependency",
+      "sentence": "This feature has an external dependency on the payment API.",
+      "category": "技术"
+    },
+    {
+      "word": "timeout",
+      "phonetic": "/ˈtaɪmaʊt/",
+      "meaning": "超时；请求超时",
+      "phrase": "request timeout",
+      "sentence": "Show a retry button when a request timeout happens.",
+      "category": "技术"
+    },
+    {
+      "word": "pagination",
+      "phonetic": "/ˌpædʒɪˈneɪʃən/",
+      "meaning": "分页；分页加载",
+      "phrase": "pagination logic",
+      "sentence": "The pagination logic should keep the selected filters after loading more results.",
+      "category": "技术"
+    },
+    {
+      "word": "follow-up",
+      "phonetic": "/ˈfɑːloʊ ʌp/",
+      "meaning": "跟进；后续事项",
+      "phrase": "follow-up action",
+      "sentence": "Please send a follow-up note after the product review meeting.",
+      "category": "沟通"
+    },
+    {
+      "word": "concern",
+      "phonetic": "/kənˈsɜːrn/",
+      "meaning": "担忧；顾虑；关注点",
+      "phrase": "raise a concern",
+      "sentence": "I want to raise a concern about the release timeline.",
+      "category": "沟通"
+    },
+    {
+      "word": "layover",
+      "phonetic": "/ˈleɪoʊvər/",
+      "meaning": "中转停留；转机等待时间",
+      "phrase": "short layover",
+      "sentence": "A short layover may increase the risk of missing the connection.",
+      "category": "旅行"
+    },
+    {
+      "word": "baggage",
+      "phonetic": "/ˈbæɡɪdʒ/",
+      "meaning": "行李",
+      "phrase": "checked baggage",
+      "sentence": "Checked baggage rules should be visible before users confirm the flight.",
+      "category": "旅行"
+    }
+  ],
+  "focus": [
+    "动态复习：今天优先强化 constraint / handoff / edge case / latency / rollback，继续把它们放进真实前端发布和产品评审语境里。",
+    "技术表达：用 dependency / timeout / pagination 描述接口依赖、请求失败和列表加载，例如 The request timeout should trigger a fallback UI.",
+    "业务流程：用 eligibility / workflow / milestone 讲清楚规则、流程和项目节点，避免只会说 requirement。",
+    "沟通与旅行：用 follow-up / concern 表达会后跟进和风险顾虑；用 layover / baggage 描述转机和行李规则。"
+  ]
+}
