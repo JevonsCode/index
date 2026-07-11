@@ -1,1 +1,134 @@
-{}
+{
+  "date": "2026-07-11",
+  "title": "2026-07-11｜Daily English",
+  "reviewQuiz": [
+    {
+      "zh": "资格规则",
+      "answer": "eligibility rules"
+    },
+    {
+      "zh": "审批工作流",
+      "answer": "approval workflow"
+    },
+    {
+      "zh": "项目里程碑",
+      "answer": "project milestone"
+    },
+    {
+      "zh": "外部依赖",
+      "answer": "external dependency"
+    },
+    {
+      "zh": "请求超时",
+      "answer": "request timeout"
+    },
+    {
+      "zh": "分页逻辑",
+      "answer": "pagination logic"
+    },
+    {
+      "zh": "后续行动",
+      "answer": "follow-up action"
+    },
+    {
+      "zh": "提出一个顾虑",
+      "answer": "raise a concern"
+    },
+    {
+      "zh": "短时间转机",
+      "answer": "short layover"
+    },
+    {
+      "zh": "托运行李",
+      "answer": "checked baggage"
+    }
+  ],
+  "words": [
+    {
+      "word": "onboarding",
+      "phonetic": "/ˈɑːnbɔːrdɪŋ/",
+      "meaning": "引导流程；入门流程；新用户接入",
+      "phrase": "user onboarding",
+      "sentence": "The user onboarding flow should explain the key steps without showing too much information at once.",
+      "category": "业务"
+    },
+    {
+      "word": "conversion",
+      "phonetic": "/kənˈvɜːrʒən/",
+      "meaning": "转化；转化率相关结果",
+      "phrase": "conversion rate",
+      "sentence": "A shorter checkout flow may improve the conversion rate.",
+      "category": "业务"
+    },
+    {
+      "word": "exception",
+      "phonetic": "/ɪkˈsepʃən/",
+      "meaning": "例外情况；异常情况",
+      "phrase": "handle an exception",
+      "sentence": "The product flow should explain how to handle an exception when approval is delayed.",
+      "category": "业务"
+    },
+    {
+      "word": "debounce",
+      "phonetic": "/diːˈbaʊns/",
+      "meaning": "防抖；限制高频触发",
+      "phrase": "debounce user input",
+      "sentence": "We should debounce user input before sending search requests.",
+      "category": "技术"
+    },
+    {
+      "word": "stale",
+      "phonetic": "/steɪl/",
+      "meaning": "过期的；未更新的；陈旧的",
+      "phrase": "stale data",
+      "sentence": "The page should refresh stale data after the user returns to the tab.",
+      "category": "技术"
+    },
+    {
+      "word": "hydration",
+      "phonetic": "/haɪˈdreɪʃən/",
+      "meaning": "水合；前端将服务端 HTML 激活为可交互页面的过程",
+      "phrase": "hydration mismatch",
+      "sentence": "A hydration mismatch can happen when the server and client render different content.",
+      "category": "技术"
+    },
+    {
+      "word": "acknowledge",
+      "phonetic": "/əkˈnɑːlɪdʒ/",
+      "meaning": "确认收到；承认；认可",
+      "phrase": "acknowledge the issue",
+      "sentence": "Please acknowledge the issue first, then share the next action and expected timing.",
+      "category": "沟通"
+    },
+    {
+      "word": "compromise",
+      "phonetic": "/ˈkɑːmprəmaɪz/",
+      "meaning": "折中方案；妥协",
+      "phrase": "reach a compromise",
+      "sentence": "We reached a compromise by reducing the first release scope.",
+      "category": "沟通"
+    },
+    {
+      "word": "refundable",
+      "phonetic": "/rɪˈfʌndəbəl/",
+      "meaning": "可退款的",
+      "phrase": "refundable fare",
+      "sentence": "A refundable fare costs more but gives travelers more flexibility.",
+      "category": "旅行"
+    },
+    {
+      "word": "shuttle",
+      "phonetic": "/ˈʃʌtl/",
+      "meaning": "接驳车；往返班车",
+      "phrase": "airport shuttle",
+      "sentence": "The hotel provides an airport shuttle every thirty minutes.",
+      "category": "旅行"
+    }
+  ],
+  "focus": [
+    "动态复习：继续强化 dependency / timeout / pagination，并把它们与 stale / debounce / hydration 组合成完整的前端问题描述。",
+    "业务表达：复习 eligibility / workflow / milestone，今天重点加入 onboarding / conversion / exception，用来描述用户进入流程、转化和异常分支。",
+    "沟通练习：把 follow-up / concern 与 acknowledge / compromise 连用，先确认问题，再说明顾虑并提出折中方案。",
+    "旅行复习：继续区分 layover / checked baggage，今天补充 refundable fare / airport shuttle，练习描述转机、行李、退改和接驳安排。"
+  ]
+}
