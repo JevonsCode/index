@@ -1,0 +1,134 @@
+{
+  "date": "2026-07-12",
+  "title": "2026-07-12｜Daily English",
+  "reviewQuiz": [
+    {
+      "zh": "用户引导流程",
+      "answer": "user onboarding"
+    },
+    {
+      "zh": "转化率",
+      "answer": "conversion rate"
+    },
+    {
+      "zh": "处理异常情况",
+      "answer": "handle an exception"
+    },
+    {
+      "zh": "对用户输入进行防抖处理",
+      "answer": "debounce user input"
+    },
+    {
+      "zh": "过期数据",
+      "answer": "stale data"
+    },
+    {
+      "zh": "水合不匹配",
+      "answer": "hydration mismatch"
+    },
+    {
+      "zh": "确认收到问题",
+      "answer": "acknowledge the issue"
+    },
+    {
+      "zh": "达成折中方案",
+      "answer": "reach a compromise"
+    },
+    {
+      "zh": "可退款票价",
+      "answer": "refundable fare"
+    },
+    {
+      "zh": "机场接驳车",
+      "answer": "airport shuttle"
+    }
+  ],
+  "words": [
+    {
+      "word": "retention",
+      "phonetic": "/rɪˈtenʃən/",
+      "meaning": "留存；保留；用户持续使用",
+      "phrase": "user retention",
+      "sentence": "A clearer onboarding flow may improve user retention during the first week.",
+      "category": "业务"
+    },
+    {
+      "word": "fulfillment",
+      "phonetic": "/fʊlˈfɪlmənt/",
+      "meaning": "履约；订单或服务的完成过程",
+      "phrase": "order fulfillment",
+      "sentence": "The status page should show each step of the order fulfillment process.",
+      "category": "业务"
+    },
+    {
+      "word": "prerequisite",
+      "phonetic": "/ˌpriːˈrekwəzɪt/",
+      "meaning": "前置条件；先决条件",
+      "phrase": "a prerequisite for approval",
+      "sentence": "Identity verification is a prerequisite for completing this flow.",
+      "category": "业务"
+    },
+    {
+      "word": "throttle",
+      "phonetic": "/ˈθrɑːtl/",
+      "meaning": "节流；限制操作或请求的触发频率",
+      "phrase": "throttle scroll events",
+      "sentence": "We should throttle scroll events to reduce unnecessary calculations.",
+      "category": "技术"
+    },
+    {
+      "word": "race condition",
+      "phonetic": "/ˈreɪs kənˌdɪʃən/",
+      "meaning": "竞态条件；多个异步操作因执行顺序产生的问题",
+      "phrase": "avoid a race condition",
+      "sentence": "Cancel the previous request to avoid a race condition in the search results.",
+      "category": "技术"
+    },
+    {
+      "word": "retry",
+      "phonetic": "/ˌriːˈtraɪ/",
+      "meaning": "重试；再次执行失败的操作",
+      "phrase": "retry the request",
+      "sentence": "The client can retry the request once after a temporary network failure.",
+      "category": "技术"
+    },
+    {
+      "word": "prioritize",
+      "phonetic": "/praɪˈɔːrətaɪz/",
+      "meaning": "确定优先级；优先处理",
+      "phrase": "prioritize critical issues",
+      "sentence": "Let's prioritize critical issues before discussing minor visual changes.",
+      "category": "沟通"
+    },
+    {
+      "word": "consensus",
+      "phonetic": "/kənˈsensəs/",
+      "meaning": "共识；一致意见",
+      "phrase": "reach a consensus",
+      "sentence": "We need to reach a consensus on the release scope by the end of the meeting.",
+      "category": "沟通"
+    },
+    {
+      "word": "departure",
+      "phonetic": "/dɪˈpɑːrtʃər/",
+      "meaning": "出发；离境；班次的起飞或发车",
+      "phrase": "departure time",
+      "sentence": "Please arrive at the station thirty minutes before the departure time.",
+      "category": "旅行"
+    },
+    {
+      "word": "connection",
+      "phonetic": "/kəˈnekʃən/",
+      "meaning": "转机或换乘衔接；连接",
+      "phrase": "miss a connection",
+      "sentence": "A delayed first flight may cause us to miss the connection.",
+      "category": "旅行"
+    }
+  ],
+  "focus": [
+    "动态复习：stale / debounce / hydration 仍是近期技术弱项；今天加入 throttle / race condition / retry，练习完整描述异步请求和高频事件问题。",
+    "业务表达：继续复习 onboarding / conversion / exception，并用 retention / fulfillment / prerequisite 描述用户留存、履约步骤和流程前置条件。",
+    "沟通练习：把 acknowledge / concern / compromise 与 prioritize / consensus 连用，形成“确认问题—确定优先级—达成共识”的表达链路。",
+    "旅行复习：巩固 refundable fare / airport shuttle / layover / checked baggage，今天补充 departure time / miss a connection，重点练习行程衔接和延误影响。"
+  ]
+}
