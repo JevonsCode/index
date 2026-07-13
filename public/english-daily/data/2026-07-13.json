@@ -1,0 +1,134 @@
+{
+  "date": "2026-07-13",
+  "title": "2026-07-13｜Daily English",
+  "reviewQuiz": [
+    {
+      "zh": "用户留存",
+      "answer": "user retention"
+    },
+    {
+      "zh": "订单履约",
+      "answer": "order fulfillment"
+    },
+    {
+      "zh": "流程的前置条件",
+      "answer": "a prerequisite for the flow"
+    },
+    {
+      "zh": "对滚动事件进行节流",
+      "answer": "throttle scroll events"
+    },
+    {
+      "zh": "避免竞态条件",
+      "answer": "avoid a race condition"
+    },
+    {
+      "zh": "重试请求",
+      "answer": "retry the request"
+    },
+    {
+      "zh": "优先处理关键问题",
+      "answer": "prioritize critical issues"
+    },
+    {
+      "zh": "达成共识",
+      "answer": "reach a consensus"
+    },
+    {
+      "zh": "出发时间",
+      "answer": "departure time"
+    },
+    {
+      "zh": "错过转机",
+      "answer": "miss a connection"
+    }
+  ],
+  "words": [
+    {
+      "word": "activation",
+      "phonetic": "/ˌæktɪˈveɪʃən/",
+      "meaning": "激活；用户首次完成关键行为",
+      "phrase": "user activation",
+      "sentence": "The new checklist helps users reach activation without leaving the setup flow.",
+      "category": "业务"
+    },
+    {
+      "word": "drop-off",
+      "phonetic": "/ˈdrɑːp ɔːf/",
+      "meaning": "流失；用户在流程中途退出",
+      "phrase": "reduce checkout drop-off",
+      "sentence": "A shorter form may reduce checkout drop-off on mobile devices.",
+      "category": "业务"
+    },
+    {
+      "word": "reconciliation",
+      "phonetic": "/ˌrekənsɪliˈeɪʃən/",
+      "meaning": "对账；核对不同系统中的记录",
+      "phrase": "payment reconciliation",
+      "sentence": "The operations team runs payment reconciliation after the daily settlement.",
+      "category": "业务"
+    },
+    {
+      "word": "idempotent",
+      "phonetic": "/ˌaɪdəmˈpoʊtənt/",
+      "meaning": "幂等的；重复执行不会产生额外副作用的",
+      "phrase": "an idempotent request",
+      "sentence": "The payment endpoint should be idempotent so repeated requests do not create duplicate orders.",
+      "category": "技术"
+    },
+    {
+      "word": "memoization",
+      "phonetic": "/ˌmemoʊɪˈzeɪʃən/",
+      "meaning": "记忆化；缓存函数计算结果以避免重复计算",
+      "phrase": "use memoization",
+      "sentence": "We can use memoization to avoid recalculating the filtered list on every render.",
+      "category": "技术"
+    },
+    {
+      "word": "viewport",
+      "phonetic": "/ˈvjuːpɔːrt/",
+      "meaning": "视口；浏览器中当前可见的页面区域",
+      "phrase": "mobile viewport",
+      "sentence": "The sticky toolbar should remain visible within the mobile viewport.",
+      "category": "技术"
+    },
+    {
+      "word": "escalate",
+      "phonetic": "/ˈeskəleɪt/",
+      "meaning": "升级处理；将问题提交给更合适或更高层级的人",
+      "phrase": "escalate an issue",
+      "sentence": "Please escalate the issue if it blocks the release or affects user data.",
+      "category": "沟通"
+    },
+    {
+      "word": "tentative",
+      "phonetic": "/ˈtentətɪv/",
+      "meaning": "暂定的；尚未最终确认的",
+      "phrase": "a tentative timeline",
+      "sentence": "This is a tentative timeline and may change after the technical review.",
+      "category": "沟通"
+    },
+    {
+      "word": "customs",
+      "phonetic": "/ˈkʌstəmz/",
+      "meaning": "海关；入境时的申报和检查环节",
+      "phrase": "clear customs",
+      "sentence": "Allow enough time to clear customs before taking the connecting train.",
+      "category": "旅行"
+    },
+    {
+      "word": "stopover",
+      "phonetic": "/ˈstɑːpoʊvər/",
+      "meaning": "中途停留；较长时间的转机停留",
+      "phrase": "an overnight stopover",
+      "sentence": "An overnight stopover can make a long journey less exhausting.",
+      "category": "旅行"
+    }
+  ],
+  "focus": [
+    "动态复习：retention / fulfillment / prerequisite 继续作为业务弱项，与今天的 activation / drop-off / reconciliation 组成“进入流程—中途流失—完成与核对”的表达链路。",
+    "技术强化：stale / debounce / hydration 仍需间隔复习；今天重点区分 throttle、race condition、retry，并加入 idempotent / memoization / viewport 描述接口安全、渲染性能和移动端布局。",
+    "沟通练习：用 prioritize / consensus 回顾决策过程，再用 escalate / tentative 表达问题升级和尚未确认的计划。",
+    "旅行复习：继续巩固 departure / connection，并用 clear customs / overnight stopover 练习入境和长途转机安排。"
+  ]
+}
