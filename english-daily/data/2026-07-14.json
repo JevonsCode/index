@@ -1,1 +1,104 @@
-{}
+{
+  "date": "2026-07-14",
+  "title": "2026-07-14｜Daily English",
+  "reviewQuiz": [
+    { "zh": "用户激活", "answer": "user activation" },
+    { "zh": "减少结账流程中的用户流失", "answer": "reduce checkout drop-off" },
+    { "zh": "付款对账", "answer": "payment reconciliation" },
+    { "zh": "一个幂等请求", "answer": "an idempotent request" },
+    { "zh": "使用记忆化优化计算", "answer": "use memoization" },
+    { "zh": "移动端视口", "answer": "mobile viewport" },
+    { "zh": "升级处理这个问题", "answer": "escalate the issue" },
+    { "zh": "暂定时间表", "answer": "a tentative timeline" },
+    { "zh": "办理海关手续", "answer": "clear customs" },
+    { "zh": "过夜中途停留", "answer": "an overnight stopover" }
+  ],
+  "words": [
+    {
+      "word": "attribution",
+      "phonetic": "/ˌætrɪˈbjuːʃən/",
+      "meaning": "归因；判断一次转化或结果来自哪个渠道或动作",
+      "phrase": "conversion attribution",
+      "sentence": "Accurate conversion attribution helps the team understand which entry point drives completed bookings.",
+      "category": "业务"
+    },
+    {
+      "word": "renewal",
+      "phonetic": "/rɪˈnuːəl/",
+      "meaning": "续订；续期；更新",
+      "phrase": "subscription renewal",
+      "sentence": "The product should remind users before the subscription renewal date.",
+      "category": "业务"
+    },
+    {
+      "word": "settlement",
+      "phonetic": "/ˈsetlmənt/",
+      "meaning": "结算；清算；完成款项处理",
+      "phrase": "daily settlement",
+      "sentence": "The dashboard compares confirmed orders with the daily settlement records.",
+      "category": "业务"
+    },
+    {
+      "word": "serialization",
+      "phonetic": "/ˌsɪəriələˈzeɪʃən/",
+      "meaning": "序列化；把数据转换为便于传输或存储的格式",
+      "phrase": "JSON serialization",
+      "sentence": "JSON serialization failed because the object contained a circular reference.",
+      "category": "技术"
+    },
+    {
+      "word": "mutation",
+      "phonetic": "/mjuːˈteɪʃən/",
+      "meaning": "变更；对状态或数据进行修改",
+      "phrase": "state mutation",
+      "sentence": "Avoid direct state mutation so the UI can update predictably.",
+      "category": "技术"
+    },
+    {
+      "word": "overflow",
+      "phonetic": "/ˌoʊvərˈfloʊ/",
+      "meaning": "溢出；内容超出容器或数值范围",
+      "phrase": "horizontal overflow",
+      "sentence": "The long label causes horizontal overflow on narrow screens.",
+      "category": "技术"
+    },
+    {
+      "word": "rationale",
+      "phonetic": "/ˌræʃəˈnæl/",
+      "meaning": "理由；决策依据；背后的逻辑",
+      "phrase": "explain the rationale",
+      "sentence": "Please explain the rationale behind changing the release sequence.",
+      "category": "沟通"
+    },
+    {
+      "word": "actionable",
+      "phonetic": "/ˈækʃənəbl/",
+      "meaning": "可执行的；能够直接转化为行动的",
+      "phrase": "actionable feedback",
+      "sentence": "The review should produce actionable feedback instead of general comments.",
+      "category": "沟通"
+    },
+    {
+      "word": "transit",
+      "phonetic": "/ˈtrænzɪt/",
+      "meaning": "中转；过境；运输过程",
+      "phrase": "in transit",
+      "sentence": "Check the transfer requirements before booking the connecting flight.",
+      "category": "旅行"
+    },
+    {
+      "word": "reimbursement",
+      "phonetic": "/ˌriːɪmˈbɜːrsmənt/",
+      "meaning": "报销；偿还已支付的费用",
+      "phrase": "travel reimbursement",
+      "sentence": "Keep the original receipts for travel reimbursement after the trip.",
+      "category": "旅行"
+    }
+  ],
+  "focus": [
+    "动态复习：activation / drop-off / reconciliation 仍是业务链路中的易混词，今天用 attribution / renewal / settlement 继续练习来源、续订与结算表达。",
+    "技术强化：继续间隔复习 idempotent / memoization / viewport，并用 serialization / mutation / overflow 描述数据传输、状态管理和移动端布局问题。",
+    "沟通练习：用 escalate / tentative 回顾问题升级和未确认计划，再用 rationale / actionable 说明决策依据并给出可执行反馈。",
+    "旅行复习：继续巩固 clear customs / overnight stopover，今天加入 transit / reimbursement，覆盖过境要求和费用报销场景。"
+  ]
+}
