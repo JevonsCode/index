@@ -1,0 +1,134 @@
+{
+  "date": "2026-07-15",
+  "title": "2026-07-15｜Daily English",
+  "reviewQuiz": [
+    {
+      "zh": "转化归因",
+      "answer": "conversion attribution"
+    },
+    {
+      "zh": "订阅续期",
+      "answer": "subscription renewal"
+    },
+    {
+      "zh": "每日结算",
+      "answer": "daily settlement"
+    },
+    {
+      "zh": "JSON 序列化",
+      "answer": "JSON serialization"
+    },
+    {
+      "zh": "避免直接修改状态",
+      "answer": "avoid direct state mutation"
+    },
+    {
+      "zh": "横向溢出",
+      "answer": "horizontal overflow"
+    },
+    {
+      "zh": "解释决策依据",
+      "answer": "explain the rationale"
+    },
+    {
+      "zh": "可执行的反馈",
+      "answer": "actionable feedback"
+    },
+    {
+      "zh": "在运输或中转途中",
+      "answer": "in transit"
+    },
+    {
+      "zh": "旅行费用报销",
+      "answer": "travel reimbursement"
+    }
+  ],
+  "words": [
+    {
+      "word": "redemption",
+      "phonetic": "/rɪˈdempʃən/",
+      "meaning": "兑换；核销；使用优惠券或权益",
+      "phrase": "coupon redemption",
+      "sentence": "The checkout flow should confirm coupon redemption before calculating the final price.",
+      "category": "业务"
+    },
+    {
+      "word": "threshold",
+      "phonetic": "/ˈθreʃhoʊld/",
+      "meaning": "阈值；门槛；触发某项规则的临界值",
+      "phrase": "minimum threshold",
+      "sentence": "Free delivery becomes available when the order reaches the minimum threshold.",
+      "category": "业务"
+    },
+    {
+      "word": "allocation",
+      "phonetic": "/ˌæləˈkeɪʃən/",
+      "meaning": "分配；配置；将库存、预算或资源分给不同对象",
+      "phrase": "inventory allocation",
+      "sentence": "Inventory allocation should happen only after the payment is confirmed.",
+      "category": "业务"
+    },
+    {
+      "word": "regression",
+      "phonetic": "/rɪˈɡreʃən/",
+      "meaning": "回归问题；原本正常的功能因改动再次出现故障",
+      "phrase": "UI regression",
+      "sentence": "The latest style change introduced a UI regression on smaller screens.",
+      "category": "技术"
+    },
+    {
+      "word": "listener",
+      "phonetic": "/ˈlɪsənər/",
+      "meaning": "监听器；用于响应事件的函数或机制",
+      "phrase": "event listener",
+      "sentence": "Remember to remove the event listener when the component is unmounted.",
+      "category": "技术"
+    },
+    {
+      "word": "placeholder",
+      "phonetic": "/ˈpleɪshoʊldər/",
+      "meaning": "占位符；内容加载或输入前显示的临时提示",
+      "phrase": "loading placeholder",
+      "sentence": "Show a loading placeholder while the product data is being fetched.",
+      "category": "技术"
+    },
+    {
+      "word": "assumption",
+      "phonetic": "/əˈsʌmpʃən/",
+      "meaning": "假设；在信息尚未完全确认时采用的前提",
+      "phrase": "validate an assumption",
+      "sentence": "We should validate the assumption with user data before changing the flow.",
+      "category": "沟通"
+    },
+    {
+      "word": "trade-off",
+      "phonetic": "/ˈtreɪd ɔːf/",
+      "meaning": "权衡；为了获得某项收益而接受另一项损失",
+      "phrase": "a performance trade-off",
+      "sentence": "This approach is a trade-off between faster delivery and simpler maintenance.",
+      "category": "沟通"
+    },
+    {
+      "word": "check-in",
+      "phonetic": "/ˈtʃek ɪn/",
+      "meaning": "办理登机或入住手续",
+      "phrase": "online check-in",
+      "sentence": "Online check-in usually opens before the scheduled departure time.",
+      "category": "旅行"
+    },
+    {
+      "word": "carry-on",
+      "phonetic": "/ˈkæri ɑːn/",
+      "meaning": "随身行李；可带入客舱的行李",
+      "phrase": "carry-on allowance",
+      "sentence": "Check the carry-on allowance before packing for the flight.",
+      "category": "旅行"
+    }
+  ],
+  "focus": [
+    "动态复习：attribution / settlement / reimbursement 仍包含较长拼写，今天优先练习 conversion attribution、daily settlement 和 travel reimbursement 三个固定搭配。",
+    "业务强化：用 redemption / threshold / allocation 串联优惠核销、规则门槛与库存分配，练习描述完整交易流程。",
+    "技术强化：继续复习 serialization / mutation / overflow，并用 regression / listener / placeholder 描述前端改动、事件清理和加载状态。",
+    "沟通与旅行：用 assumption / trade-off 说明方案前提与取舍；用 online check-in / carry-on allowance 练习出行前确认信息。"
+  ]
+}
