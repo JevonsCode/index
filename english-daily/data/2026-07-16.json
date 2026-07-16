@@ -1,0 +1,134 @@
+{
+  "date": "2026-07-16",
+  "title": "2026-07-16｜Daily English",
+  "reviewQuiz": [
+    {
+      "zh": "优惠券核销",
+      "answer": "coupon redemption"
+    },
+    {
+      "zh": "最低门槛",
+      "answer": "minimum threshold"
+    },
+    {
+      "zh": "库存分配",
+      "answer": "inventory allocation"
+    },
+    {
+      "zh": "界面回归问题",
+      "answer": "UI regression"
+    },
+    {
+      "zh": "移除事件监听器",
+      "answer": "remove the event listener"
+    },
+    {
+      "zh": "加载占位符",
+      "answer": "loading placeholder"
+    },
+    {
+      "zh": "验证一个假设",
+      "answer": "validate an assumption"
+    },
+    {
+      "zh": "性能上的权衡",
+      "answer": "a performance trade-off"
+    },
+    {
+      "zh": "在线办理值机",
+      "answer": "online check-in"
+    },
+    {
+      "zh": "随身行李额度",
+      "answer": "carry-on allowance"
+    }
+  ],
+  "words": [
+    {
+      "word": "entitlement",
+      "phonetic": "/ɪnˈtaɪtəlmənt/",
+      "meaning": "权益；资格；用户有权获得的服务或优惠",
+      "phrase": "benefit entitlement",
+      "sentence": "The system should verify the benefit entitlement before applying the discount.",
+      "category": "业务"
+    },
+    {
+      "word": "deduction",
+      "phonetic": "/dɪˈdʌkʃən/",
+      "meaning": "抵扣；扣减；从总金额中减去的一部分",
+      "phrase": "automatic deduction",
+      "sentence": "The order summary should show the automatic deduction separately.",
+      "category": "业务"
+    },
+    {
+      "word": "inventory",
+      "phonetic": "/ˈɪnvəntɔːri/",
+      "meaning": "库存；可售资源；系统中可分配的数量",
+      "phrase": "inventory sync",
+      "sentence": "Inventory sync prevents two users from booking the same remaining item.",
+      "category": "业务"
+    },
+    {
+      "word": "invalidate",
+      "phonetic": "/ɪnˈvælɪdeɪt/",
+      "meaning": "使失效；让旧缓存或旧状态不再被使用",
+      "phrase": "invalidate the cache",
+      "sentence": "Invalidate the cache after the update so the page can load fresh data.",
+      "category": "技术"
+    },
+    {
+      "word": "observer",
+      "phonetic": "/əbˈzɜːrvər/",
+      "meaning": "观察器；用于监听元素或状态变化的机制",
+      "phrase": "intersection observer",
+      "sentence": "Use an intersection observer to load more cards when the user reaches the bottom.",
+      "category": "技术"
+    },
+    {
+      "word": "cleanup",
+      "phonetic": "/ˈkliːnʌp/",
+      "meaning": "清理；组件销毁或任务结束时释放资源",
+      "phrase": "cleanup function",
+      "sentence": "The cleanup function removes listeners and cancels unfinished requests.",
+      "category": "技术"
+    },
+    {
+      "word": "feasibility",
+      "phonetic": "/ˌfiːzəˈbɪləti/",
+      "meaning": "可行性；方案在时间、成本和技术上能否实现",
+      "phrase": "assess feasibility",
+      "sentence": "We need to assess feasibility before committing to the delivery date.",
+      "category": "沟通"
+    },
+    {
+      "word": "blocker",
+      "phonetic": "/ˈblɑːkər/",
+      "meaning": "阻塞项；导致工作无法继续推进的问题",
+      "phrase": "raise a blocker",
+      "sentence": "Please raise the blocker early if the API contract is still unclear.",
+      "category": "沟通"
+    },
+    {
+      "word": "boarding pass",
+      "phonetic": "/ˈbɔːrdɪŋ pæs/",
+      "meaning": "登机牌；用于通过安检和登机的凭证",
+      "phrase": "digital boarding pass",
+      "sentence": "Save the digital boarding pass before leaving for the airport.",
+      "category": "旅行"
+    },
+    {
+      "word": "checked baggage",
+      "phonetic": "/tʃekt ˈbæɡɪdʒ/",
+      "meaning": "托运行李；办理值机后交由航空公司运输的行李",
+      "phrase": "checked baggage allowance",
+      "sentence": "Confirm the checked baggage allowance before adding another suitcase.",
+      "category": "旅行"
+    }
+  ],
+  "focus": [
+    "动态复习：redemption / allocation / regression / assumption 拼写较长，今天继续用 coupon redemption、inventory allocation、UI regression 和 validate an assumption 做快速回忆。",
+    "业务串联：用 entitlement → threshold → deduction → inventory 描述权益校验、门槛判断、金额抵扣和库存同步的完整流程。",
+    "技术强化：把 listener 与 observer 区分开，并用 cleanup function 练习描述移除监听、取消请求和避免回归问题。",
+    "旅行流程：从 online check-in 到 boarding pass，再对比 carry-on allowance 与 checked baggage allowance。"
+  ]
+}
