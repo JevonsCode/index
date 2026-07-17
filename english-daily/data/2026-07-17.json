@@ -1,0 +1,134 @@
+{
+  "date": "2026-07-17",
+  "title": "2026-07-17｜Daily English",
+  "reviewQuiz": [
+    {
+      "zh": "权益资格校验",
+      "answer": "entitlement verification"
+    },
+    {
+      "zh": "自动抵扣",
+      "answer": "automatic deduction"
+    },
+    {
+      "zh": "同步库存",
+      "answer": "sync the inventory"
+    },
+    {
+      "zh": "使缓存失效",
+      "answer": "invalidate the cache"
+    },
+    {
+      "zh": "交叉观察器",
+      "answer": "intersection observer"
+    },
+    {
+      "zh": "清理函数",
+      "answer": "cleanup function"
+    },
+    {
+      "zh": "评估可行性",
+      "answer": "assess feasibility"
+    },
+    {
+      "zh": "提出一个阻塞项",
+      "answer": "raise a blocker"
+    },
+    {
+      "zh": "电子登机牌",
+      "answer": "digital boarding pass"
+    },
+    {
+      "zh": "托运行李额度",
+      "answer": "checked baggage allowance"
+    }
+  ],
+  "words": [
+    {
+      "word": "enrollment",
+      "phonetic": "/ɪnˈroʊlmənt/",
+      "meaning": "注册；加入；用户进入某项服务或计划的流程",
+      "phrase": "user enrollment",
+      "sentence": "The user enrollment flow should explain the eligibility rules before submission.",
+      "category": "业务"
+    },
+    {
+      "word": "quota",
+      "phonetic": "/ˈkwoʊtə/",
+      "meaning": "配额；限额；可分配给用户或渠道的数量上限",
+      "phrase": "daily quota",
+      "sentence": "The page should display the remaining daily quota before the user confirms the request.",
+      "category": "业务"
+    },
+    {
+      "word": "amendment",
+      "phonetic": "/əˈmendmənt/",
+      "meaning": "修改；修订条款；对已有订单、协议或需求的正式变更",
+      "phrase": "contract amendment",
+      "sentence": "Any contract amendment should be reviewed before the updated flow goes live.",
+      "category": "业务"
+    },
+    {
+      "word": "deduplicate",
+      "phonetic": "/ˌdiːˈduːplɪkeɪt/",
+      "meaning": "去重；删除重复数据或避免重复请求",
+      "phrase": "deduplicate requests",
+      "sentence": "Deduplicate requests so repeated taps do not create multiple orders.",
+      "category": "技术"
+    },
+    {
+      "word": "prefetch",
+      "phonetic": "/ˌpriːˈfetʃ/",
+      "meaning": "预取；在真正需要之前提前加载数据或资源",
+      "phrase": "prefetch data",
+      "sentence": "We can prefetch data for the next page to make navigation feel faster.",
+      "category": "技术"
+    },
+    {
+      "word": "teardown",
+      "phonetic": "/ˈterdaʊn/",
+      "meaning": "拆除；清理阶段；组件结束时释放监听器和资源的过程",
+      "phrase": "teardown logic",
+      "sentence": "The teardown logic should disconnect the observer and cancel pending requests.",
+      "category": "技术"
+    },
+    {
+      "word": "alignment",
+      "phonetic": "/əˈlaɪnmənt/",
+      "meaning": "对齐；就目标、范围或执行方式达成一致",
+      "phrase": "team alignment",
+      "sentence": "A short review meeting can improve team alignment on the delivery scope.",
+      "category": "沟通"
+    },
+    {
+      "word": "contingency",
+      "phonetic": "/kənˈtɪndʒənsi/",
+      "meaning": "应急方案；针对风险或意外情况准备的备用安排",
+      "phrase": "contingency plan",
+      "sentence": "We need a contingency plan in case the external service becomes unavailable.",
+      "category": "沟通"
+    },
+    {
+      "word": "departure gate",
+      "phonetic": "/dɪˈpɑːrtʃər ɡeɪt/",
+      "meaning": "登机口；航班旅客等待并登机的位置",
+      "phrase": "check the departure gate",
+      "sentence": "Check the departure gate again because it may change shortly before boarding.",
+      "category": "旅行"
+    },
+    {
+      "word": "travel adapter",
+      "phonetic": "/ˈtrævəl əˌdæptər/",
+      "meaning": "旅行转换插头；在不同国家连接电源插座的设备",
+      "phrase": "universal travel adapter",
+      "sentence": "Pack a universal travel adapter before traveling to a country with different sockets.",
+      "category": "旅行"
+    }
+  ],
+  "focus": [
+    "动态复习：entitlement / feasibility / deduction 仍容易与相近词混淆，先用 entitlement verification、assess feasibility 和 automatic deduction 做中英互译。",
+    "技术串联：用 invalidate → observer → cleanup → teardown 描述缓存更新、元素监听和组件销毁时的完整资源管理流程。",
+    "业务表达：把 enrollment、eligibility、quota 和 amendment 放进同一流程，练习说明加入条件、数量限制和后续变更。",
+    "旅行强化：对比 boarding pass、departure gate、carry-on 与 checked baggage，完整复述从值机到登机的步骤。"
+  ]
+}
