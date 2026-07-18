@@ -1,0 +1,134 @@
+{
+  "date": "2026-07-18",
+  "title": "2026-07-18｜Daily English",
+  "reviewQuiz": [
+    {
+      "zh": "用户注册流程",
+      "answer": "user enrollment"
+    },
+    {
+      "zh": "每日配额",
+      "answer": "daily quota"
+    },
+    {
+      "zh": "合同修订",
+      "answer": "contract amendment"
+    },
+    {
+      "zh": "对重复请求进行去重",
+      "answer": "deduplicate requests"
+    },
+    {
+      "zh": "预取数据",
+      "answer": "prefetch data"
+    },
+    {
+      "zh": "清理阶段的逻辑",
+      "answer": "teardown logic"
+    },
+    {
+      "zh": "团队目标对齐",
+      "answer": "team alignment"
+    },
+    {
+      "zh": "应急方案",
+      "answer": "contingency plan"
+    },
+    {
+      "zh": "检查登机口",
+      "answer": "check the departure gate"
+    },
+    {
+      "zh": "通用旅行转换插头",
+      "answer": "universal travel adapter"
+    }
+  ],
+  "words": [
+    {
+      "word": "consent",
+      "phonetic": "/kənˈsent/",
+      "meaning": "同意；许可；用户明确授权某项操作",
+      "phrase": "obtain user consent",
+      "sentence": "The flow must obtain user consent before saving optional personal settings.",
+      "category": "业务"
+    },
+    {
+      "word": "expiration",
+      "phonetic": "/ˌekspəˈreɪʃn/",
+      "meaning": "到期；失效；资格、链接或优惠停止有效的时间",
+      "phrase": "expiration date",
+      "sentence": "Show the expiration date clearly before the user confirms the purchase.",
+      "category": "业务"
+    },
+    {
+      "word": "resubmission",
+      "phonetic": "/ˌriːsəbˈmɪʃn/",
+      "meaning": "重新提交；修改信息后再次发送申请或表单",
+      "phrase": "allow resubmission",
+      "sentence": "The product flow should allow resubmission after the validation error is fixed.",
+      "category": "业务"
+    },
+    {
+      "word": "reflow",
+      "phonetic": "/ˌriːˈfloʊ/",
+      "meaning": "重排；浏览器重新计算页面元素位置和尺寸的过程",
+      "phrase": "trigger a reflow",
+      "sentence": "Reading layout values repeatedly inside the loop may trigger a reflow.",
+      "category": "技术"
+    },
+    {
+      "word": "event delegation",
+      "phonetic": "/ɪˈvent ˌdelɪˈɡeɪʃn/",
+      "meaning": "事件委托；在父元素上统一处理子元素事件",
+      "phrase": "use event delegation",
+      "sentence": "Use event delegation when a list contains many dynamically created buttons.",
+      "category": "技术"
+    },
+    {
+      "word": "abort",
+      "phonetic": "/əˈbɔːrt/",
+      "meaning": "中止；取消尚未完成的请求或操作",
+      "phrase": "abort a request",
+      "sentence": "Abort the previous request when the user changes the filter quickly.",
+      "category": "技术"
+    },
+    {
+      "word": "ownership",
+      "phonetic": "/ˈoʊnərʃɪp/",
+      "meaning": "责任归属；主动负责并推动任务完成",
+      "phrase": "take ownership",
+      "sentence": "Please take ownership of the follow-up and share the result with the group.",
+      "category": "沟通"
+    },
+    {
+      "word": "concise",
+      "phonetic": "/kənˈsaɪs/",
+      "meaning": "简洁的；用较少的话清楚表达重点的",
+      "phrase": "a concise update",
+      "sentence": "Give a concise update that covers the issue, impact, and next step.",
+      "category": "沟通"
+    },
+    {
+      "word": "aisle seat",
+      "phonetic": "/aɪl siːt/",
+      "meaning": "靠过道座位",
+      "phrase": "request an aisle seat",
+      "sentence": "I would like to request an aisle seat for the longer flight.",
+      "category": "旅行"
+    },
+    {
+      "word": "arrival hall",
+      "phonetic": "/əˈraɪvəl hɔːl/",
+      "meaning": "到达大厅；旅客入境并领取行李后进入的区域",
+      "phrase": "meet in the arrival hall",
+      "sentence": "Let's meet in the arrival hall after you collect your checked baggage.",
+      "category": "旅行"
+    }
+  ],
+  "focus": [
+    "动态复习：enrollment / quota / amendment 容易只记住中文含义，先用 user enrollment、daily quota 和 contract amendment 做完整短语回忆。",
+    "技术强化：对比 cleanup 与 teardown，再用 abort → event delegation → reflow 描述请求取消、事件处理和页面性能问题。",
+    "沟通表达：把 alignment、contingency、ownership 和 concise 串进一次项目更新，说明共识、备用方案、负责人和下一步。",
+    "旅行复习：继续区分 boarding pass、departure gate、aisle seat 和 arrival hall，按出发到抵达的顺序复述。"
+  ]
+}
