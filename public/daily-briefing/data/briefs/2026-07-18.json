@@ -1,0 +1,150 @@
+{
+  "date": "2026-07-18",
+  "title": "中文每日简报",
+  "summary": "过去 24 小时的主线不是再出现一个更大的模型，而是 AI 开始进入企业经营与生产治理：OpenAI 把价值衡量从席位、Token 价格转向成功任务的完整成本；GitHub 与 Vercel 则把 Agent 纳入可度量、可配置、可观测的开发链路。保险和支付基础设施也在重新画边界——传统责任险开始明确排除生成式 AI 风险，欧洲银行账户直付加速绕开卡组织。宏观层面，AI 高估值回撤与霍尔木兹冲突叠加，油价已向中国零售燃料成本传导，市场同时面临科技估值和通胀风险。",
+  "topics": [
+    "AI / Agent / LLM",
+    "前端 / 开发工具",
+    "保险科技",
+    "金融科技",
+    "宏观经济 / 市场",
+    "国际新闻"
+  ],
+  "items": [
+    {
+      "title": "OpenAI 提出“每美元有效智能”指标，企业 AI ROI 从 Token 转向成功任务",
+      "category": "AI / 企业应用",
+      "what_happened": "OpenAI 在 7 月 17 日发布企业 AI 价值衡量框架，建议围绕四个问题评估投入：完成了多少有用工作、每个成功任务的完整成本、结果是否可靠，以及规模扩大后每美元能否产出更多价值。框架明确指出，成本应计入重试、人工审核、返工和延迟，而不能只比较单 Token 价格。",
+      "why_it_matters": "这标志着企业采购 AI 的评价口径从“买了多少席位、用了多少 Token”转向“真正完成多少合格工作”。模型路由、Agent 编排和知识库项目若无法证明成功任务率及人工介入下降，将更难获得持续预算。",
+      "what_it_means_for_you": "做 AI 产品或内部 Agent 时，应把指标直接绑定业务完成态，例如代码通过测试、客户问题闭环、保单材料审核通过，而不是只展示调用量。建议至少记录一次通过率、平均重试次数、人工修正率、升级人工比例和单个合格结果总成本。",
+      "sources": [
+        {
+          "title": "OpenAI：A scorecard for the AI age",
+          "url": "https://openai.com/index/a-scorecard-for-the-ai-age/"
+        }
+      ],
+      "confidence": "高",
+      "risk_level": "观察中"
+    },
+    {
+      "title": "GitHub 将 Copilot 下沉到仓库级度量，并强化代码审查的指令与网络边界",
+      "category": "开发工具 / Agent 治理",
+      "what_happened": "GitHub Copilot 使用指标 API 已支持按仓库查看 Coding Agent 创建、合并的 PR，以及 Copilot Code Review 的审查和建议数据；同日代码审查 Agent 增加独立运行配置、默认防火墙、可测试的分支级自定义指令，并读取 AGENTS.md、Agent Skills、REVIEW.md、CLAUDE.md、GEMINI.md 等仓库规范。",
+      "why_it_matters": "编码 Agent 正从个人效率工具变成可治理的工程系统。管理者开始能回答“哪些仓库真正受益”，开发团队也可以把构建环境、审查标准和网络权限固化进仓库，而不是依赖个人提示词。",
+      "what_it_means_for_you": "适合把前端规范、组件库约束、测试要求和安全边界放进版本化的 Agent 指令文件，并以仓库为单位观察 PR 产出、合并率和有效建议率。需要注意：自托管 Runner 当前不受该代码审查防火墙保护，涉及私有依赖时要单独做出网控制。",
+      "sources": [
+        {
+          "title": "GitHub：Repository-level Copilot usage metrics GA",
+          "url": "https://github.blog/changelog/2026-07-17-repository-level-github-copilot-usage-metrics-generally-available/"
+        },
+        {
+          "title": "GitHub：Copilot code review customization improvements",
+          "url": "https://github.blog/changelog/2026-07-17-copilot-code-review-customization-and-configurability-improvements/"
+        }
+      ],
+      "confidence": "高",
+      "risk_level": "低"
+    },
+    {
+      "title": "Vercel 把平台知识接入 Kimi Code，并为 Slack Agent 补齐原生交互与缓存可观测性",
+      "category": "前端 / Agent 工程",
+      "what_happened": "Vercel 于 7 月 17 日向 Kimi Code CLI 提供官方插件，使其可按需调用 Next.js、AI SDK、Functions 等平台 Skills；Chat SDK 同时加入 Slack 原生 Agent 视图、建议提示、流式响应和反馈按钮。Vercel Runtime Logs 还新增缓存原因，可区分冷缓存、请求合并、Draft Mode、重新验证错误等状态。",
+      "why_it_matters": "Agent 开发正在从“模型会写代码”转向“模型掌握平台规范、能进入协作工具，并能解释线上行为”。Skills、渠道适配器和可观测性正在成为 Agent 工程的标准组件。",
+      "what_it_means_for_you": "前端团队可以把部署平台知识作为可安装 Skill，而不是在提示词里长期复制文档；Slack Agent 的反馈按钮可直接形成质量数据闭环。线上排查时应让 Agent 同时读取日志中的缓存原因，避免把 ISR 或 CDN 行为误判成代码问题。",
+      "sources": [
+        {
+          "title": "Vercel Plugin now available in Kimi Code CLI",
+          "url": "https://vercel.com/changelog/vercel-plugin-now-available-in-kimi-code-cli"
+        },
+        {
+          "title": "Vercel Chat SDK adds native Slack agent support",
+          "url": "https://vercel.com/changelog/chat-sdk-adds-native-slack-agent-support"
+        },
+        {
+          "title": "Vercel Runtime logs now show cache reasons",
+          "url": "https://vercel.com/changelog/runtime-logs-now-show-cache-reasons"
+        }
+      ],
+      "confidence": "高",
+      "risk_level": "观察中"
+    },
+    {
+      "title": "标准责任险开始明确排除生成式 AI，独立 AI 责任险窗口出现",
+      "category": "保险科技 / 风险产品",
+      "what_happened": "保险行业近期开始关注 ISO 在 2026 年推出的生成式 AI 责任排除条款。较宽泛的 CG 40 47 01 26 可排除与 AI、生成式 AI 和 LLM 有关的身体伤害、财产损失及广告责任；另有针对诽谤、版权和产品完工责任的更窄条款。行业同时开始探索独立 AI 责任产品，覆盖错误陈述、知识产权侵权、数据泄露和由 AI 失误引发的损害。",
+      "why_it_matters": "传统 GL、网络险和科技 E&O 之间可能出现新的保障断层。随着企业把 Agent 用于客服、建议、定价和自动操作，责任事故不再只是数据泄露，可能直接转化为财务损失、名誉损害甚至物理损害。",
+      "what_it_means_for_you": "保险产品机会不应只做“AI 风险问卷”，而应围绕模型用途、数据权限、人工审批、输出影响范围和供应商责任设计可核保字段。企业侧则需要逐项核对 GL、Cyber、Tech E&O 是否存在 AI 排除，避免误以为现有保单自动承保。",
+      "sources": [
+        {
+          "title": "Insurance Journal：GL policies and emerging AI exclusions",
+          "url": "https://www.insurancejournal.com/news/national/2026/07/16/877894.htm"
+        }
+      ],
+      "confidence": "中",
+      "risk_level": "高"
+    },
+    {
+      "title": "Airwallex 接入 Wero，欧洲账户直付开始成为跨境商户的现实替代方案",
+      "category": "金融科技 / 支付",
+      "what_happened": "Airwallex 宣布直接支持欧洲支付倡议 EPI 推出的 Wero 即时账户到账户支付，商户无需设立欧洲实体即可接入，并提供 Shopify 插件。截至 2026 年 6 月，Wero 在欧洲已有约 5500 万注册用户；其定位是整合德国、比利时、法国等地本地支付方式，并降低对卡组织的依赖。",
+      "why_it_matters": "欧洲支付竞争正在从钱包界面转向底层清算路线。A2A 即时支付若能同时解决商户接入、订阅、欺诈和退款体验，就可能压缩卡组织及传统 PSP 的费率空间，并提升欧洲支付主权。",
+      "what_it_means_for_you": "涉及欧洲旅游、电商或订阅业务时，应把 Wero 纳入支付方式评估，重点验证覆盖国家、退款与争议处理、转化率和实际费率。报道中的 0.8% 费率及转化提升来自服务商披露，落地前仍需以商户合同和真实 A/B 数据验证。",
+      "sources": [
+        {
+          "title": "The Paypers：Airwallex enables Wero payments for merchants in Europe",
+          "url": "https://thepaypers.com/payments/news/airwallex-enables-wero-payments-for-merchants-in-europe"
+        }
+      ],
+      "confidence": "中",
+      "risk_level": "中"
+    },
+    {
+      "title": "AI 明星股继续下跌，油价上涨开始形成双重估值压力",
+      "category": "宏观经济 / 市场",
+      "what_happened": "7 月 17 日全球市场继续抛售 AI 相关资产，纳斯达克下跌 1.4%，英伟达下跌 2.2%，台北和东京等亚洲市场跌幅更大；市场同时担忧 Kimi K3 等低成本模型削弱高端算力需求预期。布伦特原油当日上涨 4.6% 至每桶 88.10 美元。中国随后宣布自 7 月 18 日上调汽柴油最高零售价，显示国际油价已开始传导到实体成本。",
+      "why_it_matters": "市场正在同时重新定价 AI 的盈利兑现速度与能源冲击。高估值科技股不仅面临需求和资本开支质疑，也会受到油价推升通胀、利率和融资成本的二次压力。",
+      "what_it_means_for_you": "评估 AI 或半导体资产时，应把收入兑现、推理成本下降和资本开支回报放在一起看，而不是只看模型能力。企业预算侧要预留能源、物流和云成本上行空间；若布伦特持续接近或突破 90 美元，增长股和长久期资产波动可能继续放大。",
+      "sources": [
+        {
+          "title": "AP：The sell-off for AI stars worsens, while oil prices keep jumping",
+          "url": "https://apnews.com/article/stocks-markets-ai-iran-trump-rates-65449e9565fba441a617f9517e097f5a"
+        },
+        {
+          "title": "Reuters：中国自 7 月 18 日上调汽柴油零售价",
+          "url": "https://www.reuters.com/business/energy/china-raise-domestic-retail-petrol-diesel-prices-july-18-2026-07-17/"
+        }
+      ],
+      "confidence": "高",
+      "risk_level": "高"
+    },
+    {
+      "title": "美伊连续升级基础设施打击，霍尔木兹航运风险进入更危险阶段",
+      "category": "国际新闻 / 地缘风险",
+      "what_happened": "美国与伊朗在 7 月 17 日继续扩大相互打击，美国攻击伊朗桥梁、能源设施和关键港口，伊朗则向卡塔尔、科威特等美国盟友方向发射导弹。霍尔木兹海峡通行量降至三周低点，周四仅有 8 艘船通过；一艘油轮还在海峡航行时遭到攻击并轻微受损。",
+      "why_it_matters": "风险已从口头威胁和局部军事目标扩展到港口、能源、水务和商船。霍尔木兹承担全球重要油气运输，一旦通航继续收缩，能源价格、船舶保险、航空燃油和全球物流成本会同步上升。",
+      "what_it_means_for_you": "短期应把航运量而不只是油价作为领先指标，并关注海运战争险费率、航空燃油附加费和欧洲能源价格。旅游与跨境业务需要准备中东航路调整、航班取消和成本临时上调方案。",
+      "sources": [
+        {
+          "title": "AP：US and Iran escalate strikes across Mideast",
+          "url": "https://apnews.com/article/iran-us-hormuz-strait-war-july-17-2026-2ad0cfe592eb258cb15a9eb04411d58a"
+        }
+      ],
+      "confidence": "高",
+      "risk_level": "高"
+    }
+  ],
+  "signals": [
+    {
+      "title": "企业 AI 指标是否从调用量切换到成功任务率",
+      "reason": "若更多模型厂商、云平台和企业采购开始公开一次通过率、人工修正率与单个合格任务总成本，AI 项目将从试用规模竞争进入经营效率竞争。"
+    },
+    {
+      "title": "Agent 的仓库级治理是否成为工程默认配置",
+      "reason": "GitHub 已同时补齐使用度量、版本化指令、运行环境和网络防火墙。下一步应观察审计日志、权限授权和跨 Agent 策略能否形成统一标准。"
+    },
+    {
+      "title": "霍尔木兹通航量与布伦特 90 美元关口",
+      "reason": "若海峡每日通行继续维持个位数，或布伦特原油稳定突破 90 美元，通胀、利率、航运保险和旅行成本可能出现更明显的二次传导。"
+    }
+  ]
+}
