@@ -1,0 +1,134 @@
+{
+  "date": "2026-07-19",
+  "title": "2026-07-19｜Daily English",
+  "reviewQuiz": [
+    {
+      "zh": "获得用户同意",
+      "answer": "obtain user consent"
+    },
+    {
+      "zh": "到期日期",
+      "answer": "expiration date"
+    },
+    {
+      "zh": "允许重新提交",
+      "answer": "allow resubmission"
+    },
+    {
+      "zh": "触发页面重排",
+      "answer": "trigger a reflow"
+    },
+    {
+      "zh": "使用事件委托",
+      "answer": "use event delegation"
+    },
+    {
+      "zh": "中止一个请求",
+      "answer": "abort a request"
+    },
+    {
+      "zh": "主动承担后续责任",
+      "answer": "take ownership of the follow-up"
+    },
+    {
+      "zh": "简洁的进展更新",
+      "answer": "a concise update"
+    },
+    {
+      "zh": "申请靠过道座位",
+      "answer": "request an aisle seat"
+    },
+    {
+      "zh": "在到达大厅见面",
+      "answer": "meet in the arrival hall"
+    }
+  ],
+  "words": [
+    {
+      "word": "disclosure",
+      "phonetic": "/dɪsˈkloʊʒər/",
+      "meaning": "披露；告知；向用户明确说明重要信息",
+      "phrase": "clear disclosure",
+      "sentence": "The checkout flow needs a clear disclosure of all additional charges.",
+      "category": "业务"
+    },
+    {
+      "word": "authorization",
+      "phonetic": "/ˌɔːθərəˈzeɪʃn/",
+      "meaning": "授权；批准某项操作或访问权限",
+      "phrase": "request authorization",
+      "sentence": "The system should request authorization before accessing saved payment details.",
+      "category": "业务"
+    },
+    {
+      "word": "surcharge",
+      "phonetic": "/ˈsɜːrtʃɑːrdʒ/",
+      "meaning": "附加费；在基础价格之外收取的额外费用",
+      "phrase": "apply a surcharge",
+      "sentence": "A weekend surcharge is applied before the final price is confirmed.",
+      "category": "业务"
+    },
+    {
+      "word": "batching",
+      "phonetic": "/ˈbætʃɪŋ/",
+      "meaning": "批处理；将多次操作合并后统一执行",
+      "phrase": "batching updates",
+      "sentence": "Batching updates can reduce unnecessary rendering work.",
+      "category": "技术"
+    },
+    {
+      "word": "lazy loading",
+      "phonetic": "/ˈleɪzi ˈloʊdɪŋ/",
+      "meaning": "懒加载；在内容真正需要时才进行加载",
+      "phrase": "enable lazy loading",
+      "sentence": "Enable lazy loading for images that are outside the initial viewport.",
+      "category": "技术"
+    },
+    {
+      "word": "optimistic update",
+      "phonetic": "/ˌɑːptɪˈmɪstɪk ˈʌpdeɪt/",
+      "meaning": "乐观更新；先更新界面，再等待服务器确认",
+      "phrase": "use an optimistic update",
+      "sentence": "Use an optimistic update, but restore the previous state if the request fails.",
+      "category": "技术"
+    },
+    {
+      "word": "accountability",
+      "phonetic": "/əˌkaʊntəˈbɪləti/",
+      "meaning": "责任意识；对结果和后续行动负责",
+      "phrase": "clear accountability",
+      "sentence": "Clear accountability helps the team resolve blockers faster.",
+      "category": "沟通"
+    },
+    {
+      "word": "clarification",
+      "phonetic": "/ˌklærəfɪˈkeɪʃn/",
+      "meaning": "澄清；对不明确的信息进行进一步说明",
+      "phrase": "ask for clarification",
+      "sentence": "Ask for clarification when the acceptance criteria are incomplete.",
+      "category": "沟通"
+    },
+    {
+      "word": "departure tax",
+      "phonetic": "/dɪˈpɑːrtʃər tæks/",
+      "meaning": "离境税；离开某些国家或地区时收取的税费",
+      "phrase": "pay the departure tax",
+      "sentence": "Check whether the departure tax is already included in the ticket price.",
+      "category": "旅行"
+    },
+    {
+      "word": "travel insurance",
+      "phonetic": "/ˈtrævəl ɪnˈʃʊrəns/",
+      "meaning": "旅行保险；用于覆盖行程取消、医疗或行李风险的保险",
+      "phrase": "purchase travel insurance",
+      "sentence": "Review the coverage carefully before you purchase travel insurance.",
+      "category": "旅行"
+    }
+  ],
+  "focus": [
+    "动态复习：consent / authorization 容易混淆，先区分“用户同意”和“系统授权”，再分别造句。",
+    "技术强化：继续复习 reflow / event delegation / abort，并加入 batching / lazy loading / optimistic update，按性能、事件和请求三个方向归类。",
+    "沟通表达：把 ownership 与 accountability 对比练习，再用 concise update 和 clarification 完成一次简短项目同步。",
+    "旅行复习：按 aisle seat → departure tax → arrival hall 的顺序复述出发与抵达流程，并补充 travel insurance 的保障范围。"
+  ]
+}
