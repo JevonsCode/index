@@ -1,0 +1,104 @@
+{
+  "date": "2026-07-20",
+  "title": "2026-07-20｜Daily English",
+  "reviewQuiz": [
+    { "zh": "清晰披露所有额外费用", "answer": "provide clear disclosure of all additional charges" },
+    { "zh": "请求退款授权", "answer": "request authorization for a refund" },
+    { "zh": "收取附加费", "answer": "apply a surcharge" },
+    { "zh": "批量处理状态更新", "answer": "batch state updates" },
+    { "zh": "为首屏之外的图片启用懒加载", "answer": "enable lazy loading for off-screen images" },
+    { "zh": "使用乐观更新", "answer": "use an optimistic update" },
+    { "zh": "明确结果责任", "answer": "establish clear accountability" },
+    { "zh": "请求进一步澄清", "answer": "ask for further clarification" },
+    { "zh": "确认离境税是否已包含", "answer": "check whether the departure tax is included" },
+    { "zh": "查看旅行保险的保障范围", "answer": "review the travel insurance coverage" }
+  ],
+  "words": [
+    {
+      "word": "verification",
+      "phonetic": "/ˌverɪfɪˈkeɪʃn/",
+      "meaning": "验证；核验信息是否真实、完整或符合要求",
+      "phrase": "booking verification",
+      "sentence": "The flow should show a clear error message when booking verification fails.",
+      "category": "业务"
+    },
+    {
+      "word": "reversal",
+      "phonetic": "/rɪˈvɜːrsl/",
+      "meaning": "撤销；冲正；将已完成的交易或操作恢复",
+      "phrase": "payment reversal",
+      "sentence": "The system creates a payment reversal when the original charge cannot be completed.",
+      "category": "业务"
+    },
+    {
+      "word": "compliance",
+      "phonetic": "/kəmˈplaɪəns/",
+      "meaning": "合规；遵守规则、政策或监管要求",
+      "phrase": "compliance requirement",
+      "sentence": "The consent step was added to meet a compliance requirement.",
+      "category": "业务"
+    },
+    {
+      "word": "event propagation",
+      "phonetic": "/ɪˈvent ˌprɑːpəˈɡeɪʃn/",
+      "meaning": "事件传播；事件在 DOM 捕获和冒泡阶段中的传递过程",
+      "phrase": "stop event propagation",
+      "sentence": "Stop event propagation when clicking the nested button should not trigger the card action.",
+      "category": "技术"
+    },
+    {
+      "word": "stale closure",
+      "phonetic": "/steɪl ˈkloʊʒər/",
+      "meaning": "陈旧闭包；闭包读取了旧状态或旧变量值",
+      "phrase": "avoid a stale closure",
+      "sentence": "Use the latest state reference to avoid a stale closure in the callback.",
+      "category": "技术"
+    },
+    {
+      "word": "skeleton screen",
+      "phonetic": "/ˈskelɪtən skriːn/",
+      "meaning": "骨架屏；数据加载完成前展示的占位界面",
+      "phrase": "display a skeleton screen",
+      "sentence": "Display a skeleton screen while the product list is loading.",
+      "category": "技术"
+    },
+    {
+      "word": "context",
+      "phonetic": "/ˈkɑːntekst/",
+      "meaning": "背景信息；理解问题或决定所需的上下文",
+      "phrase": "provide more context",
+      "sentence": "Please provide more context so we can evaluate the impact of the change.",
+      "category": "沟通"
+    },
+    {
+      "word": "commitment",
+      "phonetic": "/kəˈmɪtmənt/",
+      "meaning": "承诺；明确答应完成的事项或时间",
+      "phrase": "make a commitment",
+      "sentence": "We should confirm the dependency before making a delivery commitment.",
+      "category": "沟通"
+    },
+    {
+      "word": "baggage allowance",
+      "phonetic": "/ˈbæɡɪdʒ əˈlaʊəns/",
+      "meaning": "行李额度；机票允许携带或托运的行李数量和重量",
+      "phrase": "check the baggage allowance",
+      "sentence": "Check the baggage allowance before adding an extra suitcase.",
+      "category": "旅行"
+    },
+    {
+      "word": "currency exchange",
+      "phonetic": "/ˈkɜːrənsi ɪksˈtʃeɪndʒ/",
+      "meaning": "货币兑换；将一种货币换成另一种货币",
+      "phrase": "currency exchange rate",
+      "sentence": "Compare the currency exchange rate before paying in the local currency.",
+      "category": "旅行"
+    }
+  ],
+  "focus": [
+    "动态复习：继续区分 disclosure / authorization / compliance，分别对应信息披露、操作批准和规则合规。",
+    "技术强化：将 batching / lazy loading / optimistic update 与 event propagation / stale closure / skeleton screen 分类练习，重点说明每个概念解决什么问题。",
+    "沟通表达：用 accountability / clarification / context / commitment 组织一次简短同步，先补充背景，再澄清问题，最后确认责任和承诺。",
+    "旅行复习：把 departure tax / travel insurance / baggage allowance / currency exchange 串成出发前检查清单。"
+  ]
+}
