@@ -1,6 +1,11 @@
 {
-  "latest": "2026-07-20",
+  "latest": "2026-07-21",
   "lessons": [
+    {
+      "date": "2026-07-21",
+      "title": "2026-07-21｜Daily English",
+      "path": "./data/2026-07-21.json"
+    },
     {
       "date": "2026-07-20",
       "title": "2026-07-20｜Daily English",
