@@ -1,0 +1,134 @@
+{
+  "date": "2026-07-21",
+  "title": "2026-07-21｜Daily English",
+  "reviewQuiz": [
+    {
+      "zh": "完成预订信息核验",
+      "answer": "complete the booking verification"
+    },
+    {
+      "zh": "发起付款冲正",
+      "answer": "initiate a payment reversal"
+    },
+    {
+      "zh": "满足合规要求",
+      "answer": "meet the compliance requirement"
+    },
+    {
+      "zh": "阻止事件继续传播",
+      "answer": "stop event propagation"
+    },
+    {
+      "zh": "避免回调读取陈旧闭包",
+      "answer": "avoid a stale closure in the callback"
+    },
+    {
+      "zh": "在数据加载时显示骨架屏",
+      "answer": "display a skeleton screen while the data is loading"
+    },
+    {
+      "zh": "补充更多背景信息",
+      "answer": "provide more context"
+    },
+    {
+      "zh": "确认交付承诺",
+      "answer": "confirm the delivery commitment"
+    },
+    {
+      "zh": "查看行李额度",
+      "answer": "check the baggage allowance"
+    },
+    {
+      "zh": "比较货币兑换汇率",
+      "answer": "compare the currency exchange rate"
+    }
+  ],
+  "words": [
+    {
+      "word": "chargeback",
+      "phonetic": "/ˈtʃɑːrdʒbæk/",
+      "meaning": "拒付；持卡人要求银行撤销一笔银行卡交易",
+      "phrase": "handle a chargeback",
+      "sentence": "The support team needs clear evidence to handle a chargeback.",
+      "category": "业务"
+    },
+    {
+      "word": "price breakdown",
+      "phonetic": "/praɪs ˈbreɪkdaʊn/",
+      "meaning": "价格明细；总价中各项费用的拆分说明",
+      "phrase": "show a price breakdown",
+      "sentence": "Show a complete price breakdown before the user confirms the order.",
+      "category": "业务"
+    },
+    {
+      "word": "service recovery",
+      "phonetic": "/ˈsɜːrvɪs rɪˈkʌvəri/",
+      "meaning": "服务补救；在服务失败后恢复体验和信任的处理过程",
+      "phrase": "service recovery plan",
+      "sentence": "A clear service recovery plan can reduce complaints after a cancellation.",
+      "category": "业务"
+    },
+    {
+      "word": "layout shift",
+      "phonetic": "/ˈleɪaʊt ʃɪft/",
+      "meaning": "布局偏移；页面元素在加载过程中意外移动",
+      "phrase": "prevent layout shift",
+      "sentence": "Reserve image space to prevent layout shift while the page is loading.",
+      "category": "技术"
+    },
+    {
+      "word": "focus trap",
+      "phonetic": "/ˈfoʊkəs træp/",
+      "meaning": "焦点陷阱；将键盘焦点限制在弹窗等指定区域内",
+      "phrase": "implement a focus trap",
+      "sentence": "Implement a focus trap so keyboard users cannot tab behind the modal.",
+      "category": "技术"
+    },
+    {
+      "word": "memory leak",
+      "phonetic": "/ˈmeməri liːk/",
+      "meaning": "内存泄漏；不再需要的对象仍被引用而无法释放",
+      "phrase": "detect a memory leak",
+      "sentence": "Remove unused event listeners to prevent a memory leak.",
+      "category": "技术"
+    },
+    {
+      "word": "scope creep",
+      "phonetic": "/skoʊp kriːp/",
+      "meaning": "范围蔓延；需求在未同步调整资源或排期时不断扩大",
+      "phrase": "avoid scope creep",
+      "sentence": "Document every new request to avoid scope creep during development.",
+      "category": "沟通"
+    },
+    {
+      "word": "follow-through",
+      "phonetic": "/ˈfɑːloʊ θruː/",
+      "meaning": "贯彻到底；把承诺的事项持续推进并完成",
+      "phrase": "strong follow-through",
+      "sentence": "Clear ownership and strong follow-through are needed after the meeting.",
+      "category": "沟通"
+    },
+    {
+      "word": "self-transfer",
+      "phonetic": "/self ˈtrænsfɜːr/",
+      "meaning": "自行中转；旅客需自行提取行李并重新办理下一段航班",
+      "phrase": "self-transfer flight",
+      "sentence": "Leave enough time between flights when the itinerary includes a self-transfer.",
+      "category": "旅行"
+    },
+    {
+      "word": "visa waiver",
+      "phonetic": "/ˈviːzə ˈweɪvər/",
+      "meaning": "免签安排；符合条件的旅客无需提前申请普通签证",
+      "phrase": "visa waiver program",
+      "sentence": "Check the visa waiver rules before booking an international trip.",
+      "category": "旅行"
+    }
+  ],
+  "focus": [
+    "动态复习：优先区分 verification / reversal / compliance，分别对应信息核验、交易冲正和规则合规。",
+    "技术强化：用 event propagation / stale closure / skeleton screen 描述事件、状态和加载体验，再补充今天的 layout shift / focus trap / memory leak。",
+    "沟通表达：把 context / commitment 与 scope creep / follow-through 串成一次项目同步，先说明背景，再确认范围、承诺和后续执行。",
+    "旅行复习：将 baggage allowance / currency exchange / self-transfer / visa waiver 组成出发前检查清单。"
+  ]
+}
