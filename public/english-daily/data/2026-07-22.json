@@ -1,0 +1,134 @@
+{
+  "date": "2026-07-22",
+  "title": "2026-07-22｜Daily English",
+  "reviewQuiz": [
+    {
+      "zh": "处理一笔拒付",
+      "answer": "handle a chargeback"
+    },
+    {
+      "zh": "在确认订单前展示完整价格明细",
+      "answer": "show a complete price breakdown before confirming the order"
+    },
+    {
+      "zh": "制定服务补救方案",
+      "answer": "create a service recovery plan"
+    },
+    {
+      "zh": "防止页面加载时发生布局偏移",
+      "answer": "prevent layout shift while the page is loading"
+    },
+    {
+      "zh": "为弹窗实现焦点陷阱",
+      "answer": "implement a focus trap for the modal"
+    },
+    {
+      "zh": "移除监听器以避免内存泄漏",
+      "answer": "remove event listeners to prevent a memory leak"
+    },
+    {
+      "zh": "记录新增需求以避免范围蔓延",
+      "answer": "document new requests to avoid scope creep"
+    },
+    {
+      "zh": "确保会议事项得到持续推进",
+      "answer": "ensure strong follow-through after the meeting"
+    },
+    {
+      "zh": "为自行中转预留足够时间",
+      "answer": "leave enough time for a self-transfer"
+    },
+    {
+      "zh": "出发前确认免签规则",
+      "answer": "check the visa waiver rules before departure"
+    }
+  ],
+  "words": [
+    {
+      "word": "partial refund",
+      "phonetic": "/ˈpɑːrʃəl ˈriːfʌnd/",
+      "meaning": "部分退款；仅退还订单金额中的一部分",
+      "phrase": "issue a partial refund",
+      "sentence": "The system should allow support agents to issue a partial refund for one canceled item.",
+      "category": "业务"
+    },
+    {
+      "word": "dispute resolution",
+      "phonetic": "/dɪˈspjuːt ˌrezəˈluːʃən/",
+      "meaning": "争议解决；处理付款、订单或服务纠纷的过程",
+      "phrase": "dispute resolution process",
+      "sentence": "A clear dispute resolution process helps both the customer and the service team understand the next step.",
+      "category": "业务"
+    },
+    {
+      "word": "inventory hold",
+      "phonetic": "/ˈɪnvənˌtɔːri hoʊld/",
+      "meaning": "库存占用；在付款完成前临时保留库存",
+      "phrase": "release an inventory hold",
+      "sentence": "Release the inventory hold automatically when the payment session expires.",
+      "category": "业务"
+    },
+    {
+      "word": "code splitting",
+      "phonetic": "/koʊd ˈsplɪtɪŋ/",
+      "meaning": "代码分割；按页面或功能拆分并按需加载代码",
+      "phrase": "use code splitting",
+      "sentence": "Use code splitting to reduce the initial JavaScript bundle size.",
+      "category": "技术"
+    },
+    {
+      "word": "request cancellation",
+      "phonetic": "/rɪˈkwest ˌkænsəˈleɪʃən/",
+      "meaning": "请求取消；停止已经发出但不再需要的网络请求",
+      "phrase": "support request cancellation",
+      "sentence": "The search page should support request cancellation when the user changes the destination quickly.",
+      "category": "技术"
+    },
+    {
+      "word": "accessibility tree",
+      "phonetic": "/əkˌsesəˈbɪləti triː/",
+      "meaning": "无障碍树；辅助技术用来理解页面结构和控件语义的信息结构",
+      "phrase": "inspect the accessibility tree",
+      "sentence": "Inspect the accessibility tree to confirm that the dialog has a clear name and description.",
+      "category": "技术"
+    },
+    {
+      "word": "acceptance criteria",
+      "phonetic": "/əkˈseptəns kraɪˈtɪriə/",
+      "meaning": "验收标准；判断需求是否完成并可交付的具体条件",
+      "phrase": "define acceptance criteria",
+      "sentence": "Define the acceptance criteria before development starts to reduce later disagreements.",
+      "category": "沟通"
+    },
+    {
+      "word": "action item",
+      "phonetic": "/ˈækʃən ˈaɪtəm/",
+      "meaning": "待办事项；会议后需要由明确负责人完成的任务",
+      "phrase": "assign an action item",
+      "sentence": "Assign each action item to one owner and include a due date.",
+      "category": "沟通"
+    },
+    {
+      "word": "nonstop flight",
+      "phonetic": "/ˌnɑːnˈstɑːp flaɪt/",
+      "meaning": "直飞航班；途中不经停其他机场的航班",
+      "phrase": "book a nonstop flight",
+      "sentence": "A nonstop flight may cost more, but it reduces connection risk.",
+      "category": "旅行"
+    },
+    {
+      "word": "entry requirement",
+      "phonetic": "/ˈentri rɪˈkwaɪərmənt/",
+      "meaning": "入境要求；进入目的地国家或地区必须满足的条件",
+      "phrase": "check entry requirements",
+      "sentence": "Check the entry requirements again before leaving for the airport.",
+      "category": "旅行"
+    }
+  ],
+  "focus": [
+    "动态复习：继续区分 chargeback / partial refund / dispute resolution，分别对应拒付、部分退款和争议处理流程。",
+    "技术强化：把 layout shift / focus trap / memory leak 与今天的 code splitting / request cancellation / accessibility tree 组成一次页面质量检查。",
+    "沟通表达：用 scope creep / follow-through / acceptance criteria / action item 描述如何控制需求范围并推动事项落地。",
+    "旅行复习：将 self-transfer / visa waiver / nonstop flight / entry requirement 组成订票前与出发前检查清单。"
+  ]
+}
